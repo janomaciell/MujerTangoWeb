@@ -1,0 +1,125 @@
+/* ═══════════════════════════════════════════════
+   MARÍA JOSÉ MENTANA — globals.css
+   Paleta: negro profundo + crema envejecida + oro viejo
+   Tipografía: Cormorant Garamond (display) + DM Sans (body)
+   ═══════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
+
+/* ── Tokens ── */
+:root {
+  --ink:        #0a0906;
+  --ink-soft:   #1a1711;
+  --cream:      #f5f0e8;
+  --cream-dark: #e8e1d4;
+  --gold:       #efc149;
+  --gold-light: #d4af6a;
+  --gold-pale:  #f0dfa0;
+  --sepia:      #8b6f47;
+  --sepia-dark: #5c4a2a;
+  --white:      #faf8f4;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  --ease-silk:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-expo:    cubic-bezier(0.87, 0, 0.13, 1);
+
+  --container: 1280px;
+  --gutter:    clamp(1.5rem, 5vw, 5rem);
+  --section-py: clamp(5rem, 10vw, 10rem);
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: var(--ink);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  cursor: none;
+  overflow-x: hidden;
+}
+
+img { display: block; max-width: 100%; }
+a  { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: none; border: none; background: none; }
+
+/* ── Typography scale ── */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(4.5rem, 12vw, 11rem); }
+h2 { font-size: clamp(2.8rem, 6vw,  5.5rem); }
+h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); }
+
+p  { font-size: clamp(0.95rem, 1.2vw, 1.1rem); line-height: 1.75; }
+
+/* ── Container ── */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.container--narrow {
+  max-width: 860px;
+}
+
+/* ── Section utilities ── */
+.section-label {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.4rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: clamp(4rem, 8vw, 7rem);
+}
+.section-header h2 { margin-bottom: 1.5rem; }
+
+.section-divider {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  margin: 1.5rem auto 0;
+  opacity: 0.6;
+}
+
+/* ── Gold line separator ── */
+.gold-rule {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold) 30%, var(--gold) 70%, transparent);
+  opacity: 0.25;
+  margin-block: 0;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--ink); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+/* ── Selection ── */
+::selection { background: var(--gold); color: var(--ink); }

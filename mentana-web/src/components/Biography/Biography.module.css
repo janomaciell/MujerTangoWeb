@@ -1,0 +1,199 @@
+.section {
+  background: var(--ink-soft);
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  padding-block: var(--section-py);
+  padding-bottom: clamp(3rem, 5vw, 5rem);
+}
+
+.headerTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.headerTitle em { font-style: italic; color: var(--gold-light); }
+
+.headerSub {
+  color: rgba(245,240,232,0.6);
+  max-width: 60ch;
+}
+
+/* Pin container */
+.pinContainer {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  height: 100%;
+  padding-inline: var(--gutter);
+  will-change: transform;
+}
+
+.trackStart {
+  flex-shrink: 0;
+  width: clamp(120px, 15vw, 200px);
+  display: flex;
+  align-items: center;
+}
+
+.trackDecor {
+  font-family: var(--font-display);
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  color: var(--gold);
+  letter-spacing: 0.12em;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  opacity: 0.6;
+}
+
+/* Mobile line */
+.lineMobile {
+  display: none;
+  position: absolute;
+  left: calc(var(--gutter) + 1rem);
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  opacity: 0.3;
+  transform-origin: top;
+}
+
+/* Cards */
+.card {
+  flex-shrink: 0;
+  width: clamp(280px, 30vw, 380px);
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(239,193,73,0.12);
+  background: rgba(255,255,255,0.02);
+  margin-right: clamp(1.5rem, 3vw, 2.5rem);
+  position: relative;
+  transition: border-color 0.3s;
+}
+
+.card:hover { border-color: rgba(239,193,73,0.3); }
+
+.cardYear {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 300;
+  color: rgba(239,193,73,0.15);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.cardEra {
+  display: block;
+  font-size: 0.62rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  font-weight: 400;
+  color: var(--cream);
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+
+.cardText {
+  font-size: clamp(0.82rem, 1vw, 0.92rem);
+  color: rgba(245,240,232,0.65);
+  line-height: 1.75;
+  margin-bottom: 1.2rem;
+}
+
+.cardDetail {
+  font-size: 0.72rem;
+  color: rgba(245,240,232,0.4);
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cardDot { color: var(--gold); font-size: 0.45rem; }
+
+.connector {
+  position: absolute;
+  right: -clamp(1.5rem, 3vw, 2.5rem);
+  top: 50%;
+  width: clamp(1.5rem, 3vw, 2.5rem);
+  height: 1px;
+  background: linear-gradient(to right, rgba(239,193,73,0.3), transparent);
+}
+
+/* Closing quote */
+.closing {
+  padding-block: clamp(4rem, 8vw, 7rem);
+}
+
+.quote {
+  max-width: 640px;
+  margin-inline: auto;
+  text-align: center;
+  border-left: none;
+  padding: 0;
+}
+
+.quote p {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+  font-style: italic;
+  font-weight: 300;
+  color: rgba(245,240,232,0.75);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.quote cite {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-style: normal;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .pinContainer {
+    height: auto;
+    overflow: visible;
+  }
+
+  .track {
+    flex-direction: column;
+    height: auto;
+    padding-block: 2rem;
+    position: relative;
+  }
+
+  .trackStart { display: none; }
+
+  .lineMobile {
+    display: block;
+  }
+
+  .card {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+    margin-left: 2.5rem;
+  }
+
+  .connector { display: none; }
+}

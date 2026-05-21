@@ -1,0 +1,83 @@
+.section {
+  padding-block: var(--section-py);
+  background: var(--ink-soft);
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(239,193,73,0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.embedWrap {
+  margin-bottom: 2.5rem;
+}
+
+.embedLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.8rem;
+  padding-inline: 0.2rem;
+}
+
+.embedAlbumTitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--cream);
+}
+
+.embedYear {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+}
+
+.embedFrame {
+  border: 1px solid rgba(239,193,73,0.12);
+  overflow: hidden;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.linksLabel {
+  font-size: 0.68rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(245,240,232,0.4);
+}
+
+.linksRow {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.linkBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.6rem;
+  border: 1px solid rgba(239,193,73,0.25);
+  color: rgba(245,240,232,0.75);
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  transition: border-color 0.25s, color 0.25s, background 0.25s;
+}
+
+.linkBtn:hover {
+  border-color: var(--gold);
+  color: var(--gold-light);
+  background: rgba(239,193,73,0.06);
+}
+
+.linkIcon { color: var(--gold); font-size: 0.9rem; }

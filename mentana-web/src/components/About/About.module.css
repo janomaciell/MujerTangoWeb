@@ -1,0 +1,168 @@
+.section {
+  padding-block: var(--section-py);
+  background: var(--ink);
+}
+
+.header { margin-bottom: clamp(3rem, 6vw, 5rem); }
+
+.heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 300;
+  color: var(--cream);
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.bodyText { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.lead {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.5;
+}
+
+.para { color: rgba(245, 240, 232, 0.65); }
+
+.counterBlock { flex-shrink: 0; }
+
+.counterRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.counterNum {
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 10vw, 9rem);
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.counterLabel {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(245, 240, 232, 0.45);
+  padding-top: 1rem;
+  line-height: 1.6;
+}
+
+/* Frase destacada + foto */
+.quoteBlock {
+  display: grid;
+  grid-template-columns: 1fr minmax(200px, 34%);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+  padding-top: clamp(3rem, 6vw, 5.5rem);
+  border-top: 1px solid rgba(239, 193, 73, 0.2);
+}
+
+.quote {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  line-height: 1.05;
+}
+
+.quoteUna {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 9vw, 7.5rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--gold-light);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.08em;
+}
+
+.quoteRest {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4.2vw, 3.25rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.22;
+  max-width: min(100%, 22em);
+}
+
+.quoteEmphasis {
+  font-style: italic;
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.quoteFigure {
+  margin: 0;
+  justify-self: end;
+  width: 100%;
+  max-width: 320px;
+}
+
+.quoteImageWrap {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid rgba(239, 193, 73, 0.25);
+}
+
+.quoteImageWrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 9, 6, 0.35) 0%,
+    transparent 45%
+  );
+  pointer-events: none;
+}
+
+.quoteImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+@media (max-width: 900px) {
+  .quoteBlock {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .quoteRest {
+    max-width: none;
+  }
+
+  .quoteFigure {
+    justify-self: start;
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .body { grid-template-columns: 1fr; gap: 2rem; }
+
+  .quoteUna {
+    font-size: clamp(2.8rem, 14vw, 4rem);
+  }
+
+  .quoteRest {
+    font-size: clamp(1.45rem, 6.5vw, 2rem);
+  }
+
+  .quoteFigure {
+    max-width: 220px;
+  }
+}
