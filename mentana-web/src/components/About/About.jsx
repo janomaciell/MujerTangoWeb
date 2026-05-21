@@ -58,28 +58,17 @@ export default function About() {
         },
       })
 
-      gsap.from('.about-para', {
+      const paras = sectionRef.current.querySelectorAll('.about-para')
+      gsap.from(paras, {
         opacity: 0,
         y: 20,
         duration: 0.7,
         stagger: 0.1,
         ease: 'power2.out',
+        immediateRender: false,
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top 80%',
-          toggleActions: 'play none none none',
-        },
-      })
-
-      gsap.from('.about-quote-block > *', {
-        opacity: 0,
-        y: 28,
-        duration: 0.85,
-        stagger: 0.12,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: '.about-quote-block',
-          start: 'top 82%',
           toggleActions: 'play none none none',
         },
       })

@@ -26,11 +26,14 @@ export function coverPath(file) {
   return assetUrl(`portadas/${file}`)
 }
 
+/** Misma imagen que `<link rel="icon">` en index.html */
+export const SITE_FAVICON = '/favicon.svg'
+
 export const siteImages = {
   hero: pngPath('img10.png'),
   aboutQuote: formatosXPath('img21.png'),
   biographyHero: formatosXPath('img01.png'),
-  logo: formatosXPath('img02.png'),
+  logo: SITE_FAVICON,
 }
 
 /** true cuando el build usa el CDN (R2) en lugar de /public */

@@ -81,3 +81,33 @@
 }
 
 .linkIcon { color: var(--gold); font-size: 0.9rem; }
+
+.embedFrame iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .embedLabel {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .embedFrame iframe {
+    height: min(352px, 80vw);
+    min-height: 280px;
+  }
+
+  .linksRow {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .linkBtn {
+    justify-content: center;
+    width: 100%;
+  }
+}

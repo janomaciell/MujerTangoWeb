@@ -43,6 +43,7 @@ export default function Biography() {
             y: 20,
             duration: 0.6,
             ease: 'sine.out',
+            immediateRender: false,
             scrollTrigger: {
               trigger: card,
               containerAnimation: tl,
@@ -78,6 +79,7 @@ export default function Biography() {
             x: -15,
             duration: 0.7,
             ease: 'power2.out',
+            immediateRender: false,
             scrollTrigger: {
               trigger: card,
               start: 'top 92%',
@@ -87,17 +89,21 @@ export default function Biography() {
         })
       })
 
-      gsap.from('.biog-header', {
-        opacity: 0,
-        y: 20,
-        duration: 0.8,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 85%',
-          toggleActions: 'play none none none',
-        }
-      })
+      const header = sectionRef.current.querySelector('.biog-header')
+      if (header) {
+        gsap.from(header, {
+          opacity: 0,
+          y: 20,
+          duration: 0.8,
+          ease: 'power2.out',
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          }
+        })
+      }
     }, sectionRef)
 
     return () => ctx.revert()

@@ -172,5 +172,21 @@
 
 @media (max-width: 768px) {
   .grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .bottomInner { flex-direction: column; gap: 1rem; text-align: center; }
+  .sigSurname { font-size: clamp(1.75rem, 8vw, 2.5rem); }
+  .bottomInner {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    align-items: center;
+  }
+  .marqueeItem { font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .main { padding-block: 3rem; }
+  .copy,
+  .backTop,
+  .credit {
+    font-size: 0.68rem;
+  }
 }

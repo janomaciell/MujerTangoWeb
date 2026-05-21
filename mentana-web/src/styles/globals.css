@@ -26,8 +26,13 @@
   --ease-expo:    cubic-bezier(0.87, 0, 0.13, 1);
 
   --container: 1280px;
-  --gutter:    clamp(1.5rem, 5vw, 5rem);
-  --section-py: clamp(5rem, 10vw, 10rem);
+  --gutter:    clamp(1.25rem, 4vw, 5rem);
+  --section-py: clamp(4rem, 10vw, 10rem);
+  --header-bar: 3.5rem;
+  --safe-top:  env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --header-h:  calc(var(--header-bar) + var(--safe-top));
+  --page-top:  calc(var(--header-h) + 1rem);
 }
 
 /* ── Reset ── */
@@ -39,6 +44,7 @@
 
 html {
   font-size: 16px;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -50,6 +56,26 @@ body {
   -webkit-font-smoothing: antialiased;
   cursor: none;
   overflow-x: hidden;
+  padding-bottom: var(--safe-bottom);
+}
+
+main {
+  overflow-x: clip;
+  width: 100%;
+}
+
+/* Touch: cursor normal (el componente Cursor ya se oculta) */
+@media (hover: none), (pointer: coarse) {
+  body,
+  button,
+  a,
+  [role='button'],
+  label,
+  input,
+  textarea,
+  select {
+    cursor: auto;
+  }
 }
 
 img { display: block; max-width: 100%; }
@@ -123,3 +149,30 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.1rem); line-height: 1.75; }
 
 /* ── Selection ── */
 ::selection { background: var(--gold); color: var(--ink); }
+
+/* ── Responsive global ── */
+@media (max-width: 768px) {
+  html { font-size: 15px; }
+
+  :root {
+    --section-py: clamp(3.25rem, 9vw, 5.5rem);
+    --gutter: clamp(1rem, 4vw, 1.5rem);
+  }
+
+  h1 { font-size: clamp(2.75rem, 14vw, 4.5rem); }
+  h2 { font-size: clamp(2rem, 8vw, 3.25rem); }
+
+  .section-header {
+    margin-bottom: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  .section-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  html { font-size: 14px; }
+}

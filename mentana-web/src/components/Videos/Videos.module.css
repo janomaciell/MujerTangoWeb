@@ -186,10 +186,27 @@
 
 .channelArrow { color: var(--gold); }
 
+@media (max-width: 900px) {
+  .featuredInner { aspect-ratio: 16 / 10; }
+}
+
 @media (max-width: 768px) {
-  .grid { grid-template-columns: 1fr 1fr; }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .featured { margin-bottom: 2rem; }
+  .featuredTitle { font-size: 1.15rem; }
+
+  .channelBtn {
+    width: 100%;
+    justify-content: center;
+    padding-inline: 1.25rem;
+  }
 }
 
 @media (max-width: 480px) {
-  .grid { grid-template-columns: 1fr; }
+  .cardTitle { font-size: 1rem; }
+  .placeholderTitle { font-size: 1.1rem; }
 }

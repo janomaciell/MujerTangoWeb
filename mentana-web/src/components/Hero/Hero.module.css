@@ -238,12 +238,36 @@
   }
 }
 
+@media (max-width: 600px) {
+  .section {
+    min-height: 100dvh;
+    min-height: 100svh;
+  }
+
+  .inner {
+    padding-top: calc(var(--header-h) + 0.25rem);
+  }
+
+  .ruleTop {
+    top: var(--header-h);
+  }
+}
+
 @media (max-width: 480px) {
   .portrait {
-    height: 48%;
+    height: 46%;
   }
 
   .bottomBlock {
-    gap: 1.25rem;
+    gap: 1rem;
+  }
+
+  .wordMaria   { font-size: clamp(2.5rem, 15vw, 3.5rem); }
+  .wordJose    { font-size: clamp(2rem, 12vw, 3rem); padding-left: 0.75rem; }
+  .wordMentana { font-size: clamp(1.65rem, 9vw, 2.5rem); }
+
+  .metaItem {
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
   }
 }

@@ -197,3 +197,27 @@
 
   .connector { display: none; }
 }
+
+@media (max-width: 480px) {
+  .header {
+    padding-top: var(--section-py);
+    padding-bottom: 2rem;
+  }
+
+  .headerTitle {
+    font-size: clamp(2rem, 9vw, 2.75rem);
+  }
+
+  .card {
+    margin-left: 1.25rem;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .lineMobile {
+    left: calc(var(--gutter) + 0.35rem);
+  }
+
+  .cardYear {
+    font-size: clamp(2.25rem, 12vw, 3rem);
+  }
+}
