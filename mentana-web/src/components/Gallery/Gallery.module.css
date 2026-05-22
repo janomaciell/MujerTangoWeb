@@ -264,7 +264,11 @@
     padding-bottom: 1.5rem;
   }
 
-  .title { font-size: clamp(2.25rem, 10vw, 3.5rem); }
+  .title { font-size: clamp(2.25rem, 9vw, 3.5rem); }
+
+  .subtitle {
+    font-size: clamp(0.88rem, 3.5vw, 1rem);
+  }
 
   .filters {
     gap: 0.45rem;
@@ -281,6 +285,13 @@
 
 @media (max-width: 480px) {
   .grid { grid-template-columns: repeat(2, 1fr); gap: 2px; }
+
+  .title { font-size: clamp(1.85rem, 8vw, 2.5rem); }
+
+  .filterBtn {
+    font-size: 0.58rem;
+    padding: 0.35rem 0.7rem;
+  }
 
   .lightboxClose {
     top: calc(0.75rem + var(--safe-top));
@@ -309,4 +320,17 @@
     height: 40px;
     font-size: 1.5rem;
   }
+
+  .count {
+    font-size: 0.68rem;
+    padding: 1.5rem var(--gutter);
+  }
 }
+
+@media (max-width: 360px) {
+  .title { font-size: 1.65rem; }
+  .subtitle { font-size: 0.82rem; }
+  .filterBtn { font-size: 0.55rem; padding: 0.3rem 0.6rem; }
+  .navBtn { width: 36px; height: 36px; font-size: 1.3rem; }
+}
+

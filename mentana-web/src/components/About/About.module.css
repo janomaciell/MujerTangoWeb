@@ -152,7 +152,10 @@
 }
 
 @media (max-width: 768px) {
-  .body { grid-template-columns: 1fr; gap: 2rem; }
+  .body {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 
   .counterRow {
     flex-wrap: wrap;
@@ -160,7 +163,7 @@
   }
 
   .counterNum {
-    font-size: clamp(3.5rem, 18vw, 5rem);
+    font-size: clamp(3.5rem, 16vw, 5rem);
   }
 
   .counterLabel {
@@ -169,11 +172,11 @@
   }
 
   .quoteUna {
-    font-size: clamp(2.8rem, 14vw, 4rem);
+    font-size: clamp(2.8rem, 12vw, 4rem);
   }
 
   .quoteRest {
-    font-size: clamp(1.45rem, 6.5vw, 2rem);
+    font-size: clamp(1.45rem, 5.5vw, 2rem);
   }
 
   .quoteFigure {
@@ -185,9 +188,36 @@
   .quoteImageWrap {
     width: 100%;
   }
+
+  .lead {
+    font-size: clamp(1.05rem, 3.5vw, 1.4rem);
+  }
 }
 
 @media (max-width: 480px) {
-  .heading { font-size: clamp(2rem, 9vw, 2.75rem); }
+  .heading { font-size: clamp(1.85rem, 8vw, 2.75rem); }
   .quoteFigure { max-width: 100%; }
+
+  .quoteUna {
+    font-size: clamp(2.2rem, 11vw, 3rem);
+  }
+
+  .quoteRest {
+    font-size: clamp(1.25rem, 5vw, 1.65rem);
+  }
+
+  .counterNum {
+    font-size: clamp(3rem, 14vw, 4rem);
+  }
+
+  .body {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .heading { font-size: 1.75rem; }
+  .quoteUna { font-size: 2rem; }
+  .quoteRest { font-size: 1.15rem; }
+  .counterNum { font-size: 2.75rem; }
 }

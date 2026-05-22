@@ -234,7 +234,7 @@
   .nav { display: none; }
   .burger { display: flex; }
   .rightGroup { gap: 0.75rem; }
-  .logoImg { height: 36px; }
+  .logoImg { height: 36px; width: 36px; }
   .inner { padding-block: 0.55rem; }
 
   .langBtn {
@@ -256,6 +256,27 @@
   }
 
   .mobileNavLink {
-    font-size: clamp(1.75rem, 10vw, 2.35rem);
+    font-size: clamp(1.75rem, 9vw, 2.35rem);
+  }
+
+  .logoImg { height: 32px; width: 32px; }
+
+  .langBtn {
+    padding: 0.25rem 0.55rem;
+    min-width: 28px;
+    font-size: 0.55rem;
   }
 }
+
+@media (max-width: 360px) {
+  .mobileNavLink {
+    font-size: clamp(1.5rem, 8vw, 1.9rem);
+  }
+
+  .mobileNavNum {
+    font-size: 0.58rem;
+  }
+
+  .logoImg { height: 28px; width: 28px; }
+}
+

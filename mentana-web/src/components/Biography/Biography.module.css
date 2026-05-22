@@ -189,7 +189,7 @@
   }
 
   .card {
-    width: 100%;
+    width: calc(100% - 2.5rem);
     margin-right: 0;
     margin-bottom: 1.5rem;
     margin-left: 2.5rem;
@@ -205,11 +205,16 @@
   }
 
   .headerTitle {
-    font-size: clamp(2rem, 9vw, 2.75rem);
+    font-size: clamp(1.85rem, 8vw, 2.75rem);
+  }
+
+  .headerSub {
+    font-size: clamp(0.85rem, 3.5vw, 0.95rem);
   }
 
   .card {
     margin-left: 1.25rem;
+    width: calc(100% - 1.25rem);
     padding: 1.5rem 1.25rem;
   }
 
@@ -220,4 +225,16 @@
   .cardYear {
     font-size: clamp(2.25rem, 12vw, 3rem);
   }
+
+  .cardText {
+    font-size: clamp(0.78rem, 3.5vw, 0.88rem);
+  }
 }
+
+@media (max-width: 360px) {
+  .headerTitle { font-size: 1.75rem; }
+  .cardYear { font-size: 2rem; }
+  .cardTitle { font-size: 1rem; }
+  .card { padding: 1.25rem 1rem; }
+}
+

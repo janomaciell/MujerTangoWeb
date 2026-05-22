@@ -193,13 +193,34 @@
     width: 100%;
     justify-content: center;
   }
+
+  .infoLabel { font-size: 0.62rem; }
+  .emailLink { font-size: clamp(0.95rem, 3.5vw, 1.15rem); }
 }
 
 @media (max-width: 480px) {
   .sideQuote {
-    font-size: 1rem;
+    font-size: 0.95rem;
     padding-left: 0.85rem;
   }
 
   .successMsg { padding: 3rem 1.25rem; }
+
+  .input { font-size: 0.88rem; }
+  .submitBtn {
+    font-size: 0.75rem;
+    padding: 0.85rem 1.5rem;
+  }
+
+  .successTitle { font-size: 1.5rem; }
+  .socialLink { font-size: 0.8rem; }
+  .infoValue { font-size: 0.85rem; }
 }
+
+@media (max-width: 360px) {
+  .sideQuote { font-size: 0.88rem; }
+  .successTitle { font-size: 1.3rem; }
+  .input { font-size: 0.82rem; }
+  .submitBtn { font-size: 0.68rem; }
+}
+

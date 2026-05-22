@@ -180,6 +180,10 @@
     align-items: center;
   }
   .marqueeItem { font-size: 1rem; }
+
+  .navLink { font-size: 0.82rem; }
+  .email { font-size: 0.82rem; }
+  .social { font-size: 0.78rem; }
 }
 
 @media (max-width: 480px) {
@@ -189,4 +193,16 @@
   .credit {
     font-size: 0.68rem;
   }
+  .sigSurname { font-size: clamp(1.5rem, 7vw, 2rem); }
+  .sigName { font-size: clamp(1.15rem, 4vw, 1.5rem); }
+  .sigTagline { font-size: 0.68rem; }
+  .navHeading { font-size: 0.55rem; }
 }
+
+@media (max-width: 360px) {
+  .main { padding-block: 2.5rem; }
+  .sigSurname { font-size: 1.35rem; }
+  .sigName { font-size: 1rem; }
+  .copy, .backTop, .credit { font-size: 0.62rem; }
+}
+

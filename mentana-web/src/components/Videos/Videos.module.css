@@ -192,7 +192,7 @@
 
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
   }
 
@@ -206,7 +206,28 @@
   }
 }
 
-@media (max-width: 480px) {
-  .cardTitle { font-size: 1rem; }
-  .placeholderTitle { font-size: 1.1rem; }
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
+
+@media (max-width: 480px) {
+  .cardTitle { font-size: 0.95rem; }
+  .placeholderTitle { font-size: 1rem; }
+  .featuredInner { aspect-ratio: 16 / 10; }
+  .featuredTitle { font-size: 1.05rem; }
+  .featuredSub { font-size: 0.72rem; }
+  .channelBtn {
+    font-size: 0.72rem;
+    padding: 0.8rem 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .cardTitle { font-size: 0.88rem; }
+  .placeholderTitle { font-size: 0.92rem; }
+  .channelBtn { font-size: 0.68rem; }
+}
+

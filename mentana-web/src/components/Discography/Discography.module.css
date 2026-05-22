@@ -16,10 +16,14 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 17.5rem), 1fr));
   gap: 1.5rem;
+  align-items: start;
 }
 
 .card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   border: 1px solid rgba(239,193,73,0.12);
   background: rgba(255,255,255,0.02);
   padding: 2rem;
@@ -66,13 +70,21 @@
   border-radius: 50%;
 }
 
-/* Year badge */
+/* Year badge — slot fijo para alinear portadas entre álbumes */
 .yearBadge {
   font-family: var(--font-display);
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   color: var(--gold);
-  margin-bottom: 1.2rem;
+  line-height: 1.5;
+  min-height: calc(0.75rem * 1.5 + 1.2rem);
+  margin-bottom: 0;
+  padding-bottom: 1.2rem;
+  flex-shrink: 0;
+}
+
+.yearBadgeEmpty {
+  visibility: hidden;
 }
 
 /* Cover */
@@ -87,6 +99,7 @@
   justify-content: center;
   overflow: hidden;
   position: relative;
+  flex-shrink: 0;
 }
 
 .coverImg {
@@ -119,6 +132,12 @@
 }
 
 /* Info */
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 .albumTitle {
   font-family: var(--font-display);
   font-size: clamp(1.1rem, 1.6vw, 1.4rem);
@@ -184,6 +203,15 @@
 
 @media (max-width: 480px) {
   .card { padding: 1.25rem; }
-  .albumTitle { font-size: 1.15rem; }
+  .albumTitle { font-size: 1.1rem; }
   .trackName { font-size: 0.8rem; }
+  .note { font-size: 0.78rem; }
+  .yearBadge { font-size: 0.7rem; }
+  .cover { margin-bottom: 1.25rem; }
 }
+
+@media (max-width: 360px) {
+  .card { padding: 1rem; }
+  .albumTitle { font-size: 1rem; }
+}
+

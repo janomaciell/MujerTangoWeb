@@ -67,7 +67,12 @@ export default function Discography() {
                 </div>
               </div>
 
-              {a.year && <div className={styles.yearBadge}>{a.year}</div>}
+              <div
+                className={`${styles.yearBadge} ${!a.year ? styles.yearBadgeEmpty : ''}`}
+                aria-hidden={!a.year}
+              >
+                {a.year || '\u00a0'}
+              </div>
 
               <div className={styles.cover}>
                 {a.cover ? (

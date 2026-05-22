@@ -159,8 +159,8 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.1rem); line-height: 1.75; }
     --gutter: clamp(1rem, 4vw, 1.5rem);
   }
 
-  h1 { font-size: clamp(2.75rem, 14vw, 4.5rem); }
-  h2 { font-size: clamp(2rem, 8vw, 3.25rem); }
+  h1 { font-size: clamp(2.75rem, 12vw, 4.5rem); }
+  h2 { font-size: clamp(2rem, 7vw, 3.25rem); }
 
   .section-header {
     margin-bottom: clamp(2.5rem, 6vw, 4rem);
@@ -171,8 +171,36 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.1rem); line-height: 1.75; }
     letter-spacing: 0.22em;
     margin-bottom: 1rem;
   }
+
+  p { font-size: clamp(0.88rem, 3.5vw, 1.05rem); }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-py: clamp(2.75rem, 8vw, 4rem);
+    --gutter: clamp(0.85rem, 3.5vw, 1.25rem);
+  }
+
+  h1 { font-size: clamp(2rem, 10vw, 3rem); }
+  h2 { font-size: clamp(1.75rem, 7vw, 2.5rem); }
+  h3 { font-size: clamp(1.15rem, 4vw, 1.5rem); }
+
+  .section-header {
+    margin-bottom: clamp(2rem, 5vw, 3rem);
+  }
+
+  .section-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 0.85rem;
+  }
+
+  .section-header h2 { margin-bottom: 1rem; }
 }
 
 @media (max-width: 380px) {
   html { font-size: 14px; }
+  h1 { font-size: 1.85rem; }
+  h2 { font-size: 1.65rem; }
 }
+

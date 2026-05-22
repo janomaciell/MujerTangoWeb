@@ -111,3 +111,32 @@
     width: 100%;
   }
 }
+
+@media (max-width: 480px) {
+  .embedFrame iframe {
+    height: min(300px, 75vw);
+    min-height: 240px;
+  }
+
+  .linkBtn {
+    font-size: 0.78rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .embedAlbumTitle {
+    font-size: 1rem;
+  }
+
+  .embedYear {
+    font-size: 0.68rem;
+  }
+
+  .linksLabel {
+    font-size: 0.62rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .linkBtn { font-size: 0.72rem; padding: 0.55rem 1rem; }
+}
+

@@ -108,7 +108,11 @@
 @media (max-width: 768px) {
   .mainGrid { grid-template-columns: 1fr; gap: 3rem; margin-bottom: 3rem; }
   .statsRow { grid-template-columns: 1fr; }
-  .statItem { padding: 2rem 1rem; }
+  .statItem { padding: 1.75rem 1rem; }
+
+  .colHeading {
+    font-size: clamp(1.1rem, 4vw, 1.4rem);
+  }
 }
 
 @media (max-width: 480px) {
@@ -122,4 +126,15 @@
     font-size: 0.75rem;
     padding: 0.35rem 0.7rem;
   }
+
+  .statNum { font-size: clamp(2rem, 10vw, 3rem); }
+  .statItem { padding: 1.5rem 0.75rem; }
+  .colHeading { font-size: 1.1rem; }
 }
+
+@media (max-width: 360px) {
+  .statNum { font-size: 1.8rem; }
+  .distTitle { font-size: 0.9rem; }
+  .collabTag { font-size: 0.7rem; padding: 0.3rem 0.55rem; }
+}
+

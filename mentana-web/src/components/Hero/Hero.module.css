@@ -191,6 +191,7 @@
   50%       { opacity: 0.9; transform: scale(1.25); }
 }
 
+/* ── TABLET (max-width: 900px) ── */
 @media (max-width: 900px) {
   .portrait {
     width: 100%;
@@ -203,9 +204,9 @@
     background: linear-gradient(
       to top,
       var(--ink) 0%,
-      rgba(10, 9, 6, 0.9) 18%,
-      rgba(10, 9, 6, 0.4) 45%,
-      transparent 75%
+      rgba(10, 9, 6, 0.2) 40%,
+      rgba(10, 9, 6, 0.8) 75%,
+      var(--ink) 100%
     );
   }
 
@@ -221,23 +222,29 @@
   .leftPanel {
     width: 100%;
     z-index: 2;
+    justify-content: flex-start;
+    gap: 1.5rem;
   }
 
-  .wordMaria   { font-size: clamp(3.2rem, 17vw, 5.5rem); }
-  .wordJose    { font-size: clamp(2.6rem, 14vw, 4.5rem); padding-left: clamp(1.25rem, 10vw, 3rem); }
-  .wordMentana { font-size: clamp(2rem, 10vw, 3.2rem); }
+  .wordMaria   { font-size: clamp(3.2rem, 13vw, 5.5rem); }
+  .wordJose    { font-size: clamp(2.6rem, 11vw, 4.5rem); padding-left: clamp(1.25rem, 8vw, 3rem); }
+  .wordMentana { font-size: clamp(2rem, 8.5vw, 3.2rem); }
 
   .titleBlock {
     flex: 0;
-    padding: 0.5rem 0 1.5rem;
+    padding: 0.5rem 0 0.5rem;
   }
 
   .scrollIndicator {
-    margin-left: 0;
-    align-self: flex-start;
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
   }
 }
 
+/* ── MOBILE (max-width: 600px) ── */
 @media (max-width: 600px) {
   .section {
     min-height: 100dvh;
@@ -245,29 +252,87 @@
   }
 
   .inner {
-    padding-top: calc(var(--header-h) + 0.25rem);
+    padding-top: calc(var(--header-h) + 1rem);
+    padding-bottom: 1.5rem;
   }
 
   .ruleTop {
     top: var(--header-h);
   }
+
+  .leftPanel {
+    justify-content: flex-start;
+    gap: 1.25rem;
+  }
+
+  .titleBlock {
+    padding: 0.25rem 0 0.5rem;
+  }
+
+  .wordMaria   { font-size: clamp(2.8rem, 14vw, 4rem); }
+  .wordJose    { font-size: clamp(2.2rem, 11vw, 3.2rem); padding-left: clamp(0.75rem, 5vw, 2rem); }
+  .wordMentana { font-size: clamp(1.8rem, 9vw, 2.8rem); }
+
+  .metaItem {
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    gap: 0.4rem;
+  }
+
+  .metaGold {
+    font-size: 0.82rem;
+    margin-top: 0.25rem;
+  }
+
+  .bottomBlock {
+    gap: 1rem;
+  }
 }
 
+/* ── SMALL MOBILE (max-width: 480px) ── */
 @media (max-width: 480px) {
   .portrait {
     height: 46%;
+  }
+
+  .inner {
+    padding-bottom: 1.25rem;
   }
 
   .bottomBlock {
     gap: 1rem;
   }
 
-  .wordMaria   { font-size: clamp(2.5rem, 15vw, 3.5rem); }
-  .wordJose    { font-size: clamp(2rem, 12vw, 3rem); padding-left: 0.75rem; }
-  .wordMentana { font-size: clamp(1.65rem, 9vw, 2.5rem); }
+  .wordMaria   { font-size: clamp(2.4rem, 13vw, 3.2rem); }
+  .wordJose    { font-size: clamp(1.9rem, 10.5vw, 2.6rem); padding-left: 0.75rem; }
+  .wordMentana { font-size: clamp(1.55rem, 8.5vw, 2.2rem); }
 
   .metaItem {
-    font-size: 0.6rem;
-    letter-spacing: 0.14em;
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
+  }
+
+  .metaGold {
+    font-size: 0.78rem;
+  }
+
+  .scrollIndicator {
+    bottom: 2rem;
+  }
+}
+
+/* ── VERY SMALL (max-width: 360px) ── */
+@media (max-width: 360px) {
+  .wordMaria   { font-size: 2.2rem; }
+  .wordJose    { font-size: 1.75rem; padding-left: 0.5rem; }
+  .wordMentana { font-size: 1.45rem; letter-spacing: 0.02em; }
+
+  .metaItem {
+    font-size: 0.54rem;
+    letter-spacing: 0.1em;
+  }
+
+  .metaGold {
+    font-size: 0.72rem;
   }
 }

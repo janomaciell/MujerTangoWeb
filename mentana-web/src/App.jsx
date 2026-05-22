@@ -8,6 +8,7 @@ import { LangProvider } from './context/LangContext'
 import Header   from './components/Header/Header'
 import Footer   from './components/Footer/Footer'
 import Cursor   from './components/Cursor/Cursor'
+import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 
 // Home sections
 import Hero        from './components/Hero/Hero'
@@ -56,6 +57,7 @@ export default function App() {
   return (
     <LangProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <Cursor />
         <Header />
         <Routes>
