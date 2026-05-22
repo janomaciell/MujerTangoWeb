@@ -1,10 +1,15 @@
 import { useState, useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import emailjs from '@emailjs/browser'
 import styles from './Contact.module.css'
 import { useLang, t } from '../../context/LangContext'
 
 gsap.registerPlugin(ScrollTrigger)
+
+const EMAILJS_SERVICE_ID  = 'service_u8tw2g2'
+const EMAILJS_TEMPLATE_ID = 'template_zx6r019'
+const EMAILJS_PUBLIC_KEY  = '4AxbLxrmW38UjVKHN'
 
 export default function Contact({ asPage = false }) {
   const sectionRef = useRef(null)
@@ -62,13 +67,25 @@ export default function Contact({ asPage = false }) {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setStatus('sending')
-    // Replace with EmailJS: npm install @emailjs/browser
-    // import emailjs from '@emailjs/browser'
-    // emailjs.sendForm('SERVICE_ID', 'TEMPLATE_ID', formRef.current, 'PUBLIC_KEY')
-    setTimeout(() => {
+
+    emailjs.sendForm(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      formRef.current,
+      EMAILJS_PUBLIC_KEY
+    )
+    .then(() => {
       setStatus('done')
-      gsap.fromTo('.success-content', { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.8, ease: 'back.out(1.7)' })
-    }, 1500)
+      gsap.fromTo(
+        '.success-content',
+        { opacity: 0, scale: 0.9 },
+        { opacity: 1, scale: 1, duration: 0.8, ease: 'back.out(1.7)' }
+      )
+    })
+    .catch((error) => {
+      console.error('EmailJS error:', error)
+      setStatus('error')
+    })
   }
 
   const ct = t.contact
@@ -121,39 +138,52 @@ export default function Contact({ asPage = false }) {
                 <div className={styles.successIcon}>✓</div>
                 <h3 className={styles.successTitle}>{ct.success.title[lang]}</h3>
                 <p className={styles.successSub}>{ct.success.sub[lang]}</p>
-                <button className={styles.resetBtn} onClick={() => { setStatus('idle'); setForm({ name: '', email: '', subject: '', message: '' }) }}>
+                <button
+                  className={styles.resetBtn}
+                  onClick={() => {
+                    setStatus('idle')
+                    setForm({ name: '', email: '', subject: '', message: '' })
+                  }}
+                >
                   {ct.success.again[lang]}
                 </button>
               </div>
             ) : (
-              <form ref={formRef} className={styles.form} onSubmit={handleSubmit} id="form-contact" noValidate>
-                <div className={styles.fieldRow}>
+              <>
+                {status === 'error' && (
+                  <p className={styles.errorMsg}>
+                    {ct.error?.[lang] ?? 'Hubo un error al enviar. Intentá de nuevo.'}
+                  </p>
+                )}
+                <form ref={formRef} className={styles.form} onSubmit={handleSubmit} id="form-contact" noValidate>
+                  <div className={styles.fieldRow}>
+                    <div className={styles.field}>
+                      <label htmlFor="contact-name" className={styles.fieldLabel}>{f.name[lang]}</label>
+                      <input id="contact-name" name="name" type="text" value={form.name} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur} className={styles.input} required autoComplete="name" />
+                      <div className={styles.focusLine} />
+                    </div>
+                    <div className={styles.field}>
+                      <label htmlFor="contact-email" className={styles.fieldLabel}>Email</label>
+                      <input id="contact-email" name="email" type="email" value={form.email} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur} className={styles.input} required autoComplete="email" />
+                      <div className={styles.focusLine} />
+                    </div>
+                  </div>
                   <div className={styles.field}>
-                    <label htmlFor="contact-name" className={styles.fieldLabel}>{f.name[lang]}</label>
-                    <input id="contact-name" name="name" type="text" value={form.name} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur} className={styles.input} required autoComplete="name" />
+                    <label htmlFor="contact-subject" className={styles.fieldLabel}>{f.subject[lang]}</label>
+                    <input id="contact-subject" name="subject" type="text" value={form.subject} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur} className={styles.input} required />
                     <div className={styles.focusLine} />
                   </div>
                   <div className={styles.field}>
-                    <label htmlFor="contact-email" className={styles.fieldLabel}>Email</label>
-                    <input id="contact-email" name="email" type="email" value={form.email} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur} className={styles.input} required autoComplete="email" />
+                    <label htmlFor="contact-message" className={styles.fieldLabel}>{f.message[lang]}</label>
+                    <textarea id="contact-message" name="message" value={form.message} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur} className={`${styles.input} ${styles.textarea}`} required rows={1} />
                     <div className={styles.focusLine} />
                   </div>
-                </div>
-                <div className={styles.field}>
-                  <label htmlFor="contact-subject" className={styles.fieldLabel}>{f.subject[lang]}</label>
-                  <input id="contact-subject" name="subject" type="text" value={form.subject} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur} className={styles.input} required />
-                  <div className={styles.focusLine} />
-                </div>
-                <div className={styles.field}>
-                  <label htmlFor="contact-message" className={styles.fieldLabel}>{f.message[lang]}</label>
-                  <textarea id="contact-message" name="message" value={form.message} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur} className={`${styles.input} ${styles.textarea}`} required rows={1} />
-                  <div className={styles.focusLine} />
-                </div>
-                <button type="submit" id="btn-contact-submit" className={styles.submitBtn} disabled={status === 'sending'}>
-                  <span>{status === 'sending' ? f.sending[lang] : f.send[lang]}</span>
-                  <span className={styles.submitArrow}>→</span>
-                </button>
-              </form>
+                  <button type="submit" id="btn-contact-submit" className={styles.submitBtn} disabled={status === 'sending'}>
+                    <span>{status === 'sending' ? f.sending[lang] : f.send[lang]}</span>
+                    <span className={styles.submitArrow}>→</span>
+                  </button>
+                </form>
+              </>
             )}
           </div>
         </div>
