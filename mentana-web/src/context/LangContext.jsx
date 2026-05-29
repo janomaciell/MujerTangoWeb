@@ -28,14 +28,28 @@ export const t = {
   // ── About ──
   about: {
     heading:    { es: 'La Artista',    en: 'The Artist'    },
-    lead: {
-      es: 'Nacida en Buenos Aires, María José Mentana es una de las voces más reconocidas del tango argentino, con una trayectoria de más de cinco décadas sobre los escenarios del mundo.',
-      en: 'Born in Buenos Aires, María José Mentana is one of the most recognized voices of Argentine tango, with a career spanning over five decades on stages around the world.',
-    },
-    para: {
-      es: 'Su voz inconfundible la llevó por Europa, Asia y América, grabando en Japón y Francia y actuando en los teatros más importantes del mundo.',
-      en: "Her unmistakable voice took her through Europe, Asia and the Americas, recording in Japan and France and performing in the world's most important theatres.",
-    },
+    paragraphs: [
+      {
+        es: 'Rosana Inés nació en San Isidro — y María José nació con la música. A los nueve años debutó en Grandes Valores del Tango — y desde entonces el escenario fue su casa.',
+        en: 'Rosana Inés was born in San Isidro — and María José was born with the music. At the age of nine, she made her debut on Grandes Valores del Tango—and since then, the stage has been her home.',
+      },
+      {
+        es: 'Creció rodeada de los grandes referentes del género — Tita Merello, Nelly Omar, Roberto Goyeneche, Floreal Ruiz, Mariano Mores, Leopoldo Federico, Raúl Garello y Horacio Ferrer, entre otros. De ellos aprendió lo más valioso: el sentir, la intención, todo aquello que no se escribe pero se vive. Junto a ellos grabó, viajó y dejó su voz en los escenarios más importantes de Europa, Japón, China y Latinoamérica — teatros que son historia.',
+        en: 'She grew up surrounded by the greatest legends of the genre—Tita Merello, Nelly Omar, Roberto Goyeneche, Floreal Ruiz, Mariano Mores, Leopoldo Federico, Raúl Garello, and Horacio Ferrer, among others. From them, she learned what is most valuable: the feeling, the intention, everything that cannot be written but must be lived. Alongside them, she recorded, traveled, and left her voice on the most important stages of Europe, Japan, China, and Latin America—theaters that are history.',
+      },
+      {
+        es: 'Personalidad Destacada de la Cultura por la Legislatura de la Ciudad de Buenos Aires. Académica Titular de la Academia Nacional del Tango. Nominada a los Premios Gardel. Solista con orquestas sinfónicas. Creadora del espectáculo Mujer Tango, un homenaje a las mujeres que hicieron historia en el tango y que la formaron como artista.',
+        en: 'Outstanding Cultural Personality by the Legislature of the City of Buenos Aires. Full Academician of the National Academy of Tango. Nominated for the Gardel Awards. Soloist with symphony orchestras. Creator of the show Mujer Tango, a tribute to the women who made history in tango and who shaped her as an artist.',
+      },
+      {
+        es: 'Hoy sigue tan vigente como siempre: cantando tangos sinfónicos junto a grandes orquestas, grabando y produciendo junto a su hijo Lucas Russo en su propio MJEstudio de Grabación, y acompañando a nuevos artistas como coach y productora artística.',
+        en: 'Today she remains as active and relevant as ever: singing symphonic tangos alongside great orchestras, recording and producing with her son Lucas Russo at their own MJEstudio de Grabación, and guiding emerging artists as a coach and artistic producer.',
+      },
+      {
+        es: 'Una vida entera con la música — y siempre hay más por vivir y cantar.',
+        en: 'A lifetime dedicated to music—and there is always more to live and sing.',
+      },
+    ],
     yearsLabel: { es: 'años de\nexperiencia', en: 'years of\nexperience' },
     quote: {
       una: { es: 'Una', en: 'A' },
@@ -471,6 +485,97 @@ export const t = {
     },
   },
 
+  // ── Clases ──
+  clases: {
+    sectionLabel: { es: 'Clases & Talleres', en: 'Classes & Workshops' },
+    headingTitle: {
+      es: 'Clases de Canto\u003cbr /\u003e\u003cem\u003econ María José Mentana\u003c/em\u003e',
+      en: 'Singing Classes\u003cbr /\u003e\u003cem\u003ewith María José Mentana\u003c/em\u003e',
+    },
+    headerSub: {
+      es: 'Masterclasses y talleres de canto en folklore, tango y géneros argentinos. Transmisión directa de la tradición oral, con más de 55 años de experiencia escénica.',
+      en: 'Master classes and singing workshops in folklore, tango and Argentine genres. Direct transmission of oral tradition, with over 55 years of stage experience.',
+    },
+
+    genres: [
+      {
+        title: { es: 'Folklore', en: 'Folklore' },
+        desc: {
+          es: 'Técnica vocal aplicada al folklore argentino: zamba, chacarera, vidala y más. Respiración, proyección y la identidad rítmica del género.',
+          en: 'Vocal technique applied to Argentine folklore: zamba, chacarera, vidala and more. Breathing, projection and the rhythmic identity of the genre.',
+        },
+      },
+      {
+        title: { es: 'Tango', en: 'Tango' },
+        desc: {
+          es: 'El "yeite" tanguero enseñado de primera mano. Fraseo, interpretación dramática del texto poético y construcción de repertorio auténtico.',
+          en: 'Tango "yeite" taught first-hand. Phrasing, dramatic interpretation of poetic text and authentic repertoire building.',
+        },
+      },
+      {
+        title: { es: 'Géneros Argentinos', en: 'Argentine Genres' },
+        desc: {
+          es: 'Un recorrido por los géneros urbanos y regionales: milonga, candombe, vals criollo y bolero. Versatilidad con raíz.',
+          en: 'A journey through urban and regional genres: milonga, candombe, vals criollo and bolero. Versatility with roots.',
+        },
+      },
+    ],
+
+    scheduleLabel: { es: 'Horarios', en: 'Schedule' },
+    scheduleTitle: {
+      es: 'Todos los\u003cbr /\u003e\u003cem\u003esábados\u003c/em\u003e',
+      en: 'Every\u003cbr /\u003e\u003cem\u003eSaturday\u003c/em\u003e',
+    },
+    scheduleSub: {
+      es: 'Las clases se dictan los sábados por la tarde en dos turnos. Cupos limitados para garantizar la atención personalizada que cada alumno merece.',
+      en: 'Classes are held on Saturdays in two shifts. Limited spots to ensure the personalized attention each student deserves.',
+    },
+    shifts: [
+      { time: '11:00 hs', new: false },
+      { time: '16:00 hs', new: true  },
+    ],
+    newShift: { es: 'Nuevo turno', en: 'New shift' },
+    studentsLine: { es: '~11 alumnos por turno · grupos reducidos', en: '~11 students per shift · small groups' },
+    location:     { es: 'Buenos Aires, Argentina', en: 'Buenos Aires, Argentina' },
+
+    badge: {
+      title: { es: 'Cupos Limitados', en: 'Limited Spots' },
+      text:  {
+        es: 'Para garantizar la calidad de la enseñanza y el contacto directo con la maestra, cada turno tiene cupo máximo. ¡Reservá el tuyo!',
+        en: 'To guarantee teaching quality and direct contact with the teacher, each shift has a maximum capacity. Reserve yours!',
+      },
+      pill: { es: '✦ Exclusividad garantizada', en: '✦ Guaranteed exclusivity' },
+    },
+
+    ctaLabel: { es: 'Inscripción', en: 'Enrollment' },
+    ctaTitle: {
+      es: '¿Querés\u003cbr /\u003e\u003cem\u003esumar tu voz?\u003c/em\u003e',
+      en: 'Want to\u003cbr /\u003e\u003cem\u003ejoin the class?\u003c/em\u003e',
+    },
+    ctaSub: {
+      es: 'Completá el formulario o escribinos directamente por WhatsApp. Te responderemos a la brevedad con toda la información.',
+      en: 'Fill out the form or contact us directly via WhatsApp. We will get back to you promptly with all the information.',
+    },
+    ctaWhatsApp: { es: 'Consultá por WhatsApp', en: 'Ask via WhatsApp' },
+
+    form: {
+      title:            { es: 'Anotate al taller',              en: 'Register for the workshop'          },
+      nombre:           { es: 'Nombre',                         en: 'Name'                               },
+      turno:            { es: 'Turno preferido',                en: 'Preferred shift'                    },
+      turnoPlaceholder: { es: 'Elegí un turno',                 en: 'Choose a shift'                     },
+      turnoManana:      { es: 'Turno mañana — 11:00 hs',       en: 'Morning shift — 11:00 am'           },
+      turnoTarde:       { es: 'Turno tarde — 16:00 hs',        en: 'Afternoon shift — 4:00 pm'          },
+      turnoAmbos:       { es: 'Ambos (tengo flexibilidad)',     en: 'Either (I am flexible)'             },
+      mensaje:          { es: 'Contanos sobre vos (opcional)',  en: 'Tell us about yourself (optional)'  },
+      send:             { es: 'Reservar mi lugar',              en: 'Reserve my spot'                    },
+      sending:          { es: 'Enviando...',                    en: 'Sending...'                         },
+      successTitle:     { es: '¡Recibimos tu consulta!',       en: 'We received your inquiry!'          },
+      successSub:       { es: 'María José o su equipo te escribirán a la brevedad con la información del taller.', en: 'María José or her team will contact you shortly with workshop details.' },
+      again:            { es: 'Enviar otra consulta',          en: 'Send another inquiry'               },
+      error:            { es: 'Hubo un error al enviar. Intentá de nuevo o escribinos por WhatsApp.', en: 'There was an error. Please try again or contact us via WhatsApp.' },
+    },
+  },
+
   // ── Footer ──
   footer: {
     tagline: {
@@ -480,13 +585,11 @@ export const t = {
     sections: { es: 'Secciones', en: 'Sections' },
     contact:  { es: 'Contacto',  en: 'Contact'  },
     links: [
-      { es: 'La artista',  en: 'The Artist',  to: '/#nosotros'    },
-      { es: 'Biografía',   en: 'Biography',   to: '/biografia'    },
-      { es: 'Trayectoria', en: 'Career',      to: '/#biografia'   },
-      { es: 'Discografía', en: 'Discography', to: '/#discografia' },
-      { es: 'Galería',     en: 'Gallery',     to: '/galeria'      },
-      { es: 'Videos',      en: 'Videos',      to: '/#videos'      },
-      { es: 'Contacto',    en: 'Contact',     to: '/contacto'     },
+      { es: 'Discografía', en: 'Discography', to: '/discografia' },
+      { es: 'Biografía',   en: 'Biography',   to: '/biografia'   },
+      { es: 'Galería',     en: 'Gallery',     to: '/galeria'     },
+      { es: 'Clases',      en: 'Classes',     to: '/clases'      },
+      { es: 'Contacto',    en: 'Contact',     to: '/contacto'    },
     ],
     copy:    { es: 'Todos los derechos reservados.', en: 'All rights reserved.' },
     backTop: { es: '↑ Volver arriba', en: '↑ Back to top' },

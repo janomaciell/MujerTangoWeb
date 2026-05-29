@@ -1,38 +1,60 @@
 /* ═══════════════════════════════════════════════
    MARÍA JOSÉ MENTANA — globals.css
-   Paleta: negro profundo + crema envejecida + oro viejo
-   Tipografía: Cormorant Garamond (display) + DM Sans (body)
+   Paleta: azul noche #040533 · acento #3F5EFB · luz #B8B9FF
+   Tipografía: Cormorant Garamond (display) + Lora (body)
    ═══════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
 
 /* ── Tokens ── */
 :root {
-  --ink:        #0a0906;
-  --ink-soft:   #1a1711;
-  --cream:      #f5f0e8;
-  --cream-dark: #e8e1d4;
-  --gold:       #efc149;
-  --gold-light: #d4af6a;
-  --gold-pale:  #f0dfa0;
-  --sepia:      #8b6f47;
-  --sepia-dark: #5c4a2a;
-  --white:      #faf8f4;
+  /* Colores principales */
+  --bg:           #111;
+  --bg-deep:      #0b0b0b;
+  --surface:      #161616;
+  --surface-2:    #1a1a1a;
+  --border:       rgba(181, 173, 158, 0.12);
+  --border-mid:   rgba(181, 173, 158, 0.22);
 
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body:    'DM Sans', sans-serif;
+  /* Acentos */
+  --accent:       #b5ad9e;
+  --accent-light: #d2c8b4;
+  --accent-glow:  rgba(181, 173, 158, 0.35);
 
-  --ease-silk:    cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-expo:    cubic-bezier(0.87, 0, 0.13, 1);
+  /* Texto */
+  --text-primary: #f5f3ef;
+  --text-muted:   rgba(245, 243, 239, 0.55);
+  --text-faint:   rgba(245, 243, 239, 0.3);
 
-  --container: 1280px;
-  --gutter:    clamp(1.25rem, 4vw, 5rem);
+  /* Legado (compatibilidad con componentes existentes) */
+  --ink:        #111;
+  --ink-soft:   #1a1a1a;
+  --cream:      #f5f3ef;
+  --cream-dark: #b5ad9e;
+  --gold:       #b5ad9e;
+  --gold-light: #d2c8b4;
+  --gold-pale:  rgba(181, 173, 158, 0.25);
+  --sepia:      #b5ad9e;
+  --sepia-dark: #9e9584;
+  --white:      #ffffff;
+
+  /* Tipografía */
+  --font-display: 'Lora', Georgia, serif;
+  --font-body:    'Lora', Georgia, serif;
+
+  /* Easings */
+  --ease-silk: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-expo: cubic-bezier(0.87, 0, 0.13, 1);
+
+  /* Layout */
+  --container:  1280px;
+  --gutter:     clamp(1.25rem, 4vw, 5rem);
   --section-py: clamp(4rem, 10vw, 10rem);
   --header-bar: 3.5rem;
-  --safe-top:  env(safe-area-inset-top, 0px);
+  --safe-top:   env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
-  --header-h:  calc(var(--header-bar) + var(--safe-top));
-  --page-top:  calc(var(--header-h) + 1rem);
+  --header-h:   calc(var(--header-bar) + var(--safe-top));
+  --page-top:   calc(var(--header-h) + 1rem);
 }
 
 /* ── Reset ── */
@@ -48,8 +70,8 @@ html {
 }
 
 body {
-  background: var(--ink);
-  color: var(--cream);
+  background: var(--bg);
+  color: var(--text-primary);
   font-family: var(--font-body);
   font-weight: 300;
   line-height: 1.7;
@@ -64,7 +86,7 @@ main {
   width: 100%;
 }
 
-/* Touch: cursor normal (el componente Cursor ya se oculta) */
+/* Touch: cursor normal */
 @media (hover: none), (pointer: coarse) {
   body,
   button,
@@ -115,7 +137,7 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.1rem); line-height: 1.75; }
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--accent-light);
   margin-bottom: 1.4rem;
 }
 
@@ -128,27 +150,45 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.1rem); line-height: 1.75; }
 .section-divider {
   width: 40px;
   height: 1px;
-  background: var(--gold);
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
   margin: 1.5rem auto 0;
   opacity: 0.6;
 }
 
-/* ── Gold line separator ── */
+/* ── Line separator ── */
 .gold-rule {
   width: 100%;
   height: 1px;
-  background: linear-gradient(to right, transparent, var(--gold) 30%, var(--gold) 70%, transparent);
-  opacity: 0.25;
+  background: linear-gradient(to right, transparent, var(--accent-light) 30%, var(--accent-light) 70%, transparent);
+  opacity: 0.15;
   margin-block: 0;
 }
 
 /* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: var(--ink); }
-::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
 
 /* ── Selection ── */
-::selection { background: var(--gold); color: var(--ink); }
+::selection { background: var(--accent); color: var(--text-primary); }
+
+/* ── Button base ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 2rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  color: #fff;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: opacity 0.25s, transform 0.25s;
+}
+.btn-primary:hover { opacity: 0.88; transform: translateY(-2px); }
 
 /* ── Responsive global ── */
 @media (max-width: 768px) {
@@ -203,4 +243,3 @@ p  { font-size: clamp(0.95rem, 1.2vw, 1.1rem); line-height: 1.75; }
   h1 { font-size: 1.85rem; }
   h2 { font-size: 1.65rem; }
 }
-

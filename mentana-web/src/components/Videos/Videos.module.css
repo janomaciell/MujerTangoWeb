@@ -1,6 +1,6 @@
 .section {
   padding-block: var(--section-py);
-  background: var(--ink);
+  background: var(--bg);
   position: relative;
   z-index: 1;
 }
@@ -20,7 +20,7 @@
   width: 100%;
   aspect-ratio: 16/9;
   background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(239,193,73,0.12);
+  border: 1px solid var(--border);
   overflow: hidden;
   margin-bottom: 1rem;
 }
@@ -44,20 +44,20 @@
 
 .placeholderIcon {
   font-size: 3rem;
-  color: rgba(239,193,73,0.3);
+  color: var(--accent-glow);
 }
 
 .placeholderTitle {
   font-family: var(--font-display);
   font-size: 1.4rem;
-  color: rgba(245,240,232,0.5);
+  color: var(--text-muted);
 }
 
 .placeholderSub {
   font-size: 0.8rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(245,240,232,0.3);
+  color: var(--text-faint);
 }
 
 .featuredMeta { display: flex; flex-direction: column; gap: 0.3rem; }
@@ -66,14 +66,14 @@
   font-family: var(--font-display);
   font-size: clamp(1.2rem, 2vw, 1.8rem);
   font-weight: 400;
-  color: var(--cream);
+  color: var(--text-primary);
 }
 
 .featuredSub {
   font-size: 0.78rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(245,240,232,0.45);
+  color: var(--text-muted);
 }
 
 /* Grid */
@@ -96,12 +96,12 @@
 
 .card:hover { opacity: 0.85; }
 
-.cardActive .thumb { border-color: var(--gold); }
+.cardActive .thumb { border-color: var(--accent-light); }
 
 .thumb {
   position: relative;
   aspect-ratio: 16/9;
-  border: 1px solid rgba(239,193,73,0.12);
+  border: 1px solid var(--border);
   overflow: hidden;
   background: rgba(255,255,255,0.03);
 }
@@ -122,17 +122,17 @@
 
 .thumbIcon {
   font-size: 1.5rem;
-  color: rgba(239,193,73,0.4);
+  color: var(--accent-glow);
 }
 
 .thumbOverlay {
   position: absolute;
   inset: 0;
-  background: rgba(10,9,6,0.3);
+  background: rgba(17,17,17,0.3);
   transition: background 0.25s;
 }
 
-.card:hover .thumbOverlay { background: rgba(10,9,6,0.1); }
+.card:hover .thumbOverlay { background: rgba(17,17,17,0.1); }
 
 .cardMeta {
   display: flex;
@@ -142,7 +142,7 @@
 
 .cardNum {
   font-size: 0.65rem;
-  color: var(--gold);
+  color: var(--accent-light);
   opacity: 0.6;
   flex-shrink: 0;
   padding-top: 0.15rem;
@@ -152,13 +152,13 @@
   font-family: var(--font-display);
   font-size: clamp(0.9rem, 1.2vw, 1.1rem);
   font-weight: 400;
-  color: var(--cream);
+  color: var(--text-primary);
   line-height: 1.3;
 }
 
 .cardSub {
   font-size: 0.72rem;
-  color: rgba(245,240,232,0.45);
+  color: var(--text-muted);
   letter-spacing: 0.06em;
   margin-top: 0.2rem;
 }
@@ -171,8 +171,8 @@
   align-items: center;
   gap: 0.8rem;
   padding: 0.9rem 2.2rem;
-  border: 1px solid rgba(239,193,73,0.3);
-  color: var(--cream);
+  border: 1px solid var(--border-mid);
+  color: var(--text-primary);
   font-size: 0.8rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -180,11 +180,11 @@
 }
 
 .channelBtn:hover {
-  border-color: var(--gold);
-  background: rgba(239,193,73,0.06);
+  border-color: var(--accent-light);
+  background: rgba(181, 173, 158, 0.08);
 }
 
-.channelArrow { color: var(--gold); }
+.channelArrow { color: var(--accent-light); }
 
 @media (max-width: 900px) {
   .featuredInner { aspect-ratio: 16 / 10; }

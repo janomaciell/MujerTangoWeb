@@ -1,6 +1,6 @@
 .page {
-  background: var(--ink);
-  color: var(--cream);
+  background: var(--bg);
+  color: var(--text-primary);
   overflow-x: hidden;
   padding-top: var(--page-top);
 }
@@ -8,9 +8,9 @@
 .goldLine {
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, transparent 0%, var(--gold) 30%, var(--gold) 70%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, var(--accent-light) 30%, var(--accent-light) 70%, transparent 100%);
   background-size: 200% auto;
-  opacity: 0.25;
+  opacity: 0.18;
 }
 
 /* ── HERO ── */
@@ -29,7 +29,7 @@
   left: var(--gutter);
   right: var(--gutter);
   height: 1px;
-  background: linear-gradient(to right, var(--gold), transparent);
+  background: linear-gradient(to right, var(--accent), transparent);
   transform-origin: left;
   opacity: 0.4;
 }
@@ -58,14 +58,14 @@
   font-weight: 300;
   line-height: 1.05;
   letter-spacing: -0.02em;
-  color: var(--cream);
+  color: var(--text-primary);
 }
 
-.heroTitle em { font-style: italic; color: var(--gold-light); }
+.heroTitle em { font-style: italic; color: var(--accent-light); }
 
 .heroSub {
   font-size: clamp(0.92rem, 1.2vw, 1.05rem);
-  color: rgba(245,240,232,0.6);
+  color: rgba(245, 247, 255, 0.55);
   max-width: 44ch;
   line-height: 1.8;
 }
@@ -88,7 +88,7 @@
 .heroImgGradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 50%, rgba(10,9,6,0.85) 100%);
+  background: linear-gradient(to bottom, transparent 50%, rgba(17, 17, 17, 0.9) 100%);
 }
 
 .heroImgBorn {
@@ -104,28 +104,28 @@
   font-size: 0.6rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--accent-light);
 }
 
 .heroImgBornVal {
   font-family: var(--font-display);
   font-size: 1.3rem;
   font-weight: 300;
-  color: var(--cream);
+  color: var(--text-primary);
   letter-spacing: 0.08em;
 }
 
 .heroImgBornPlace {
   font-size: 0.78rem;
-  color: rgba(245,240,232,0.55);
+  color: rgba(245, 247, 255, 0.5);
 }
 
 /* ── STATS ── */
 .statsBar {
   padding-block: 3rem;
-  background: var(--ink-soft);
-  border-top: 1px solid rgba(239,193,73,0.1);
-  border-bottom: 1px solid rgba(239,193,73,0.1);
+  background: var(--surface-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .statsGrid {
@@ -140,7 +140,7 @@
   gap: 0.4rem;
   padding: 1.5rem 1rem;
   text-align: center;
-  border-right: 1px solid rgba(239,193,73,0.12);
+  border-right: 1px solid var(--border);
 }
 
 .statItem:last-child { border-right: none; }
@@ -149,7 +149,7 @@
   font-family: var(--font-display);
   font-size: clamp(2.2rem, 4vw, 3.8rem);
   font-weight: 300;
-  color: var(--gold);
+  color: var(--accent-light);
   line-height: 1;
 }
 
@@ -158,7 +158,7 @@
   font-weight: 400;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(245,240,232,0.45);
+  color: rgba(245, 247, 255, 0.4);
 }
 
 /* ── INTRO ── */
@@ -187,18 +187,18 @@
   letter-spacing: -0.02em;
 }
 
-.introTitle em { font-style: italic; color: var(--gold-light); }
+.introTitle em { font-style: italic; color: var(--accent-light); }
 
 .introRight { display: flex; flex-direction: column; gap: 1.8rem; }
 
 .introPara {
-  color: rgba(245,240,232,0.78);
+  color: rgba(245, 247, 255, 0.72);
   font-size: clamp(0.92rem, 1.15vw, 1.05rem);
   line-height: 1.85;
 }
 
 .introQuote {
-  border-left: 2px solid var(--gold);
+  border-left: 2px solid var(--accent);
   padding-left: 1.8rem;
   margin-top: 0.5rem;
 }
@@ -208,7 +208,7 @@
   font-size: clamp(1.1rem, 1.6vw, 1.4rem);
   font-style: italic;
   font-weight: 300;
-  color: var(--cream);
+  color: var(--text-primary);
   line-height: 1.4;
   margin-bottom: 0.8rem;
 }
@@ -217,7 +217,7 @@
   font-size: 0.68rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--accent-light);
   font-style: normal;
 }
 
@@ -236,8 +236,8 @@
   top: 0;
   bottom: 0;
   width: 1px;
-  background: linear-gradient(to bottom, var(--gold), transparent);
-  opacity: 0.3;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  opacity: 0.4;
   transform-origin: top;
 }
 
@@ -264,32 +264,32 @@
   top: 1.6rem;
   width: 8px;
   height: 8px;
-  background: var(--gold);
+  background: var(--accent);
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(239,193,73,0.4);
+  box-shadow: 0 0 12px rgba(181, 173, 158, 0.4);
 }
 
 .chapterYears {
   font-family: var(--font-display);
   font-size: clamp(0.8rem, 1vw, 0.95rem);
   font-weight: 300;
-  color: var(--gold);
+  color: var(--accent-light);
   letter-spacing: 0.06em;
   padding-top: 0.4rem;
   white-space: nowrap;
 }
 
 .chapterCard {
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(239,193,73,0.1);
-  border-radius: 2px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
   padding: 1.8rem;
   transition: border-color 0.3s, background 0.3s;
 }
 
 .chapterCard:hover {
-  border-color: rgba(239,193,73,0.28);
-  background: rgba(255,255,255,0.04);
+  border-color: var(--accent);
+  background: rgba(181, 173, 158, 0.06);
 }
 
 .chapterEra {
@@ -297,7 +297,7 @@
   font-size: 0.6rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--accent-light);
   margin-bottom: 0.5rem;
 }
 
@@ -305,33 +305,33 @@
   font-family: var(--font-display);
   font-size: clamp(1.2rem, 1.8vw, 1.6rem);
   font-weight: 400;
-  color: var(--cream);
+  color: var(--text-primary);
   margin-bottom: 0.8rem;
   line-height: 1.2;
 }
 
 .chapterText {
   font-size: clamp(0.85rem, 1vw, 0.95rem);
-  color: rgba(245,240,232,0.68);
+  color: rgba(245, 247, 255, 0.62);
   line-height: 1.8;
   margin-bottom: 1rem;
 }
 
 .chapterLoc {
   font-size: 0.72rem;
-  color: rgba(245,240,232,0.4);
+  color: rgba(245, 247, 255, 0.35);
   letter-spacing: 0.1em;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.chapterDot { color: var(--gold); font-size: 0.45rem; }
+.chapterDot { color: var(--accent-light); font-size: 0.45rem; }
 
 /* ── MASTERS ── */
 .mastersSection {
   padding-block: var(--section-py);
-  background: var(--ink-soft);
+  background: var(--surface-2);
 }
 
 .mastersGrid {
@@ -347,18 +347,18 @@
   font-size: clamp(0.95rem, 1.3vw, 1.2rem);
   font-weight: 300;
   font-style: italic;
-  color: var(--cream);
+  color: var(--text-primary);
   padding: 0.45rem 1.2rem;
-  border: 1px solid rgba(239,193,73,0.22);
-  border-radius: 1px;
-  background: rgba(239,193,73,0.04);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
   transition: border-color 0.25s, background 0.25s, color 0.25s;
 }
 
 .masterTag:hover {
-  border-color: var(--gold);
-  background: rgba(239,193,73,0.1);
-  color: var(--gold-light);
+  border-color: var(--accent-light);
+  background: rgba(181, 173, 158, 0.1);
+  color: var(--accent-light);
 }
 
 .mastersQuote {
@@ -372,7 +372,7 @@
   font-size: clamp(1.1rem, 1.6vw, 1.5rem);
   font-style: italic;
   font-weight: 300;
-  color: rgba(245,240,232,0.75);
+  color: rgba(245, 247, 255, 0.7);
   line-height: 1.5;
   margin-bottom: 1rem;
 }
@@ -381,7 +381,7 @@
   font-size: 0.68rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--accent-light);
   font-style: normal;
 }
 
@@ -411,14 +411,14 @@
   letter-spacing: -0.02em;
 }
 
-.voiceTitle em { font-style: italic; color: var(--gold-light); }
+.voiceTitle em { font-style: italic; color: var(--accent-light); }
 
-.voiceAccent { width: 40px; height: 1px; background: var(--gold); opacity: 0.6; }
+.voiceAccent { width: 40px; height: 1px; background: linear-gradient(90deg, var(--accent), var(--accent-light)); opacity: 0.7; }
 
 .voiceRight { display: flex; flex-direction: column; gap: 1.5rem; }
 
 .voicePara {
-  color: rgba(245,240,232,0.75);
+  color: rgba(245, 247, 255, 0.68);
   font-size: clamp(0.92rem, 1.15vw, 1.05rem);
   line-height: 1.85;
 }
@@ -428,9 +428,9 @@
   flex-direction: column;
   gap: 0.65rem;
   padding: 1.6rem;
-  border: 1px solid rgba(239,193,73,0.14);
-  background: rgba(239,193,73,0.03);
-  border-radius: 2px;
+  border: 1px solid var(--border-mid);
+  background: rgba(181, 173, 158, 0.04);
+  border-radius: 10px;
 }
 
 .voiceTrait {
@@ -438,15 +438,15 @@
   align-items: center;
   gap: 0.8rem;
   font-size: clamp(0.85rem, 1vw, 0.95rem);
-  color: rgba(245,240,232,0.72);
+  color: rgba(245, 247, 255, 0.65);
 }
 
-.voiceTraitDot { color: var(--gold); font-size: 0.42rem; flex-shrink: 0; }
+.voiceTraitDot { color: var(--accent-light); font-size: 0.42rem; flex-shrink: 0; }
 
 /* ── DOCENCIA ── */
 .teachingSection {
   padding-block: var(--section-py);
-  background: var(--ink-soft);
+  background: var(--surface-2);
 }
 
 .teachGrid {
@@ -460,19 +460,19 @@
   gap: 1.5rem;
   align-items: flex-start;
   padding: 2rem;
-  border: 1px solid rgba(239,193,73,0.1);
-  background: rgba(255,255,255,0.02);
-  border-radius: 2px;
-  transition: border-color 0.3s;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 12px;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.teachItem:hover { border-color: rgba(239,193,73,0.28); }
+.teachItem:hover { border-color: var(--accent); box-shadow: 0 8px 30px rgba(181, 173, 158, 0.12); }
 
 .teachNum {
   font-family: var(--font-display);
   font-size: 2.2rem;
   font-weight: 300;
-  color: rgba(239,193,73,0.18);
+  color: rgba(181, 173, 158, 0.3);
   line-height: 1;
   flex-shrink: 0;
   min-width: 2.8rem;
@@ -484,13 +484,13 @@
   font-family: var(--font-display);
   font-size: clamp(1rem, 1.4vw, 1.3rem);
   font-weight: 400;
-  color: var(--cream);
+  color: var(--text-primary);
   line-height: 1.2;
 }
 
 .teachItemText {
   font-size: clamp(0.82rem, 0.95vw, 0.92rem);
-  color: rgba(245,240,232,0.58);
+  color: rgba(245, 247, 255, 0.52);
   line-height: 1.75;
 }
 
@@ -508,7 +508,7 @@
   font-family: var(--font-display);
   font-size: clamp(1.1rem, 1.6vw, 1.5rem);
   font-weight: 400;
-  color: var(--cream);
+  color: var(--text-primary);
   margin-bottom: 1.8rem;
 }
 
@@ -519,50 +519,52 @@
   gap: 1rem;
   align-items: flex-start;
   padding: 1.1rem 1.3rem;
-  border: 1px solid rgba(239,193,73,0.1);
-  background: rgba(255,255,255,0.02);
-  border-radius: 1px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 8px;
   transition: border-color 0.25s, background 0.25s;
 }
 
 .distCard:hover {
-  border-color: rgba(239,193,73,0.28);
-  background: rgba(255,255,255,0.04);
+  border-color: var(--accent);
+  background: rgba(181, 173, 158, 0.06);
 }
 
-.distStar { color: var(--gold); font-size: 0.85rem; flex-shrink: 0; margin-top: 0.2rem; }
+.distStar { color: var(--accent-light); font-size: 0.85rem; flex-shrink: 0; margin-top: 0.2rem; }
 .distBody { display: flex; flex-direction: column; gap: 0.2rem; }
 
 .distTitle {
   font-family: var(--font-display);
   font-size: clamp(0.9rem, 1.1vw, 1.05rem);
   font-weight: 400;
-  color: var(--cream);
+  color: var(--text-primary);
 }
 
-.distOrg { font-size: 0.72rem; color: rgba(245,240,232,0.4); letter-spacing: 0.06em; }
+.distOrg { font-size: 0.72rem; color: rgba(245, 247, 255, 0.35); letter-spacing: 0.06em; }
 
 .collabList { display: flex; flex-wrap: wrap; gap: 0.55rem; }
 
 .collabTag {
   font-size: 0.78rem;
   padding: 0.35rem 0.85rem;
-  border: 1px solid rgba(239,193,73,0.18);
-  border-radius: 1px;
-  color: rgba(245,240,232,0.7);
-  background: rgba(239,193,73,0.04);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: rgba(245, 247, 255, 0.65);
+  background: var(--surface);
   letter-spacing: 0.04em;
   transition: border-color 0.2s, color 0.2s;
 }
 
-.collabTag:hover { border-color: var(--gold); color: var(--gold-light); }
+.collabTag:hover { border-color: var(--accent-light); color: var(--accent-light); }
 
 .recStats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
-  background: rgba(239,193,73,0.1);
-  border: 1px solid rgba(239,193,73,0.1);
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .recStatItem {
@@ -571,7 +573,7 @@
   align-items: center;
   gap: 0.4rem;
   padding: 2.5rem 1rem;
-  background: var(--ink);
+  background: var(--surface);
   text-align: center;
 }
 
@@ -579,7 +581,7 @@
   font-family: var(--font-display);
   font-size: clamp(2.2rem, 3.5vw, 3.8rem);
   font-weight: 300;
-  color: var(--gold);
+  color: var(--accent-light);
   line-height: 1;
 }
 
@@ -588,7 +590,7 @@
   font-weight: 400;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(245,240,232,0.4);
+  color: rgba(245, 247, 255, 0.35);
 }
 
 /* ── CLOSING ── */
@@ -599,8 +601,9 @@
   margin-inline: auto;
   text-align: center;
   padding: 4rem 3rem;
-  border: 1px solid rgba(239,193,73,0.14);
-  background: rgba(239,193,73,0.03);
+  border: 1px solid var(--border-mid);
+  background: rgba(181, 173, 158, 0.04);
+  border-radius: 16px;
   position: relative;
 }
 
@@ -612,8 +615,8 @@
   font-family: var(--font-display);
   font-size: 8rem;
   font-style: italic;
-  color: var(--gold);
-  opacity: 0.1;
+  color: var(--accent-light);
+  opacity: 0.08;
   line-height: 1;
 }
 
@@ -622,7 +625,7 @@
   font-size: clamp(1.3rem, 2.2vw, 2rem);
   font-style: italic;
   font-weight: 300;
-  color: var(--cream);
+  color: var(--text-primary);
   line-height: 1.5;
   margin-bottom: 1.5rem;
 }
@@ -631,7 +634,7 @@
   font-size: 0.68rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--accent-light);
   font-style: normal;
 }
 
@@ -704,10 +707,10 @@
   .heroImgGradient {
     background: linear-gradient(
       to top,
-      var(--ink) 0%,
-      rgba(10, 9, 6, 0.2) 40%,
-      rgba(10, 9, 6, 0.8) 75%,
-      var(--ink) 100%
+      #111 0%,
+      rgba(17, 17, 17, 0.2) 40%,
+      rgba(17, 17, 17, 0.8) 75%,
+      #111 100%
     );
   }
 

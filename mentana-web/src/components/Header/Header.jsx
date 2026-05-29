@@ -45,17 +45,14 @@ export default function Header() {
   }, [menuOpen])
 
   const links = [
-    { label: lang === 'es' ? 'La Artista'  : 'The Artist',  id: 'artista',     to: '/#nosotros'    },
-    { label: lang === 'es' ? 'Biografía'   : 'Biography',   id: 'biografia',   to: '/biografia'    },
-    { label: lang === 'es' ? 'Trayectoria' : 'Career',      id: 'trayectoria', to: '/#biografia'   },
-    { label: lang === 'es' ? 'Discografía' : 'Discography', id: 'disco',       to: '/#discografia' },
-    { label: lang === 'es' ? 'Galería'     : 'Gallery',     id: 'galeria',     to: '/galeria'      },
-    { label: lang === 'es' ? 'Videos'      : 'Videos',      id: 'videos',      to: '/#videos'      },
-    { label: lang === 'es' ? 'Música'      : 'Music',       id: 'musica',      to: '/#musica'      },
-    { label: lang === 'es' ? 'Contacto'    : 'Contact',     id: 'contacto',    to: '/contacto'     },
+    { label: lang === 'es' ? 'Discografía' : 'Discography', id: 'disco',     to: '/discografia' },
+    { label: lang === 'es' ? 'Biografía'   : 'Biography',   id: 'biografia', to: '/biografia'   },
+    { label: lang === 'es' ? 'Galería'     : 'Gallery',     id: 'galeria',   to: '/galeria'     },
+    { label: lang === 'es' ? 'Clases'      : 'Classes',     id: 'clases',    to: '/clases'      },
+    { label: lang === 'es' ? 'Contacto'    : 'Contact',     id: 'contacto',  to: '/contacto'    },
   ]
 
-  const desktopLinks = links.filter(l => ['biografia', 'galeria', 'contacto'].includes(l.id))
+  const desktopLinks = links
 
   const handleAnchor = (e, to) => {
     if (to.startsWith('/#')) {

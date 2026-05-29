@@ -54,13 +54,13 @@ export default function Contact({ asPage = false }) {
 
   const handleFocus = (e) => {
     const label = e.target.parentElement.querySelector(`.${styles.fieldLabel}`)
-    if (label) gsap.to(label, { y: -24, scale: 0.82, color: '#b8953a', duration: 0.4, ease: 'power3.out' })
+    if (label) gsap.to(label, { y: -24, scale: 0.82, color: 'var(--accent-light)', duration: 0.4, ease: 'power3.out' })
   }
 
   const handleBlur = (e) => {
     if (!e.target.value) {
       const label = e.target.parentElement.querySelector(`.${styles.fieldLabel}`)
-      if (label) gsap.to(label, { y: 0, scale: 1, color: 'rgba(10,9,6,0.4)', duration: 0.4, ease: 'power3.out' })
+      if (label) gsap.to(label, { y: 0, scale: 1, color: 'rgba(245, 243, 239, 0.35)', duration: 0.4, ease: 'power3.out' })
     }
   }
 

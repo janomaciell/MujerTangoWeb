@@ -88,8 +88,11 @@ export default function About() {
 
         <div className={styles.body}>
           <div className={styles.bodyText}>
-            <p className={`about-para ${styles.lead}`}>{t.about.lead[lang]}</p>
-            <p className={`about-para ${styles.para}`}>{t.about.para[lang]}</p>
+            {t.about.paragraphs.map((p, idx) => (
+              <p key={idx} className={`about-para ${idx === 0 ? styles.lead : styles.para}`}>
+                {p[lang]}
+              </p>
+            ))}
           </div>
 
           <div className={`about-para ${styles.counterBlock}`}>

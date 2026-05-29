@@ -5,24 +5,23 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { LangProvider } from './context/LangContext'
 
 // Layout
-import Header   from './components/Header/Header'
-import Footer   from './components/Footer/Footer'
-import Cursor   from './components/Cursor/Cursor'
+import Header      from './components/Header/Header'
+import Footer      from './components/Footer/Footer'
+import Cursor      from './components/Cursor/Cursor'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 
 // Home sections
-import Hero        from './components/Hero/Hero'
-import About       from './components/About/About'
-import Biography   from './components/Biography/Biography'
-import Discography from './components/Discography/Discography'
-import Press       from './components/Press/Press'
-import Videos      from './components/Videos/Videos'
-import Music       from './components/Music/Music'
+import Hero   from './components/Hero/Hero'
+import About  from './components/About/About'
+import Videos from './components/Videos/Videos'
+import Music   from './components/Music/Music'
+import Clases  from './components/Clases/Clases'
 
 // Pages
-import GalleryPage   from './components/Gallery/Gallery'
-import BiographyPage from './components/BiographyPage/BiographyPage'
-import ContactPage   from './components/ContactPage/ContactPage'
+import DiscographyPage from './components/DiscographyPage/DiscographyPage'
+import GalleryPage     from './components/Gallery/Gallery'
+import BiographyPage   from './components/BiographyPage/BiographyPage'
+import ContactPage     from './components/ContactPage/ContactPage'
 
 import './styles/globals.css'
 
@@ -33,11 +32,9 @@ function Home() {
     <main>
       <Hero />
       <About />
-      <Biography />
-      <Discography />
-      <Press />
       <Videos />
       <Music />
+      <Clases />
     </main>
   )
 }
@@ -61,10 +58,12 @@ export default function App() {
         <Cursor />
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/galeria" element={<main><GalleryPage /></main>} />
-          <Route path="/biografia" element={<main><BiographyPage /></main>} />
-          <Route path="/contacto" element={<main><ContactPage /></main>} />
+          <Route path="/"            element={<Home />} />
+          <Route path="/discografia" element={<main><DiscographyPage /></main>} />
+          <Route path="/galeria"     element={<main><GalleryPage /></main>} />
+          <Route path="/biografia"   element={<main><BiographyPage /></main>} />
+          <Route path="/contacto"    element={<main><ContactPage /></main>} />
+          <Route path="/clases"      element={<main><Clases /></main>} />
         </Routes>
         <Footer />
       </BrowserRouter>

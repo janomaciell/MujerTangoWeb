@@ -1,7 +1,3 @@
-/**
- * URLs de imágenes: local (/public) o CDN R2 si VITE_ASSETS_BASE_URL está definida.
- * Ej. VITE_ASSETS_BASE_URL=https://pub-xxxx.r2.dev
- */
 const ASSETS_BASE = (import.meta.env.VITE_ASSETS_BASE_URL || '').replace(/\/$/, '')
 
 export function assetUrl(publicPath) {
@@ -12,7 +8,7 @@ export function assetUrl(publicPath) {
 }
 
 export const FORMATOS_X_FOLDER = 'FORMATOS X'
-export const PNG_FOLDER = 'FORMATO PNG'
+export const PNG_FOLDER = 'retratos'
 
 export function formatosXPath(file) {
   return assetUrl(`images/${FORMATOS_X_FOLDER}/${file}`)
@@ -26,15 +22,13 @@ export function coverPath(file) {
   return assetUrl(`portadas/${file}`)
 }
 
-/** Misma imagen que `<link rel="icon">` en index.html */
-export const SITE_FAVICON = '/favicon.svg'
+export const SITE_FAVICON = '/logo-maria.png'
 
 export const siteImages = {
-  hero: pngPath('img10.png'),
-  aboutQuote: formatosXPath('img21.png'),
+  hero:          pngPath('maria-artistica-hero.png'),         // ← imagen de referencia
+  aboutQuote:    formatosXPath('img21.png'),
   biographyHero: formatosXPath('img01.png'),
-  logo: SITE_FAVICON,
+  logo:          SITE_FAVICON,
 }
 
-/** true cuando el build usa el CDN (R2) en lugar de /public */
 export const usesRemoteAssets = Boolean(ASSETS_BASE)

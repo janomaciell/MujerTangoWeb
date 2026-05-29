@@ -11,17 +11,17 @@
 }
 
 .scrolled {
-  background: rgba(10, 9, 6, 0.94);
+  background: rgba(17, 17, 17, 0.94);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
-  box-shadow: 0 1px 0 rgba(239, 193, 73, 0.12);
+  box-shadow: 0 1px 0 rgba(181, 173, 158, 0.12);
 }
 
 .menuOpen {
-  background: rgba(10, 9, 6, 0.98);
+  background: rgba(17, 17, 17, 0.98);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
-  box-shadow: 0 1px 0 rgba(239, 193, 73, 0.15);
+  box-shadow: 0 1px 0 rgba(181, 173, 158, 0.22);
 }
 
 .inner {
@@ -36,8 +36,8 @@
 .logo { display: flex; align-items: center; flex-shrink: 0; }
 
 .logoImg {
-  height: 44px;
-  width: 44px;
+  height: 80px;
+  width: 80px;
   object-fit: contain;
   display: block;
 }
@@ -47,8 +47,8 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  background: rgba(245, 240, 232, 0.06);
-  border: 1px solid rgba(239, 193, 73, 0.15);
+  background: rgba(181, 173, 158, 0.1);
+  border: 1px solid rgba(181, 173, 158, 0.18);
   border-radius: 999px;
   padding: 3px;
 }
@@ -59,7 +59,7 @@
   top: 3px;
   bottom: 3px;
   width: calc(50% - 3px);
-  background: var(--gold);
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
   border-radius: 999px;
   pointer-events: none;
 }
@@ -78,7 +78,7 @@
   border-radius: 999px;
 }
 
-.langActive { color: var(--ink); font-weight: 600; }
+.langActive { color: var(--bg); font-weight: 600; }
 
 .rightGroup {
   display: flex;
@@ -111,11 +111,11 @@
   left: 0;
   width: 0;
   height: 1px;
-  background: var(--gold);
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
   transition: width 0.3s;
 }
 
-.navLink:hover { color: var(--cream); }
+.navLink:hover { color: var(--text-primary); }
 .navLink:hover::after { width: 100%; }
 
 .burger {
@@ -137,8 +137,8 @@
   transition: transform 0.35s, opacity 0.35s;
 }
 
-.burgerLineOpen1 { transform: translateY(6px) rotate(45deg); }
-.burgerLineOpen2 { transform: translateY(-6px) rotate(-45deg); opacity: 0; }
+.burgerLineOpen1 { transform: translateY(3px) rotate(45deg); }
+.burgerLineOpen2 { transform: translateY(-3px) rotate(-45deg); opacity: 1; }
 
 /* Menú hamburguesa — portal en body, pantalla completa */
 .mobileMenu {
@@ -151,7 +151,7 @@
   height: 100dvh;
   min-height: 100dvh;
   z-index: 9999;
-  background: var(--ink);
+  background: var(--bg);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -206,13 +206,13 @@
 
 .mobileNavLink:hover,
 .mobileNavLink:focus-visible {
-  color: var(--cream);
+  color: var(--text-primary);
 }
 
 .mobileNavNum {
   font-family: var(--font-body);
   font-size: 0.65rem;
-  color: var(--gold);
+  color: var(--accent-light);
   opacity: 0.7;
   letter-spacing: 0.12em;
   flex-shrink: 0;
@@ -224,17 +224,10 @@
 }
 
 @media (max-width: 900px) {
-  .header {
-    background: rgba(10, 9, 6, 0.96);
-    -webkit-backdrop-filter: blur(16px);
-    backdrop-filter: blur(16px);
-    box-shadow: 0 1px 0 rgba(239, 193, 73, 0.1);
-  }
-
   .nav { display: none; }
   .burger { display: flex; }
   .rightGroup { gap: 0.75rem; }
-  .logoImg { height: 36px; width: 36px; }
+  .logoImg { height: 48px; width: 48px; }
   .inner { padding-block: 0.55rem; }
 
   .langBtn {
@@ -259,7 +252,7 @@
     font-size: clamp(1.75rem, 9vw, 2.35rem);
   }
 
-  .logoImg { height: 32px; width: 32px; }
+  .logoImg { height: 42px; width: 42px; }
 
   .langBtn {
     padding: 0.25rem 0.55rem;
@@ -277,6 +270,6 @@
     font-size: 0.58rem;
   }
 
-  .logoImg { height: 28px; width: 28px; }
+  .logoImg { height: 36px; width: 36px; }
 }
 
