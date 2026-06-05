@@ -11,14 +11,14 @@
 }
 
 .scrolled {
-  background: rgba(17, 17, 17, 0.94);
+  background: rgba(43, 43, 43, 0.94);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   box-shadow: 0 1px 0 rgba(181, 173, 158, 0.12);
 }
 
 .menuOpen {
-  background: rgba(17, 17, 17, 0.98);
+  background: rgba(43, 43, 43, 0.98);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   box-shadow: 0 1px 0 rgba(181, 173, 158, 0.22);
@@ -95,7 +95,7 @@
 }
 
 .navLink {
-  font-size: 0.72rem;
+  font-size: 0.95rem;
   font-weight: 400;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -117,6 +117,33 @@
 
 .navLink:hover { color: var(--text-primary); }
 .navLink:hover::after { width: 100%; }
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  padding-right: 0.5rem;
+  border-right: 1px solid rgba(181, 173, 158, 0.15);
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(245, 240, 232, 0.5);
+  transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.socialLink:hover {
+  color: var(--accent-light);
+  transform: translateY(-2px);
+}
+
+.socialIcon {
+  width: 17px;
+  height: 17px;
+  display: block;
+}
 
 .burger {
   display: none;
@@ -218,6 +245,42 @@
   flex-shrink: 0;
 }
 
+.mobileSocials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+  width: 100%;
+}
+
+.mobileSocialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(181, 173, 158, 0.05);
+  border: 1px solid rgba(181, 173, 158, 0.12);
+  color: rgba(245, 240, 232, 0.6);
+  opacity: 0;
+  transform: translateY(15px);
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s, opacity 0.5s ease, transform 0.5s ease;
+}
+
+.mobileSocialLink:hover,
+.mobileSocialLink:focus-visible {
+  color: var(--bg);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.mobileMenuOpen .mobileSocialLink {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 :global(body.menu-open) {
   overflow: hidden;
   touch-action: none;
@@ -225,6 +288,7 @@
 
 @media (max-width: 900px) {
   .nav { display: none; }
+  .socials { display: none; }
   .burger { display: flex; }
   .rightGroup { gap: 0.75rem; }
   .logoImg { height: 48px; width: 48px; }

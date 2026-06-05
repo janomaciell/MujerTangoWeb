@@ -31,10 +31,7 @@ function Home() {
   return (
     <main>
       <Hero />
-      <About />
-      <Videos />
-      <Music />
-      <Clases />
+
     </main>
   )
 }

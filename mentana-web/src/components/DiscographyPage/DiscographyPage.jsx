@@ -8,6 +8,7 @@ import { coverPath } from '../../data/images.js'
 gsap.registerPlugin(ScrollTrigger)
 
 const albums = [
+
   {
     id: 'mujer-tango',
     title: 'Mujer Tango',
@@ -53,6 +54,18 @@ const albums = [
     spotifyUrl: 'https://open.spotify.com/album/4wkN22Cq0Lx6YR7YQAt4CA',
     cover: coverPath('SINGLES.png'),
   },
+    {
+    id: 'envivo',
+    title: 'En Vivo',
+    spotifyUrl: 'https://open.spotify.com/album/5NcePDMz7z5DAQFBufA71r',
+    cover: coverPath('ENVIVO.png'),
+  },
+  {
+    id: 'una-piba-single',
+    title: 'Una Piba y un Tango (Single)',
+    spotifyUrl: 'https://open.spotify.com/album/7voCmpwKdUUZoWdD0tvP3V',
+    cover: coverPath('UNAPIBAYUNTANGOSINGLE.png'),
+  }
 ]
 
 export default function DiscographyPage() {

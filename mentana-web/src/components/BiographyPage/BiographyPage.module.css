@@ -88,7 +88,7 @@
 .heroImgGradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 50%, rgba(17, 17, 17, 0.9) 100%);
+  background: linear-gradient(to bottom, transparent 50%, rgba(43, 43, 43, 0.9) 100%);
 }
 
 .heroImgBorn {
@@ -707,10 +707,10 @@
   .heroImgGradient {
     background: linear-gradient(
       to top,
-      #111 0%,
-      rgba(17, 17, 17, 0.2) 40%,
-      rgba(17, 17, 17, 0.8) 75%,
-      #111 100%
+      var(--bg) 0%,
+      rgba(43, 43, 43, 0.2) 40%,
+      rgba(43, 43, 43, 0.8) 75%,
+      var(--bg) 100%
     );
   }
 

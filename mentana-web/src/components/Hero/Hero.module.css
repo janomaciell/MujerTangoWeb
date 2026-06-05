@@ -5,7 +5,7 @@
   height: 100svh;
   min-height: 600px;
   overflow: hidden;
-  background: #111;
+  background: var(--bg);
 }
 
 /* ── Foto full-bleed ── */
@@ -66,6 +66,16 @@
   align-items: center;
 }
 
+/* ── Logo ── */
+.heroLogo {
+  display: block;
+  width: clamp(100px, 20vw, 300px);
+  height: auto;
+  margin: 0 auto 0.5rem;
+  opacity: 0.95;
+  
+}
+
 .overflow {
   overflow: visible;
   padding: 0.1em 0;
@@ -77,14 +87,11 @@
 
 /* "Maria Jose" — tipografía script tipo firma */
 .wordMaria {
-  font-family: 'Pinyon Script', 'Alex Brush', 'Great Vibes', cursive;
   font-weight: 400;
   font-style: normal;
   color: rgba(255, 255, 255, 0.95);
-  letter-spacing: 0.05em;
-  font-size: clamp(2.5rem, 5.2vw, 6.2rem);
+  font-size: clamp(4.5rem, 8.5vw, 9rem);
   line-height: 0.95;
-  margin-bottom: -0.15em;
   position: relative;
   z-index: 10;
   text-transform: none;
@@ -93,14 +100,10 @@
 
 /* "MENTANA" — serif elegante */
 .wordMentana {
-  font-family: var(--font-display);
-  font-weight: 300;
+  font-weight: 100;
   font-style: normal;
-  font-size: clamp(3.2rem, 7.5vw, 8rem);
-  letter-spacing: 0.32em;
-  text-indent: 0.32em; /* Centrado perfecto compensando el letter-spacing */
-  text-transform: uppercase;
-  color: #b5ad9e;
+  font-size: clamp(6rem, 8.5vw, 9rem);
+  color: rgba(255, 255, 255, 0.95);
   line-height: 1;
   margin-top: 0;
   position: relative;
@@ -130,13 +133,11 @@
   }
 
   .wordMaria {
-    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    font-size: clamp(3rem, 7.5vw, 5.5rem);
   }
 
   .wordMentana {
-    font-size: clamp(2.6rem, 7.5vw, 5.5rem);
-    letter-spacing: 0.26em;
-    text-indent: 0.26em;
+    font-size: clamp(2.2rem, 5.5vw, 4.2rem);
   }
 
   .wordMentana::after {
@@ -156,14 +157,12 @@
   }
 
   .wordMaria {
-    font-size: clamp(1.8rem, 8vw, 3rem);
+    font-size: clamp(2.4rem, 9.5vw, 4rem);
     margin-bottom: -0.1em;
   }
 
   .wordMentana {
-    font-size: clamp(2rem, 9vw, 3.8rem);
-    letter-spacing: 0.22em;
-    text-indent: 0.22em;
+    font-size: clamp(1.8rem, 7vw, 3rem);
   }
 
   .wordMentana::after {
@@ -175,12 +174,10 @@
 /* ── SMALL MOBILE ── */
 @media (max-width: 400px) {
   .wordMaria {
-    font-size: 1.6rem;
+    font-size: 2.2rem;
   }
 
   .wordMentana {
-    font-size: 1.8rem;
-    letter-spacing: 0.18em;
-    text-indent: 0.18em;
+    font-size: 1.65rem;
   }
 }

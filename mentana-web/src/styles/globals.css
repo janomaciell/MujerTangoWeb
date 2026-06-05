@@ -9,12 +9,12 @@
 /* ── Tokens ── */
 :root {
   /* Colores principales */
-  --bg:           #111;
-  --bg-deep:      #0b0b0b;
-  --surface:      #161616;
-  --surface-2:    #1a1a1a;
-  --border:       rgba(181, 173, 158, 0.12);
-  --border-mid:   rgba(181, 173, 158, 0.22);
+  --bg:           #2b2b2b;
+  --bg-deep:      #2b2b2b;
+  --surface:      #2b2b2b;
+  --surface-2:    #2b2b2b;
+  --border:       rgba(255, 255, 255, 0.12);
+  --border-mid:   rgba(255, 255, 255, 0.22);
 
   /* Acentos */
   --accent:       #b5ad9e;
@@ -22,18 +22,18 @@
   --accent-glow:  rgba(181, 173, 158, 0.35);
 
   /* Texto */
-  --text-primary: #f5f3ef;
-  --text-muted:   rgba(245, 243, 239, 0.55);
-  --text-faint:   rgba(245, 243, 239, 0.3);
+  --text-primary: #ffffff;
+  --text-muted:   rgba(255, 255, 255, 0.7);
+  --text-faint:   rgba(255, 255, 255, 0.45);
 
   /* Legado (compatibilidad con componentes existentes) */
-  --ink:        #111;
-  --ink-soft:   #1a1a1a;
-  --cream:      #f5f3ef;
-  --cream-dark: #b5ad9e;
+  --ink:        #2b2b2b;
+  --ink-soft:   #2b2b2b;
+  --cream:      #ffffff;
+  --cream-dark: #d2c8b4;
   --gold:       #b5ad9e;
   --gold-light: #d2c8b4;
-  --gold-pale:  rgba(181, 173, 158, 0.25);
+  --gold-pale:  rgba(255, 255, 255, 0.15);
   --sepia:      #b5ad9e;
   --sepia-dark: #9e9584;
   --white:      #ffffff;

@@ -18,7 +18,7 @@ export default function Hero() {
         { opacity: 1, duration: 1.2, ease: 'power2.out' }
       )
       tl.fromTo(
-        ['.word-maria', '.word-mentana'],
+        ['.hero-logo', '.word-maria', '.word-mentana'],
         { yPercent: 110, opacity: 0 },
         { yPercent: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out' },
         '-=0.75'
@@ -57,10 +57,15 @@ export default function Hero() {
         <div className={styles.leftPanel}>
           <div className={styles.titleBlock}>
 
+            {/* Logo */}
+            <div className={styles.overflow}>
+              <img src={siteImages.logo} alt="Logo" className={`hero-logo ${styles.heroLogo}`} />
+            </div>
+
             {/* "Maria Jose" — una línea, script, sin recorte */}
             <div className={styles.overflow}>
               <span className={`word-maria ${styles.word} ${styles.wordMaria}`}>
-                Maria Jose
+                María José
               </span>
             </div>
 

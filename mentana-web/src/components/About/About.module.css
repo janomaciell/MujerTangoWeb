@@ -2,7 +2,7 @@
 
 .section {
   padding-block: var(--section-py);
-  background: #111; /* Mismo fondo oscuro mate que el Hero */
+  background: var(--bg); /* Mismo fondo oscuro mate que el Hero */
 }
 
 .header { margin-bottom: clamp(3rem, 6vw, 5rem); }
