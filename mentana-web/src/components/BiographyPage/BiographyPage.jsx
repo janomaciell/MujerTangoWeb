@@ -10,11 +10,11 @@ gsap.registerPlugin(ScrollTrigger)
 const statsData = [
   { num: '+55', key: 'years'      },
   { num: '3',   key: 'continents' },
-  { num: '97',  key: 'concerts'   },
+  { num: '+400', key: 'concerts'   },
   { num: '10+', key: 'albums'     },
 ]
 
-const distIds = ['dist-personalidad', 'dist-academica', 'dist-venezuela', 'dist-uruguay']
+const distIds = ['dist-personalidad', 'dist-academica']
 
 const mastersAndCollabs = [
   'Roberto "Polaco" Goyeneche', 'Osvaldo Pugliese', 'Edmundo Rivero',
@@ -172,11 +172,6 @@ export default function BiographyPage() {
           <div className={`bpage-hero-img ${styles.heroImgWrap}`}>
             <img src={siteImages.biographyHero} alt="María José Mentana" className={styles.heroImg} />
             <div className={styles.heroImgGradient} />
-            <div className={styles.heroImgBorn}>
-              <span className={styles.heroImgBornLabel}>{bp.bornLabel[lang]}</span>
-              <span className={styles.heroImgBornVal}>31 · 01 · 1961</span>
-              <span className={styles.heroImgBornPlace}>San Isidro, Buenos Aires</span>
-            </div>
           </div>
         </div>
       </section>

@@ -56,9 +56,9 @@
 }
 
 .sigSurname {
-  font-weight: 100;
+  font-weight: 400;
   font-style: normal;
-  font-size: clamp(5rem, 6.5vw, 6.5rem);
+  font-size: clamp(3.5rem, 5vw, 5rem);
   color: rgba(255, 255, 255, 0.95);
   line-height: 1;
   margin-top: 0;
@@ -187,6 +187,7 @@
 
 @media (max-width: 768px) {
   .grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .sigName { font-size: clamp(1.75rem, 8vw, 2.5rem); }
   .sigSurname { font-size: clamp(1.75rem, 8vw, 2.5rem); }
   .bottomInner {
     flex-direction: column;
@@ -208,16 +209,16 @@
   .credit {
     font-size: 0.68rem;
   }
+  .sigName { font-size: clamp(1.5rem, 7vw, 2rem); }
   .sigSurname { font-size: clamp(1.5rem, 7vw, 2rem); }
-  .sigName { font-size: clamp(1.15rem, 4vw, 1.5rem); }
   .sigTagline { font-size: 0.68rem; }
   .navHeading { font-size: 0.55rem; }
 }
 
 @media (max-width: 360px) {
   .main { padding-block: 2.5rem; }
+  .sigName { font-size: 1.35rem; }
   .sigSurname { font-size: 1.35rem; }
-  .sigName { font-size: 1rem; }
   .copy, .backTop, .credit { font-size: 0.62rem; }
 }
 

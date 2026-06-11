@@ -30,24 +30,20 @@ export const t = {
     heading:    { es: 'La Artista',    en: 'The Artist'    },
     paragraphs: [
       {
-        es: 'Rosana Inés nació en San Isidro — y María José nació con la música. A los nueve años debutó en Grandes Valores del Tango — y desde entonces el escenario fue su casa.',
-        en: 'Rosana Inés was born in San Isidro — and María José was born with the music. At the age of nine, she made her debut on Grandes Valores del Tango—and since then, the stage has been her home.',
+        es: 'María José Mentana es una de las grandes voces del tango argentino contemporáneo. Con más de cinco décadas de trayectoria, inició su carrera a los nueve años en Grandes Valores del Tango y construyó un camino artístico que la llevó a compartir escenarios y proyectos con figuras emblemáticas como Tita Merello, Nelly Omar, Roberto Goyeneche, Mariano Mores, Leopoldo Federico, Raúl Garello y Horacio Ferrer.',
+        en: 'María José Mentana is one of the great voices of contemporary Argentine tango. With a career spanning over five decades, she began at the age of nine on Grandes Valores del Tango and forged an artistic path that led her to share stages and projects with legendary figures such as Tita Merello, Nelly Omar, Roberto Goyeneche, Mariano Mores, Leopoldo Federico, Raúl Garello, and Horacio Ferrer.',
       },
       {
-        es: 'Creció rodeada de los grandes referentes del género — Tita Merello, Nelly Omar, Roberto Goyeneche, Floreal Ruiz, Mariano Mores, Leopoldo Federico, Raúl Garello y Horacio Ferrer, entre otros. De ellos aprendió lo más valioso: el sentir, la intención, todo aquello que no se escribe pero se vive. Junto a ellos grabó, viajó y dejó su voz en los escenarios más importantes de Europa, Japón, China y Latinoamérica — teatros que son historia.',
-        en: 'She grew up surrounded by the greatest legends of the genre—Tita Merello, Nelly Omar, Roberto Goyeneche, Floreal Ruiz, Mariano Mores, Leopoldo Federico, Raúl Garello, and Horacio Ferrer, among others. From them, she learned what is most valuable: the feeling, the intention, everything that cannot be written but must be lived. Alongside them, she recorded, traveled, and left her voice on the most important stages of Europe, Japan, China, and Latin America—theaters that are history.',
+        es: 'Su arte ha recorrido los principales escenarios de Europa, Asia y Latinoamérica, consolidando una interpretación reconocida por su profundidad expresiva, elegancia y autenticidad. La crítica la ha definido como una artista de “voz de intensos matices” y una de las intérpretes más personales del tango de las últimas décadas.',
+        en: 'Her art has traveled the main stages of Europe, Asia, and Latin America, establishing a style recognized for its expressive depth, elegance, and authenticity. Critics have defined her as an artist with a "voice of intense nuances" and one of the most personal performers of tango in recent decades.',
       },
       {
-        es: 'Personalidad Destacada de la Cultura por la Legislatura de la Ciudad de Buenos Aires. Académica Titular de la Academia Nacional del Tango. Nominada a los Premios Gardel. Solista con orquestas sinfónicas. Creadora del espectáculo Mujer Tango, un homenaje a las mujeres que hicieron historia en el tango y que la formaron como artista.',
-        en: 'Outstanding Cultural Personality by the Legislature of the City of Buenos Aires. Full Academician of the National Academy of Tango. Nominated for the Gardel Awards. Soloist with symphony orchestras. Creator of the show Mujer Tango, a tribute to the women who made history in tango and who shaped her as an artist.',
+        es: 'Distinguida como Personalidad Destacada de la Cultura por la Ciudad de Buenos Aires, Académica Titular de la Academia Nacional del Tango y nominada a los Premios Gardel, ha desarrollado además una destacada labor como creadora, productora y difusora de la cultura tanguera.',
+        en: 'Honoured as an Outstanding Cultural Personality by the City of Buenos Aires, a Full Member of the National Academy of Tango, and nominated for the Gardel Awards, she has also developed a notable career as a creator, producer, and promoter of tango culture.',
       },
       {
-        es: 'Hoy sigue tan vigente como siempre: cantando tangos sinfónicos junto a grandes orquestas, grabando y produciendo junto a su hijo Lucas Russo en su propio MJEstudio de Grabación, y acompañando a nuevos artistas como coach y productora artística.',
-        en: 'Today she remains as active and relevant as ever: singing symphonic tangos alongside great orchestras, recording and producing with her son Lucas Russo at their own MJEstudio de Grabación, and guiding emerging artists as a coach and artistic producer.',
-      },
-      {
-        es: 'Una vida entera con la música — y siempre hay más por vivir y cantar.',
-        en: 'A lifetime dedicated to music—and there is always more to live and sing.',
+        es: 'Actualmente continúa presentándose junto a importantes orquestas sinfónicas y llevando el tango a nuevos públicos. Su más reciente trabajo discográfico, Mujer Tango (EPSA Music), reafirma una mirada artística que enlaza tradición y contemporaneidad, consolidando la vigencia de una intérprete fundamental de la música argentina.',
+        en: 'Currently, she continues to perform alongside major symphony orchestras and bring tango to new audiences. Her most recent album, Mujer Tango (EPSA Music), reaffirms an artistic vision that links tradition and modernity, consolidating the relevance of a fundamental figure in Argentine music.',
       },
     ],
     yearsLabel: { es: 'años de\nexperiencia', en: 'years of\nexperience' },
@@ -72,7 +68,7 @@ export const t = {
       es: 'Más de cinco décadas sobre los escenarios del mundo, avaladas por los más altos reconocimientos del tango argentino.',
       en: "Over five decades on the world's stages, backed by the highest honours in Argentine tango.",
     },
-    distinctions: { es: 'Distinciones oficiales', en: 'Official distinctions' },
+    distinctions: { es: 'Distinciones', en: 'Distinctions' },
     actedWith:    { es: 'Actuó junto a',          en: 'Performed alongside'   },
     stats: {
       years:      { es: 'años de carrera',  en: 'years of career' },
@@ -82,14 +78,10 @@ export const t = {
     dists: [
       { es: 'Personalidad Destacada de la Cultura',        en: 'Outstanding Cultural Personality'     },
       { es: 'Académica de la Academia Nacional del Tango', en: 'Member of the National Tango Academy' },
-      { es: 'Premio en Venezuela',                         en: 'Award in Venezuela'                   },
-      { es: 'Premio en Uruguay',                           en: 'Award in Uruguay'                     },
     ],
     orgs: [
       { es: 'Ciudad de Buenos Aires',       en: 'City of Buenos Aires'    },
       { es: 'Academia Nacional del Tango',  en: 'National Tango Academy'  },
-      { es: 'Gira por América — 1970s',     en: 'American Tour — 1970s'   },
-      { es: 'Gira por América — 1970s',     en: 'American Tour — 1970s'   },
     ],
   },
 
@@ -118,8 +110,8 @@ export const t = {
         era:    { es: 'Los orígenes',  en: 'The origins'  },
         title:  { es: 'Nace en San Isidro', en: 'Born in San Isidro' },
         text: {
-          es: 'Rosana Inés Mentana nace el 31 de enero en San Isidro, Buenos Aires. Desde pequeña canta en los clubes de su barrio, descubriendo una voz que el tango reclamaría para siempre.',
-          en: 'Rosana Inés Mentana is born on January 31 in San Isidro, Buenos Aires. Since childhood she sings in the clubs of her neighborhood, discovering a voice that tango would claim forever.',
+          es: 'María José Mentana nace el 31 de enero en San Isidro, Buenos Aires. Desde pequeña canta en los clubes de su barrio, descubriendo una voz que el tango reclamaría para siempre.',
+          en: 'María José Mentana is born on January 31 in San Isidro, Buenos Aires. Since childhood she sings in the clubs of her neighborhood, discovering a voice that tango would claim forever.',
         },
         detail: { es: 'San Isidro, Buenos Aires', en: 'San Isidro, Buenos Aires' },
       },
@@ -224,8 +216,8 @@ export const t = {
       en: 'The Artist',
     },
     heroSub: {
-      es: 'Rosana Inés Mentana — una vida entera con la música.',
-      en: 'Rosana Inés Mentana — a lifetime dedicated to music.',
+      es: 'María José Mentana — una vida con la música.',
+      en: 'María José Mentana — a life with music.',
     },
     bornLabel: { es: 'Fecha de nacimiento', en: 'Date of birth' },
     stats: {
@@ -346,28 +338,28 @@ export const t = {
   // ── Clases ──
   clases: {
     title: {
-      es: 'MJEstudio — Clases de Canto',
-      en: 'MJEstudio — Singing Classes',
+      es: 'Clases de Canto',
+      en: 'Singing Classes',
     },
     subtitle: {
-      es: 'Cantar no es solo afinar. Es encontrarte.',
-      en: 'Singing is not just about staying in tune. It is about finding yourself.',
+      es: 'Cantar no es solo afinar, es interpretar, es decir, es encontrarse.',
+      en: 'Singing is not just about staying in tune: it is about interpreting, expressing, and finding yourself.',
     },
     intro1: {
-      es: 'Hay algo en la voz que no se escribe en ningún manual. Se aprende escuchando, sintiendo, viviendo. Eso es lo que enseño: los yeites, la intención, el propósito detrás de cada nota.',
-      en: 'There is something in the voice that is not written in any manual. It is learned by listening, feeling, living. That is what I teach: the secrets, the intention, the purpose behind each note.',
+      es: 'Hay algo en la voz que no se escribe en ningún manual. Se aprende escuchando, sintiendo, viviendo. Eso es lo que propongo en mis clases: la intención, los yeites, el propósito detrás de cada nota, de cada frase.',
+      en: 'There is something in the voice that is not written in any manual. It is learned by listening, feeling, living. That is what I propose in my classes: the intention, the style, the purpose behind each note, each phrase.',
     },
     intro2: {
-      es: 'Lo que aprendí de los grandes referentes, ahora te lo transmito a vos.',
-      en: 'What I learned from the great legends, now I pass it on to you.',
+      es: 'Quiero que puedas recibir lo que los grandes referentes me enseñaron, y compartir con vos todo lo que aprendí de su mano.',
+      en: 'I want you to be able to receive what the great masters taught me, and share with you everything I learned by their side.',
     },
     offerTitle: {
-      es: '¿Qué ofrezco en MJEstudio?',
-      en: 'What do I offer at MJEstudio?',
+      es: '¿Qué te propongo para que puedas sumarte?',
+      en: 'What do I propose for you to join?',
     },
     offers: [
       {
-        title: { es: 'Clases individuales presenciales', en: 'In-person individual classes' },
+        title: { es: 'Clases individuales - presenciales', en: 'In-person individual classes' },
         desc: { es: 'Trabajo personalizado, a tu ritmo y con tu voz.', en: 'Personalized work, at your own pace and with your voice.' }
       },
       {
@@ -376,16 +368,16 @@ export const t = {
       },
       {
         title: { es: 'Master Class', en: 'Master Class' },
-        desc: { es: 'Una experiencia intensiva para dar el salto que necesitás.', en: 'An intensive experience to take the leap you need.' }
+        desc: { es: 'Una experiencia intensiva para dar el salto que necesitas.', en: 'An intensive experience to take the leap you need.' }
       },
       {
-        title: { es: 'Talleres', en: 'Workshops' },
-        desc: { es: 'Aprendizaje colectivo, creativo y transformador.', en: 'Collective, creative and transformative learning.' }
+        title: { es: 'Talleres y Seminarios', en: 'Workshops & Seminars' },
+        desc: { es: 'Aprendizaje colectivo, creativo y transformador.', en: 'Collective, creative, and transformative learning.' }
       }
     ],
     audience1: {
       es: 'Para principiantes, intermedios y cantantes con experiencia.',
-      en: 'For beginners, intermediate and experienced singers.',
+      en: 'For beginners, intermediate, and experienced singers.',
     },
     audience2: {
       es: 'Para quienes quieren potenciar su canto, y también para quienes quieren cantar por primera vez.',

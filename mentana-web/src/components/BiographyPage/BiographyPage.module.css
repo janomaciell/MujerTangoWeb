@@ -188,9 +188,11 @@
 }
 
 .para {
-  color: rgba(230, 225, 215, 0.65);
-  font-size: clamp(0.92rem, 1.15vw, 1.05rem);
-  line-height: 1.85;
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
 }
 
 .counterBlock {
@@ -277,12 +279,12 @@
   margin: 0;
   justify-self: end;
   width: 100%;
-  max-width: 320px;
+  max-width: 400px;
 }
 
 .quoteImageWrap {
   position: relative;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   border: 1px solid rgba(181, 173, 158, 0.15);
 }
@@ -316,37 +318,47 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
+  max-width: 1100px;
+  margin-inline: auto;
 }
 
 .tagsCol {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  align-items: center;
 }
 
 .tagsColTitle {
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  font-size: clamp(1.65rem, 2.8vw, 2.5rem);
   font-weight: 300;
   letter-spacing: -0.01em;
   color: var(--text-primary);
+  text-align: center;
 }
 
 .distList {
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  gap: 1rem;
+  width: 100%;
 }
 
 .distCard {
   display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-  padding: 1.1rem 1.3rem;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.25rem 1.5rem;
   border: 1px solid var(--border);
   background: var(--surface);
   border-radius: 8px;
   transition: border-color 0.25s, background 0.25s;
+  width: 100%;
+  max-width: 480px;
+  margin-inline: auto;
 }
 
 .distCard:hover {
@@ -356,43 +368,44 @@
 
 .distStar {
   color: var(--accent-light);
-  font-size: 0.85rem;
+  font-size: 1rem;
   flex-shrink: 0;
-  margin-top: 0.2rem;
 }
 
 .distBody {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.35rem;
 }
 
 .distTitle {
   font-family: var(--font-display);
-  font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+  font-size: clamp(1.05rem, 1.3vw, 1.25rem);
   font-weight: 400;
   color: var(--text-primary);
-  line-height: 1.25;
+  line-height: 1.3;
 }
 
 .distOrg {
-  font-size: 0.72rem;
-  color: rgba(245, 247, 255, 0.35);
+  font-size: 0.82rem;
+  color: rgba(245, 247, 255, 0.45);
   letter-spacing: 0.06em;
 }
 
 .collabList {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.55rem;
+  justify-content: center;
+  gap: 0.65rem;
+  max-width: 500px;
 }
 
 .collabTag {
-  font-size: 0.78rem;
-  padding: 0.35rem 0.85rem;
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  padding: 0.45rem 1rem;
   border: 1px solid var(--border);
   border-radius: 8px;
-  color: rgba(245, 247, 255, 0.65);
+  color: rgba(245, 247, 255, 0.75);
   background: var(--surface);
   letter-spacing: 0.04em;
   transition: border-color 0.2s, color 0.2s;
@@ -588,7 +601,7 @@
   .closingQuote p { font-size: clamp(1.1rem, 5vw, 1.5rem); }
   .closingQuote { padding: 2rem 1rem; }
 
-  .collabTag { font-size: 0.72rem; padding: 0.3rem 0.65rem; }
+  .collabTag { font-size: 0.82rem; padding: 0.4rem 0.8rem; }
 }
 
 @media (max-width: 360px) {

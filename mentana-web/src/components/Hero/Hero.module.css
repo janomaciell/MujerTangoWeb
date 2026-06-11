@@ -100,9 +100,9 @@
 
 /* "MENTANA" — serif elegante */
 .wordMentana {
-  font-weight: 100;
+  font-weight: 400;
   font-style: normal;
-  font-size: clamp(6rem, 8.5vw, 9rem);
+  font-size: clamp(4.5rem, 8.5vw, 9rem);
   color: rgba(255, 255, 255, 0.95);
   line-height: 1;
   margin-top: 0;
@@ -137,7 +137,7 @@
   }
 
   .wordMentana {
-    font-size: clamp(2.2rem, 5.5vw, 4.2rem);
+    font-size: clamp(3rem, 7.5vw, 5.5rem);
   }
 
   .wordMentana::after {
@@ -162,7 +162,7 @@
   }
 
   .wordMentana {
-    font-size: clamp(1.8rem, 7vw, 3rem);
+    font-size: clamp(2.4rem, 9.5vw, 4rem);
   }
 
   .wordMentana::after {
@@ -178,6 +178,6 @@
   }
 
   .wordMentana {
-    font-size: 1.65rem;
+    font-size: 2.2rem;
   }
 }

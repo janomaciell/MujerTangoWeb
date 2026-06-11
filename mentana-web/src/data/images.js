@@ -31,7 +31,7 @@ export const SITE_FAVICON = '/logo-maria.png'
 
 export const siteImages = {
   hero:          assetUrl('background-liso-hero.png'),
-  aboutQuote:    formatosXPath('img21.png'),
+  aboutQuote:    assetUrl('biografia2.jpeg'),
   biographyHero: webMentanaPath('MARIA-Biografia.png'),
   logo:          SITE_FAVICON,
 }
