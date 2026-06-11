@@ -220,12 +220,12 @@ export const t = {
   biographyPage: {
     sectionLabel: { es: 'Biografía', en: 'Biography' },
     heroTitle: {
-      es: 'Una voz que<br /><em>el tango reclamó</em><br />para siempre',
-      en: 'A voice that<br /><em>tango claimed</em><br />forever',
+      es: 'La Artista',
+      en: 'The Artist',
     },
     heroSub: {
-      es: 'Rosana Inés Mentana — artista, docente, compositora. Más de 55 años sobre los escenarios del mundo, desde los estudios de Canal 9 hasta las grandes salas de Tokio, París y Caracas.',
-      en: "Rosana Inés Mentana — artist, teacher, composer. Over 55 years on the world's stages, from the studios of Canal 9 to the great halls of Tokyo, Paris and Caracas.",
+      es: 'Rosana Inés Mentana — una vida entera con la música.',
+      en: 'Rosana Inés Mentana — a lifetime dedicated to music.',
     },
     bornLabel: { es: 'Fecha de nacimiento', en: 'Date of birth' },
     stats: {
@@ -234,148 +234,6 @@ export const t = {
       concerts:   { es: 'conciertos en Asia', en: 'concerts in Asia'   },
       albums:     { es: 'álbumes grabados',   en: 'albums recorded'    },
     },
-    introLabel: { es: 'El perfil', en: 'The profile' },
-    introTitle: {
-      es: 'Heredera directa<br /><em>de la Época de Oro</em>',
-      en: 'Direct heir<br /><em>of the Golden Age</em>',
-    },
-    introPara1: {
-      es: 'Nacida el 31 de enero de 1961 en San Isidro, provincia de Buenos Aires, Rosana Inés Mentana —conocida artísticamente como María José Mentana— se consolidó a lo largo de las décadas como una de las voces femeninas más trascendentales de la música ciudadana del Río de la Plata.',
-      en: 'Born on January 31, 1961 in San Isidro, province of Buenos Aires, Rosana Inés Mentana —known artistically as María José Mentana— consolidated herself over the decades as one of the most transcendental female voices of Río de la Plata popular music.',
-    },
-    introPara2: {
-      es: 'Con una carrera ininterrumpida que abarca más de cincuenta años de actividad profesional, su figura representa un puente viviente e irreemplazable entre la legendaria "Época de Oro" del tango, las vanguardias de finales del siglo XX y las expresiones contemporáneas del siglo XXI. Su trayectoria abarca la interpretación, la composición, la dramaturgia teatral, la docencia universitaria y la preservación activa del patrimonio inmaterial porteño.',
-      en: "With an uninterrupted career spanning over fifty years of professional activity, her figure represents a living and irreplaceable bridge between the legendary \"Golden Age\" of tango, the avant-garde movements of the late 20th century, and contemporary expressions of the 21st century. Her career spans performance, composition, theatrical dramaturgy, university teaching, and the active preservation of Buenos Aires's intangible cultural heritage.",
-    },
-    introPara3: {
-      es: 'Es miembro de número de la Academia Nacional del Tango y la Academia Porteña del Lunfardo, y fue declarada Personalidad Destacada de la Cultura de la Ciudad Autónoma de Buenos Aires por la Legislatura porteña en 2015. Titular de la cátedra de canto en la Universidad Nacional de las Artes (UNA), su legado trasciende el escenario para instalarse en la transmisión oral de los saberes del género.',
-      en: "She is a full member of the National Tango Academy and the Porteña Lunfardo Academy, and was declared an Outstanding Cultural Personality of the Autonomous City of Buenos Aires by the city legislature in 2015. As holder of the vocal chair at the National University of the Arts (UNA), her legacy transcends the stage to reside in the oral transmission of the genre's knowledge.",
-    },
-    introQuote: {
-      es: '«Me considero inmensamente privilegiada por haber sido depositaria directa de las enseñanzas orales de los grandes maestros del tango.»',
-      en: '"I consider myself immensely privileged to have been a direct recipient of the oral teachings of the great tango masters."',
-    },
-    introQuoteCite: { es: 'María José Mentana', en: 'María José Mentana' },
-    chaptersLabel: { es: 'Trayectoria', en: 'Career' },
-    chaptersTitle: {
-      es: 'Seis décadas<br /><em>de historia viva</em>',
-      en: 'Six decades<br /><em>of living history</em>',
-    },
-    era1:   { es: 'La revelación',          en: 'The revelation'           },
-    title1: { es: 'La Niña Prodigio de Canal 9', en: 'The Child Prodigy of Canal 9' },
-    text1: {
-      es: 'A los nueve años debuta en "Grandes Valores del Tango" de Canal 9, conducido por Juan Carlos Thorry, con Tito Lusiardo como figura estelar. Su talento innato fue descubierto por el legendario publicista Tito Scopesi mientras cantaba entre las mesas de un restaurante de San Isidro. Rápidamente se convierte en figura habitual de "Los Fabulosos 20" y "El Tango del Millón". En 1972 graba su primer disco con el sello Microfón, acompañada por la orquesta del maestro Osvaldo Requena. En 1973 recibe el Premio de Honor de Radio Caracas Televisión y el Premio a la Fama de Uruguay.',
-      en: 'At age nine she debuts on "Grandes Valores del Tango" on Canal 9, hosted by Juan Carlos Thorry, with Tito Lusiardo as the star guest. Her innate talent was discovered by legendary publicist Tito Scopesi while she sang between tables at a San Isidro restaurant. She quickly becomes a regular on "Los Fabulosos 20" and "El Tango del Millón". In 1972 she records her first album on the Microfón label with maestro Osvaldo Requena\'s orchestra. In 1973 she receives the Honor Award from Radio Caracas Televisión and the Fame Award from Uruguay.',
-    },
-    loc1: { es: 'Canal 9 · Buenos Aires · América Latina', en: 'Canal 9 · Buenos Aires · Latin America' },
-    era2:   { es: 'La bohemia porteña', en: 'The Buenos Aires bohemia' },
-    title2: { es: 'Las noches de El Viejo Almacén y Caño 14', en: 'The nights of El Viejo Almacén and Caño 14' },
-    text2: {
-      es: 'Abandonando los estudios televisivos, Mentana se sumerge en el exigente circuito de la bohemia porteña. Noche a noche actúa en "El Viejo Almacén" y "Caño 14". Allí forja su temple junto a los grandes maestros: Roberto "Polaco" Goyeneche, Osvaldo Pugliese, Edmundo Rivero, Néstor Marconi, Horacio Salgán y Leopoldo Federico. Profundiza el vínculo con las grandes voces femeninas históricas: Tita Merello, Nelly Omar, Beba Bidart y Mercedes Simone, de quien conserva una carta manuscrita. En 1981 actúa en la Casa Rosada junto a Domingo Cura y Osvaldo Piro. Graba "Una Piba y un Tango", álbum que marca su transición de niña prodigio a artista adulta.',
-      en: 'Leaving television studios behind, Mentana immerses herself in the demanding Buenos Aires bohemian circuit. Night after night she performs at "El Viejo Almacén" and "Caño 14". There she forges her stage temperament alongside the great masters: Roberto "Polaco" Goyeneche, Osvaldo Pugliese, Edmundo Rivero, Néstor Marconi, Horacio Salgán and Leopoldo Federico. She deepens bonds with the great historical female voices: Tita Merello, Nelly Omar, Beba Bidart and Mercedes Simone, from whom she preserves a handwritten letter. In 1981 she performs at the Casa Rosada alongside Domingo Cura and Osvaldo Piro. She records "Una Piba y un Tango", marking her transition from child prodigy to adult artist.',
-    },
-    loc2: { es: 'Buenos Aires · Argentina', en: 'Buenos Aires · Argentina' },
-    era3:   { es: 'La conquista de Europa', en: 'The conquest of Europe' },
-    title3: { es: 'París y el bautismo de Horacio Ferrer', en: 'Paris and the baptism by Horacio Ferrer' },
-    text3: {
-      es: 'Entre 1984 y 1989 se radica en París. Brilla en la Galerie de Nesle y en el mítico "Trottoirs de Buenos Aires" —epicentro de la intelectualidad argentina en el exilio—. Extiende giras a Holanda, Italia, Finlandia, Bélgica y Suecia. En Suiza comparte cartelera con Frank Sinatra. Es en París, bajo la dirección de Osvaldo Piro, que el poeta Horacio Ferrer —co-creador de las obras de Piazzolla— sube al escenario y le aconseja incorporar su apellido "Mentana" para sellar su identidad como artista adulta. Desde ese momento, "María José Mentana" se convierte en su nombre definitivo.',
-      en: 'Between 1984 and 1989 she settles in Paris. She shines at the Galerie de Nesle and the mythical "Trottoirs de Buenos Aires" — the epicentre of Argentine intellectual life in exile —. She extends tours to Holland, Italy, Finland, Belgium and Sweden. In Switzerland she shares the bill with Frank Sinatra. It is in Paris, under the direction of Osvaldo Piro, that poet Horacio Ferrer — co-creator of Piazzolla\'s works — takes the stage and advises her to add her surname "Mentana" to seal her identity as a mature artist. From that moment, "María José Mentana" becomes her definitive name.',
-    },
-    loc3: { es: 'París · Europa · Suiza', en: 'Paris · Europe · Switzerland' },
-    era4:   { es: 'La embajadora transcontinental', en: 'The transcontinental ambassador' },
-    title4: { es: 'Japón, Venezuela y las orquestas sinfónicas', en: 'Japan, Venezuela and the symphony orchestras' },
-    text4: {
-      es: 'En 1991 realiza 52 conciertos en Japón con Néstor Marconi, inmortalizados en "Tanguísimo 91". Al año siguiente regresa con Mariano Mores para 42 funciones más. Entre 1993 y 1997 integra el Sexteto Mayor en giras europeas donde interpreta "Don\'t Cry for Me Argentina" con un traje original de Eva Perón cedido por el modisto Paco Jamandreu. En 1994 se traslada a Venezuela: produce el show con Simón Díaz (1998), conduce "Desde Tango y Tango" en TV (1999) y programas en Mágica 99.1 FM y Jazz 95.5 FM (2001). Ese año canta con la Orquesta Sinfónica de Venezuela en el Hotel Caracas Hilton, grabando el álbum en vivo "Sinfónica Venezuela". Entre 2002 y 2005: 55 conciertos en Japón y 10 en Taiwán.',
-      en: 'In 1991 she performs 52 concerts in Japan with Néstor Marconi, immortalized in "Tanguísimo 91". The following year she returns with Mariano Mores for 42 more shows. Between 1993 and 1997 she joins the Sexteto Mayor for European tours performing "Don\'t Cry for Me Argentina" wearing an original Eva Perón dress lent by designer Paco Jamandreu. In 1994 she moves to Venezuela: produces the show with Simón Díaz (1998), hosts "Desde Tango y Tango" on TV (1999) and programs on Mágica 99.1 FM and Jazz 95.5 FM (2001). That year she sings with the Symphony Orchestra of Venezuela at the Caracas Hilton, recording the live album "Sinfónica Venezuela". Between 2002 and 2005: 55 concerts in Japan and 10 in Taiwan.',
-    },
-    loc4: { es: 'Japón · Taiwán · Venezuela · Europa', en: 'Japan · Taiwan · Venezuela · Europe' },
-    era5:   { es: 'La dramaturga y compositora', en: 'The playwright and composer' },
-    title5: { es: 'CienTROILOS y el teatro en Corrientes', en: 'CienTROILOS and theater on Corrientes' },
-    text5: {
-      es: 'En 2010 edita "En vivo 40 años" con composiciones propias, entre ellas "Candombe Santelmero". En 2012 escribe, dirige y produce "De Buenos Aires a París", obra que llega al Teatro Maipo en 2013 durante tres meses. En 2014, para el centenario de Troilo, produce "Las Minas de Troilo" con el investigador Gabriel Soria, y graba el monumental "CienTROILOS" con Stampone, Federico, Garello, Baffa, Berlingieri, Litto Nebbia y Horacio Ferrer. El disco es nominado al Premio Carlos Gardel 2015. Ese año la Legislatura porteña la declara Personalidad Destacada de la Cultura. Entre 2006 y 2007 actúa en la compañía "Tango x 2" de Miguel Ángel Zotto en el Piccadilly Theater de Londres.',
-      en: 'In 2010 she releases "En vivo 40 años" with original compositions including "Candombe Santelmero". In 2012 she writes, directs and produces "De Buenos Aires a París", which reaches the Teatro Maipo in 2013 for three months. In 2014, for the Troilo centenary, she produces "Las Minas de Troilo" with researcher Gabriel Soria, and records the monumental "CienTROILOS" with Stampone, Federico, Garello, Baffa, Berlingieri, Litto Nebbia and Horacio Ferrer. The album is nominated for the 2015 Carlos Gardel Award. That year the Buenos Aires legislature declares her an Outstanding Cultural Personality. Between 2006 and 2007 she performs with Miguel Ángel Zotto\'s "Tango x 2" company at the Piccadilly Theater in London.',
-    },
-    loc5: { es: 'Buenos Aires · Londres · Israel', en: 'Buenos Aires · London · Israel' },
-    era6:   { es: 'Vigencia y vanguardia', en: 'Vitality and avant-garde' },
-    title6: { es: 'Mujer Tango y la escena contemporánea', en: 'Mujer Tango and the contemporary scene' },
-    text6: {
-      es: 'Tras la pandemia, regresa con vigor a los escenarios. Brinda conciertos íntimos en la Sala de Cámara de la Usina del Arte junto al pianista Oscar De Elía, y presenta "Que sea tango" en el Palacio Libertad (ex CCK) con De Elía y el saxofonista Bernardo Baraj. El 11 de abril de 2026 actúa en vivo en Radio Rivadavia AM 630, en el programa "La Radio Sos Vos" de Julio Lagos. El 20 de agosto de 2025 estrena el espectáculo "Mujer Tango" en el Festival Tango BA, en el Claridge Bar. El 17 de septiembre de 2025 lanza globalmente el álbum "Mujer Tango": nueve canciones que reivindican la perspectiva femenina en el tango con raíces afro-rioplatenses y mirada del siglo XXI.',
-      en: 'After the pandemic, she returns vigorously to the stage. She gives intimate concerts at the Chamber Hall of Usina del Arte with pianist Oscar De Elía, and presents "Que sea tango" at the Palacio Libertad (former CCK) with De Elía and saxophonist Bernardo Baraj. On April 11, 2026 she performs live on Radio Rivadavia AM 630 on Julio Lagos\'s "La Radio Sos Vos". On August 20, 2025 she premieres "Mujer Tango" at the Tango BA Festival at the Claridge Bar. On September 17, 2025 she globally launches the album "Mujer Tango": nine songs vindicating the female perspective in tango with Afro-Río de la Plata roots and a 21st-century vision.',
-    },
-    loc6: { es: 'Buenos Aires · Usina del Arte · CCK · Radio Rivadavia', en: 'Buenos Aires · Usina del Arte · CCK · Radio Rivadavia' },
-    mastersLabel: { es: 'Formación', en: 'Formation' },
-    mastersTitle: {
-      es: 'Aprendió de los<br /><em>titanes del género</em>',
-      en: 'She learned from<br /><em>the titans of the genre</em>',
-    },
-    mastersSub: {
-      es: 'A diferencia de generaciones posteriores, Mentana se formó in situ, compartiendo escenarios, estudios de grabación y charlas de madrugada con las figuras que definieron la estética del tango en el siglo XX.',
-      en: "Unlike later generations, Mentana trained in situ, sharing stages, recording studios and late-night conversations with the figures who defined tango's aesthetic in the 20th century.",
-    },
-    mastersQuote: {
-      es: '«Tuve el privilegio histórico de absorber los "yeites" del tango directamente de quienes los inventaron — la afinación de Pugliese, el fraseo de Goyeneche, la presencia de Nelly Omar.»',
-      en: '"I had the historical privilege of absorbing tango\'s \'yeites\' directly from those who invented them — Pugliese\'s tuning, Goyeneche\'s phrasing, Nelly Omar\'s presence."',
-    },
-    mastersQuoteCite: { es: 'María José Mentana', en: 'María José Mentana' },
-    voiceLabel: { es: 'La voz', en: 'The voice' },
-    voiceTitle: {
-      es: 'Técnica e interpretación:<br /><em>una voz singular</em>',
-      en: 'Technique and interpretation:<br /><em>a singular voice</em>',
-    },
-    voicePara1: {
-      es: 'La voz de María José Mentana se caracteriza por sus intensos matices en los registros medios y graves: una cualidad tímbrica aterciopelada y oscura que le permite narrar las tragedias urbanas del tango poético con visceralidad sobrecogedora, sin perder jamás la pureza tímbrica ni la exactitud de su afinación.',
-      en: "María José Mentana's voice is characterized by its intense nuances in the middle and lower registers: a velvety, dark timbral quality that allows her to narrate the urban tragedies of poetic tango with overwhelming viscerality, never losing timbral purity or the precision of her pitch.",
-    },
-    voicePara2: {
-      es: 'La crítica especializada destaca de manera unánime su "interpretación profunda y afinada", una amalgama única de la escuela melódica del "bel canto" rioplatense —encarnada por Gardel y Floreal Ruiz— con la violencia desgarradora del expresionismo tanguero moderno heredado directamente de Roberto "Polaco" Goyeneche.',
-      en: 'Specialist critics unanimously highlight her "deep and in-tune interpretation", a unique amalgam of the melodic school of Río de la Plata "bel canto" — embodied by Gardel and Floreal Ruiz — with the shattering violence of modern tango expressionism inherited directly from Roberto "Polaco" Goyeneche.',
-    },
-    voiceTraits: {
-      es: [
-        'Intensos matices en registros medios y graves',
-        'Fraseo prístino con gestión del silencio',
-        'Capacidad sinfónica: actúa frente a orquestas de 100 músicos',
-        'Dominio del "yeite" — técnica oral no escrita en la partitura',
-        'Emisión en tres idiomas: español, japonés, francés',
-        'Profunda afinación reconocida por la crítica especializada',
-      ],
-      en: [
-        'Intense nuances in middle and lower registers',
-        'Pristine phrasing with masterful use of silence',
-        'Symphonic capacity: performs before orchestras of 100 musicians',
-        'Command of "yeite" — oral technique unwritten in the score',
-        'Vocal delivery in three languages: Spanish, Japanese, French',
-        'Deep pitch accuracy recognized by specialist critics',
-      ],
-    },
-    teachLabel: { es: 'Docencia', en: 'Teaching' },
-    teachTitle: {
-      es: 'La transmisión<br /><em>del saber oral</em>',
-      en: 'The transmission<br /><em>of oral knowledge</em>',
-    },
-    teachSub: {
-      es: 'Mentana asume una responsabilidad histórica: garantizar que las técnicas del auténtico tango porteño se transmitan a las nuevas generaciones de intérpretes.',
-      en: 'Mentana takes on a historical responsibility: ensuring that the techniques of authentic Buenos Aires tango are transmitted to new generations of performers.',
-    },
-    teachItems: {
-      es: [
-        { title: 'Cátedra en la Universidad Nacional de las Artes', text: 'Titular de la cátedra de canto en el Departamento de Artes Musicales y Sonoras de la UNA. Diseña e imparte cursos de extensión universitaria, laboratorios de investigación sonora y talleres de formación práctica intensiva.' },
-        { title: 'Clases Magistrales Privadas', text: 'Brinda clases magistrales de historia del tango, técnica vocal de proyección, interpretación dramática del texto poético y armado de repertorio. El conocimiento empírico de quien creció junto a Goyeneche, Federico y Mercedes Simone.' },
-        { title: 'Academia Nacional del Tango', text: 'Miembro de número de la Academia Nacional del Tango y la Academia Porteña del Lunfardo. Participa activamente en la preservación del patrimonio inmaterial porteño y la transmisión oral de la tradición.' },
-        { title: 'Teatro, Dramaturgia y Producción', text: 'Sus obras "De Buenos Aires a París" (Teatro Maipo, 2013) y "Las Minas de Troilo" (2014) combinan investigación histórica con puesta en escena para rescatar la memoria oral del género.' },
-      ],
-      en: [
-        { title: 'Chair at the National University of the Arts', text: 'Holder of the vocal chair in the Department of Musical and Sound Arts at UNA. Designs and teaches university extension courses, sound research labs and intensive practical training workshops.' },
-        { title: 'Private Master Classes', text: "Offers master classes on tango history, vocal projection technique, dramatic interpretation of poetic text and repertoire construction. The empirical knowledge of someone who grew up alongside Goyeneche, Federico and Mercedes Simone." },
-        { title: 'National Tango Academy', text: "Full member of the National Tango Academy and the Porteña Lunfardo Academy. Actively participates in the preservation of Buenos Aires's intangible heritage and the oral transmission of tradition." },
-        { title: 'Theatre, Dramaturgy and Production', text: 'Her works "De Buenos Aires a París" (Teatro Maipo, 2013) and "Las Minas de Troilo" (2014) combine historical research with staging to rescue the oral memory of the genre.' },
-      ],
-    },
-    closingQuote: {
-      es: '«El tango es la bisagra entre generaciones. Mi misión es no dejar que se pierda lo que los grandes maestros me enseñaron en las madrugadas porteñas.»',
-      en: '"Tango is the bridge between generations. My mission is to ensure that what the great masters taught me in the Buenos Aires small hours is never lost."',
-    },
-    closingCite: { es: 'María José Mentana, 2025', en: 'María José Mentana, 2025' },
   },
 
   // ── Discography ──
@@ -454,14 +312,14 @@ export const t = {
   // ── Contact ──
   contact: {
     sectionLabel: { es: 'Contacto',                 en: 'Contact'                   },
-    heading:      { es: '¿Querés trabajar juntos?', en: 'Want to work together?'    },
+    heading:      { es: 'Descubrí tu voz',            en: 'Find your voice'           },
     sub: {
-      es: 'Para contrataciones, prensa, entrevistas y colaboraciones artísticas.',
-      en: 'For bookings, press, interviews and artistic collaborations.',
+      es: 'Encontrá tu lugar en el mundo a través de la música y el canto.',
+      en: 'Find your place in the world through music and singing.',
     },
-    emailLabel: { es: 'Email directo', en: 'Direct email' },
-    location:   { es: 'Ubicación',    en: 'Location'     },
-    social:     { es: 'Redes',        en: 'Socials'      },
+    emailLabel: { es: 'Email directo',               en: 'Direct email'                },
+    location:   { es: 'Ubicación',                    en: 'Location'                    },
+    social:     { es: 'Redes',                        en: 'Socials'                     },
     quote: {
       es: '«El tango es la bisagra entre generaciones»',
       en: '"Tango is the bridge between generations"',
@@ -487,93 +345,65 @@ export const t = {
 
   // ── Clases ──
   clases: {
-    sectionLabel: { es: 'Clases & Talleres', en: 'Classes & Workshops' },
-    headingTitle: {
-      es: 'Clases de Canto\u003cbr /\u003e\u003cem\u003econ María José Mentana\u003c/em\u003e',
-      en: 'Singing Classes\u003cbr /\u003e\u003cem\u003ewith María José Mentana\u003c/em\u003e',
+    title: {
+      es: 'MJEstudio — Clases de Canto',
+      en: 'MJEstudio — Singing Classes',
     },
-    headerSub: {
-      es: 'Masterclasses y talleres de canto en folklore, tango y géneros argentinos. Transmisión directa de la tradición oral, con más de 55 años de experiencia escénica.',
-      en: 'Master classes and singing workshops in folklore, tango and Argentine genres. Direct transmission of oral tradition, with over 55 years of stage experience.',
+    subtitle: {
+      es: 'Cantar no es solo afinar. Es encontrarte.',
+      en: 'Singing is not just about staying in tune. It is about finding yourself.',
     },
-
-    genres: [
+    intro1: {
+      es: 'Hay algo en la voz que no se escribe en ningún manual. Se aprende escuchando, sintiendo, viviendo. Eso es lo que enseño: los yeites, la intención, el propósito detrás de cada nota.',
+      en: 'There is something in the voice that is not written in any manual. It is learned by listening, feeling, living. That is what I teach: the secrets, the intention, the purpose behind each note.',
+    },
+    intro2: {
+      es: 'Lo que aprendí de los grandes referentes, ahora te lo transmito a vos.',
+      en: 'What I learned from the great legends, now I pass it on to you.',
+    },
+    offerTitle: {
+      es: '¿Qué ofrezco en MJEstudio?',
+      en: 'What do I offer at MJEstudio?',
+    },
+    offers: [
       {
-        title: { es: 'Folklore', en: 'Folklore' },
-        desc: {
-          es: 'Técnica vocal aplicada al folklore argentino: zamba, chacarera, vidala y más. Respiración, proyección y la identidad rítmica del género.',
-          en: 'Vocal technique applied to Argentine folklore: zamba, chacarera, vidala and more. Breathing, projection and the rhythmic identity of the genre.',
-        },
+        title: { es: 'Clases individuales presenciales', en: 'In-person individual classes' },
+        desc: { es: 'Trabajo personalizado, a tu ritmo y con tu voz.', en: 'Personalized work, at your own pace and with your voice.' }
       },
       {
-        title: { es: 'Tango', en: 'Tango' },
-        desc: {
-          es: 'El "yeite" tanguero enseñado de primera mano. Fraseo, interpretación dramática del texto poético y construcción de repertorio auténtico.',
-          en: 'Tango "yeite" taught first-hand. Phrasing, dramatic interpretation of poetic text and authentic repertoire building.',
-        },
+        title: { es: 'Clases online', en: 'Online classes' },
+        desc: { es: 'La misma calidad, desde donde estés.', en: 'The same quality, from wherever you are.' }
       },
       {
-        title: { es: 'Géneros Argentinos', en: 'Argentine Genres' },
-        desc: {
-          es: 'Un recorrido por los géneros urbanos y regionales: milonga, candombe, vals criollo y bolero. Versatilidad con raíz.',
-          en: 'A journey through urban and regional genres: milonga, candombe, vals criollo and bolero. Versatility with roots.',
-        },
+        title: { es: 'Master Class', en: 'Master Class' },
+        desc: { es: 'Una experiencia intensiva para dar el salto que necesitás.', en: 'An intensive experience to take the leap you need.' }
       },
+      {
+        title: { es: 'Talleres', en: 'Workshops' },
+        desc: { es: 'Aprendizaje colectivo, creativo y transformador.', en: 'Collective, creative and transformative learning.' }
+      }
     ],
-
-    scheduleLabel: { es: 'Horarios', en: 'Schedule' },
-    scheduleTitle: {
-      es: 'Todos los\u003cbr /\u003e\u003cem\u003esábados\u003c/em\u003e',
-      en: 'Every\u003cbr /\u003e\u003cem\u003eSaturday\u003c/em\u003e',
+    audience1: {
+      es: 'Para principiantes, intermedios y cantantes con experiencia.',
+      en: 'For beginners, intermediate and experienced singers.',
     },
-    scheduleSub: {
-      es: 'Las clases se dictan los sábados por la tarde en dos turnos. Cupos limitados para garantizar la atención personalizada que cada alumno merece.',
-      en: 'Classes are held on Saturdays in two shifts. Limited spots to ensure the personalized attention each student deserves.',
+    audience2: {
+      es: 'Para quienes quieren potenciar su canto, y también para quienes quieren cantar por primera vez.',
+      en: 'For those who want to boost their singing, and also for those who want to sing for the first time.',
     },
-    shifts: [
-      { time: '11:00 hs', new: false },
-      { time: '16:00 hs', new: true  },
-    ],
-    newShift: { es: 'Nuevo turno', en: 'New shift' },
-    studentsLine: { es: '~11 alumnos por turno · grupos reducidos', en: '~11 students per shift · small groups' },
-    location:     { es: 'Buenos Aires, Argentina', en: 'Buenos Aires, Argentina' },
-
-    badge: {
-      title: { es: 'Cupos Limitados', en: 'Limited Spots' },
-      text:  {
-        es: 'Para garantizar la calidad de la enseñanza y el contacto directo con la maestra, cada turno tiene cupo máximo. ¡Reservá el tuyo!',
-        en: 'To guarantee teaching quality and direct contact with the teacher, each shift has a maximum capacity. Reserve yours!',
-      },
-      pill: { es: '✦ Exclusividad garantizada', en: '✦ Guaranteed exclusivity' },
+    closing1: {
+      es: 'Cantar es expresarte en plenitud.',
+      en: 'Singing is expressing yourself in full.',
     },
-
-    ctaLabel: { es: 'Inscripción', en: 'Enrollment' },
-    ctaTitle: {
-      es: '¿Querés\u003cbr /\u003e\u003cem\u003esumar tu voz?\u003c/em\u003e',
-      en: 'Want to\u003cbr /\u003e\u003cem\u003ejoin the class?\u003c/em\u003e',
+    closing2: {
+      es: 'Y eso es lo que haremos juntos.',
+      en: 'And that is what we will do together.',
     },
-    ctaSub: {
-      es: 'Completá el formulario o escribinos directamente por WhatsApp. Te responderemos a la brevedad con toda la información.',
-      en: 'Fill out the form or contact us directly via WhatsApp. We will get back to you promptly with all the information.',
+    reserveLabel: {
+      es: 'Reservá tu lugar —',
+      en: 'Book your spot —',
     },
-    ctaWhatsApp: { es: 'Consultá por WhatsApp', en: 'Ask via WhatsApp' },
-
-    form: {
-      title:            { es: 'Anotate al taller',              en: 'Register for the workshop'          },
-      nombre:           { es: 'Nombre',                         en: 'Name'                               },
-      turno:            { es: 'Turno preferido',                en: 'Preferred shift'                    },
-      turnoPlaceholder: { es: 'Elegí un turno',                 en: 'Choose a shift'                     },
-      turnoManana:      { es: 'Turno mañana — 11:00 hs',       en: 'Morning shift — 11:00 am'           },
-      turnoTarde:       { es: 'Turno tarde — 16:00 hs',        en: 'Afternoon shift — 4:00 pm'          },
-      turnoAmbos:       { es: 'Ambos (tengo flexibilidad)',     en: 'Either (I am flexible)'             },
-      mensaje:          { es: 'Contanos sobre vos (opcional)',  en: 'Tell us about yourself (optional)'  },
-      send:             { es: 'Reservar mi lugar',              en: 'Reserve my spot'                    },
-      sending:          { es: 'Enviando...',                    en: 'Sending...'                         },
-      successTitle:     { es: '¡Recibimos tu consulta!',       en: 'We received your inquiry!'          },
-      successSub:       { es: 'María José o su equipo te escribirán a la brevedad con la información del taller.', en: 'María José or her team will contact you shortly with workshop details.' },
-      again:            { es: 'Enviar otra consulta',          en: 'Send another inquiry'               },
-      error:            { es: 'Hubo un error al enviar. Intentá de nuevo o escribinos por WhatsApp.', en: 'There was an error. Please try again or contact us via WhatsApp.' },
-    },
+    contactLink: { es: 'Contacto', en: 'Contact' },
   },
 
   // ── Footer ──

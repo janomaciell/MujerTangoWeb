@@ -9,6 +9,7 @@ export function assetUrl(publicPath) {
 
 export const FORMATOS_X_FOLDER = 'FORMATOS X'
 export const PNG_FOLDER = 'retratos'
+export const WEB_MENTANA_FOLDER = 'web-mentana'
 
 export function formatosXPath(file) {
   return assetUrl(`images/${FORMATOS_X_FOLDER}/${file}`)
@@ -18,6 +19,10 @@ export function pngPath(file) {
   return assetUrl(`images/${PNG_FOLDER}/${file}`)
 }
 
+export function webMentanaPath(file) {
+  return assetUrl(`${WEB_MENTANA_FOLDER}/${file}`)
+}
+
 export function coverPath(file) {
   return assetUrl(`portadas/${file}`)
 }
@@ -25,9 +30,9 @@ export function coverPath(file) {
 export const SITE_FAVICON = '/logo-maria.png'
 
 export const siteImages = {
-  hero:          pngPath('maria-artistica-hero.png'),         // ← imagen de referencia
+  hero:          assetUrl('background-liso-hero.png'),
   aboutQuote:    formatosXPath('img21.png'),
-  biographyHero: formatosXPath('img01.png'),
+  biographyHero: webMentanaPath('MARIA-Biografia.png'),
   logo:          SITE_FAVICON,
 }
 

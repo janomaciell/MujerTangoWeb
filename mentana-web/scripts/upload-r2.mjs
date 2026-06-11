@@ -16,7 +16,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const { join, relative, extname } = path
 const ROOT = join(__dirname, '..')
 const PUBLIC = join(ROOT, 'public')
-const UPLOAD_DIRS = ['images', 'portadas']
+const UPLOAD_DIRS = ['images', 'portadas', 'web-mentana']
 
 const MIME = {
   '.png': 'image/png',
@@ -48,6 +48,20 @@ function walk(dir, acc = []) {
 
 function collectFiles() {
   const files = []
+  
+  // Scan files directly in the root of public
+  try {
+    for (const name of readdirSync(PUBLIC)) {
+      const full = join(PUBLIC, name)
+      if (!statSync(full).isDirectory()) {
+        files.push(full)
+      }
+    }
+  } catch (err) {
+    console.warn('Error al leer el directorio public:', err.message)
+  }
+
+  // Scan subdirectories
   for (const sub of UPLOAD_DIRS) {
     const base = join(PUBLIC, sub)
     try {

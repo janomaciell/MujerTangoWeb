@@ -8,8 +8,10 @@
     "build": "vite build",
     "preview": "vite preview",
     "images:convert-x": "node scripts/convert-formatos-x-to-png.mjs",
+    "images:convert-web": "node scripts/convert-web-mentana-to-png.mjs",
     "r2:upload": "node scripts/upload-r2.mjs",
-    "r2:upload:dry": "node scripts/upload-r2.mjs --dry-run"
+    "r2:upload:dry": "node scripts/upload-r2.mjs --dry-run",
+    "r2:sync-web": "npm run images:convert-web && npm run r2:upload"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

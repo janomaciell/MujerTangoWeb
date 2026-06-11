@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Great+Vibes&family=Pinyon+Script&display=swap');
 
 .footer {
-  background: var(--surface-2);
+  background: #1b1b1b;
   border-top: 1px solid var(--border);
 }
 

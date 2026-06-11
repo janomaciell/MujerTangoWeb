@@ -1,4 +1,4 @@
-import { formatosXPath } from './images.js'
+import { webMentanaPath } from './images.js'
 
 function photoNum(file) {
   const base = file.replace(/\.[^.]+$/, '')
@@ -12,8 +12,8 @@ function makePhoto(file) {
   const num = photoNum(file)
   const id = file.replace(/[^a-z0-9]/gi, '-').toLowerCase()
   return {
-    id: `fmt-${id}`,
-    src: formatosXPath(file),
+    id: `gal-${id}`,
+    src: webMentanaPath(file),
     alt: {
       es: `Fotografía ${num} — María José Mentana`,
       en: `Photo ${num} — María José Mentana`,
@@ -21,15 +21,15 @@ function makePhoto(file) {
   }
 }
 
-/** Galería: todas las fotos de FORMATOS X, ya convertidas a .png */
-const formatosXPngFiles = [
-  'img01.png', 'img02.png', 'img03.png', 'img04.png', 'img05.png',
-  'img06.png', 'img07.png', 'img08.png', 'img11.png', 'img12.png',
-  'img13.png', 'img14.png', 'img15.png', 'img16.png', 'img17.png',
-  'img18.png', 'img18-webp.png', 'img19.png', 'img20.png', 'img21.png',
-  'img22.png', 'img23.png', 'img24.png', 'img25.png', 'img26.png',
-  'img27.png', 'img28.png', 'img28-jpg.png', 'img29.png', 'img30.png',
-  'img31.png', 'img33.png', 'imig32.png',
+/** Galería: todas las fotos de web-mentana, convertidas a .png */
+const webMentanaPngFiles = [
+  '1.png', '2.png', '3.png', '4.png', '5.png',
+  '6.png', '7.png', '8.png', '9.png', '10.png',
+  '11.png', 'img1.png', 'MJM.png', 'MJM3.png',
+  'MIRTA-LEGRAND-COLEGAS.png', 'MORES.png',
+  'PAQUITO-D-RIVERA.png', 'Stampone-Federico-Rivas-Buono.png',
+  'VITTORIOGASMAN.png', 'maria_jose_mentana-70.png',
+  'talleres-fotos.png', 'talleresfotos.png'
 ]
 
-export const photos = formatosXPngFiles.map(makePhoto)
+export const photos = webMentanaPngFiles.map(makePhoto)

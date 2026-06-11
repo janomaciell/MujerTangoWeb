@@ -14,7 +14,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 17.5rem), 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   align-items: start;
 }
@@ -188,6 +188,12 @@
   color: var(--ink);
   background: var(--gold);
   padding: 0.25rem 0.6rem;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
