@@ -21,7 +21,7 @@ const albums = [
     title: 'CienTroilos',
     year: '2014',
     spotifyUrl: 'https://open.spotify.com/album/3TvrHvdAHn3tLcDAI1CFxo',
-    cover: coverPath('CIENTROILOS.png'),
+    cover: coverPath('CIENTROILOS1.png'),
   },
   {
     id: '40-anos',

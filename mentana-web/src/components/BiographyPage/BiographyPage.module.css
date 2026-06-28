@@ -248,16 +248,15 @@
 }
 
 .quoteUna {
-  display: block;
+  display: inline;
   font-family: 'Pinyon Script', 'Alex Brush', 'Great Vibes', cursive;
-  font-size: clamp(4rem, 10vw, 8.5rem);
+  font-size: 1.35em;
   font-weight: 400;
   font-style: normal;
   color: #b5ad9e;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.05em;
-  line-height: 0.8;
+  letter-spacing: 0.03em;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  vertical-align: baseline;
 }
 
 .quoteRest {
@@ -539,10 +538,6 @@
     font-size: 0.68rem;
   }
 
-  .quoteUna {
-    font-size: clamp(3.2rem, 12vw, 5.5rem);
-  }
-
   .quoteRest {
     font-size: clamp(1.45rem, 5.5vw, 2rem);
   }
@@ -574,10 +569,6 @@
   .statNum { font-size: clamp(1.8rem, 9vw, 2.5rem); }
 
   .quoteFigure { max-width: 100%; }
-
-  .quoteUna {
-    font-size: clamp(2.5rem, 11vw, 4rem);
-  }
 
   .quoteRest {
     font-size: clamp(1.25rem, 5vw, 1.65rem);

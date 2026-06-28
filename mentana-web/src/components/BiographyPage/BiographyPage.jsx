@@ -21,7 +21,9 @@ const mastersAndCollabs = [
   'Tita Merello', 'Nelly Omar', 'Horacio Ferrer', 'Mariano Mores',
   'Leopoldo Federico', 'Raúl Garello', 'Floreal Ruiz', 'Osvaldo Piro',
   'Néstor Marconi', 'Sexteto Mayor', 'Atilio Stampone', 'Litto Nebbia',
-  'Simón Díaz', 'Orquesta Sinfónica de Venezuela', 'Orquesta Nacional "Juan de Dios Filiberto"'
+  'Simón Díaz', 'Osvaldo Berlingeri', 'Orquesta Sinfónica Venezuela',
+  'Sinfónica de Salta', 'Filarmónica de Mendoza',
+  'Orquesta Nacional "Juan de Dios Filiberto"'
 ]
 
 function QuoteText({ lang }) {
@@ -30,13 +32,8 @@ function QuoteText({ lang }) {
   const highlight = emphasis[lang]
   const idx = restText.indexOf(highlight)
 
-  if (idx === -1) {
-    return (
-      <p className={styles.quoteRest}>
-        {restText}
-      </p>
-    )
-  }
+
+
 
   const before = restText.slice(0, idx)
   const after = restText.slice(idx + highlight.length)
@@ -223,7 +220,6 @@ export default function BiographyPage() {
         <div className="container">
           <div className={styles.quoteBlock}>
             <blockquote className={`bpage-quote-anim ${styles.quote}`}>
-              <span className={styles.quoteUna}>{t.about.quote.una[lang]}</span>
               <QuoteText lang={lang} />
             </blockquote>
 

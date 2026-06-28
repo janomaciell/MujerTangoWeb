@@ -123,7 +123,7 @@ export default function Footer() {
               {ft.backTop[lang]}
             </button>
             <span className={`footer-el ${styles.credit}`}>
-              Sitio por <a href="https://clyra.studio" target="_blank" rel="noopener noreferrer">Clyra Studio</a>
+              Sitio por <a href="https://clyra-studio.vercel.app/" target="_blank" rel="noopener noreferrer">Clyra Studio</a>
             </span>
           </div>
         </div>

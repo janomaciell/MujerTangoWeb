@@ -29,7 +29,7 @@ export const discographyAlbums = [
     id: 'cientroilos',
     year: '2014',
     title: 'CienTroilos',
-    cover: coverPath('CIENTROILOS.png'),
+    cover: coverPath('CIENTROILOS1.png'),
     note: {
       es: 'Homenaje a Troilo — con Stampone, Federico, Garello, Baffa, Berlingieri y Nebbia.',
       en: 'Tribute to Troilo — with Stampone, Federico, Garello, Baffa, Berlingieri and Nebbia.',

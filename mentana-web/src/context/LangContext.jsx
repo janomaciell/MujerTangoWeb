@@ -50,7 +50,7 @@ export const t = {
     quote: {
       una: { es: 'Una', en: 'A' },
       rest: {
-        es: 'voz que atravesó continentes, llevando el tango argentino a cada rincón del mundo.',
+        es: 'Una voz que atravesó continentes, llevando el tango argentino a cada rincón del mundo.',
         en: 'voice that crossed continents, bringing Argentine tango to every corner of the world.',
       },
       emphasis: {

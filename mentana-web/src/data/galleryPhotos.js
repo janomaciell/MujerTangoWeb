@@ -23,9 +23,7 @@ function makePhoto(file) {
 
 /** Galería: todas las fotos de web-mentana, convertidas a .png */
 const webMentanaPngFiles = [
-  '1.png', '2.png', '3.png', '4.png', '5.png',
-  '6.png', '7.png', '8.png', '9.png', '10.png',
-  '11.png', 'img1.png', 'MJM.png', 'MJM3.png',
+  'MJM.png', 'MJM3.png',
   'MIRTA-LEGRAND-COLEGAS.png', 'MORES.png',
   'PAQUITO-D-RIVERA.png', 'Stampone-Federico-Rivas-Buono.png',
   'VITTORIOGASMAN.png', 'maria_jose_mentana-70.png',
