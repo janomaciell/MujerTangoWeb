@@ -34,6 +34,13 @@ export const siteImages = {
   aboutQuote:    assetUrl('biografia2.jpeg'),
   biographyHero: webMentanaPath('MARIA-Biografia.png'),
   logo:          SITE_FAVICON,
+  biographyBg:   assetUrl('Fondo BIO.png'),
+  galleryBg:     assetUrl('Fondo GALERIA.png'),
+  discographyBg: assetUrl('FondoDiscografia.png'),
+  classesBg:     assetUrl('FondoClases.jpeg'),
+  contactBg:     webMentanaPath('MJM3.png'),
+  videoHome:     assetUrl('videohome.MOV'),
+  videoHomeMobile: assetUrl('FondoHeroMobile.MOV'),
 }
 
 export const usesRemoteAssets = Boolean(ASSETS_BASE)

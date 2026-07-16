@@ -3,7 +3,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import styles from './DiscographyPage.module.css'
 import { useLang, t } from '../../context/LangContext'
-import { coverPath } from '../../data/images.js'
+import { coverPath, siteImages } from '../../data/images.js'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -74,9 +74,10 @@ export default function DiscographyPage() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.disc-hero-text', {
-        opacity: 0, y: 60, duration: 1.2, ease: 'power3.out', delay: 0.2,
-      })
+      const heroTl = gsap.timeline({ delay: 0.2 })
+      heroTl
+        .fromTo('.disc-hero-bg', { opacity: 0 }, { opacity: 1, duration: 1.2, ease: 'power2.out' })
+        .fromTo('.disc-hero-text', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out' }, '-=0.6')
       gsap.from('.disc-album-card-wrapper', {
         opacity: 0, y: 60, scale: 0.94,
         duration: 0.9, stagger: 0.1, ease: 'power3.out',
@@ -91,25 +92,38 @@ export default function DiscographyPage() {
   }, [])
 
   return (
-    <section className={styles.page} ref={sectionRef} id="discografia">
+    <div className={styles.page} ref={sectionRef} id="discografia">
       {/* Geometric decorators */}
       <div className={styles.geo1} aria-hidden="true" />
       <div className={styles.geo2} aria-hidden="true" />
       <div className={styles.geo3} aria-hidden="true" />
 
-      <div className="container">
-        <header className={`disc-hero-text ${styles.header}`}>
-          <span className={styles.label}>
-            {t.discography.sectionLabel[lang]}
-          </span>
-          <h1
-            className={styles.title}
-            dangerouslySetInnerHTML={{ __html: t.discography.headingTitle[lang] }}
+      {/* ── HERO ── */}
+      <section className={styles.hero}>
+        {/* Background Full-bleed */}
+        <div className={`disc-hero-bg ${styles.portrait}`}>
+          <img
+            src={siteImages.discographyBg}
+            alt={lang === 'es' ? 'Discografía' : 'Discography'}
+            className={styles.portraitImg}
           />
-          <div className={styles.divider} />
-          <p className={styles.sub}>{t.discography.headerSub[lang]}</p>
-        </header>
+          <div className={styles.portraitFade} aria-hidden="true" />
+        </div>
 
+        {/* Content stacked on top & aligned to the right */}
+        <div className={styles.heroInner}>
+          <div className={`disc-hero-text ${styles.heroContent}`}>
+            <span className="section-label">{t.discography.sectionLabel[lang]}</span>
+            <h1
+              className={styles.title}
+              dangerouslySetInnerHTML={{ __html: t.discography.headingTitle[lang] }}
+            />
+            <p className={styles.subtitle}>{t.discography.headerSub[lang]}</p>
+          </div>
+        </div>
+      </section>
+
+      <div className="container">
         <div className={`disc-grid ${styles.grid}`}>
           {albums.map((album) => (
             <div key={album.id} className="disc-album-card-wrapper">
@@ -151,6 +165,6 @@ export default function DiscographyPage() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   )
 }

@@ -7,6 +7,7 @@
   position: relative;
   background: var(--bg);
   overflow: hidden;
+  padding-top: 0;
 }
 
 .bgPattern {
@@ -19,62 +20,76 @@
   z-index: 0;
 }
 
-/* ════════════════════════════════════════════════════
-   1. INTRO HERO
-   ════════════════════════════════════════════════════ */
-.introSection {
+/* ── HERO ── */
+.hero {
   position: relative;
-  z-index: 1;
-  padding-top: calc(var(--page-top) + 2rem);
-  padding-bottom: clamp(4rem, 8vw, 7rem);
-  text-align: center;
-  border-bottom: 1px solid var(--border);
+  height: 100svh;
+  min-height: 600px;
+  overflow: hidden;
+  background: var(--bg);
+  margin-bottom: clamp(3rem, 6vw, 5rem);
 }
 
-.introInner {
+.portrait {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.portraitImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.portraitFade {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.85) 100%);
+  pointer-events: none;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.heroContent {
+  text-align: right;
+  max-width: clamp(300px, 55vw, 680px);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1.25rem;
+  align-items: flex-end;
+  justify-content: center;
+  padding-right: clamp(1rem, 3vw, 5rem);
 }
 
-.kicker {
-  display: inline-block;
-  font-family: var(--font-body);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent-light);
-  opacity: 0.75;
-}
-
-.mainTitle {
+.title {
   font-family: var(--font-display);
-  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-size: clamp(2rem, 5vw, 3.8rem);
   font-weight: 300;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
   color: var(--text-primary);
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  margin: 0;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.65);
 }
 
-.mainLead {
-  font-family: var(--font-display);
-  font-size: clamp(1.1rem, 2vw, 1.55rem);
-  font-style: italic;
-  color: var(--accent-light);
-  font-weight: 300;
-  max-width: 640px;
-  line-height: 1.55;
-  margin: 0;
-}
-
-.titleRule {
-  width: 48px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-light), transparent);
-  margin-top: 0.5rem;
+.subtitle {
+  color: rgba(245, 247, 255, 0.75);
+  font-size: clamp(0.92rem, 1.2vw, 1.05rem);
+  line-height: 1.7;
+  max-width: 55ch;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  text-align: right;
 }
 
 /* ════════════════════════════════════════════════════
@@ -777,4 +792,38 @@
   color: rgba(255,255,255,0.4);
   font-size: 0.78rem;
   letter-spacing: 0.12em;
+}
+
+@media (max-width: 768px) {
+  .heroInner {
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: clamp(3rem, 7vh, 5rem);
+  }
+
+  .heroContent {
+    text-align: center;
+    align-items: center;
+    padding-right: 0;
+    max-width: none;
+  }
+
+  .title {
+    font-size: clamp(1.85rem, 8vw, 2.75rem);
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: clamp(0.88rem, 3.5vw, 1rem);
+    text-align: center;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSub { font-size: clamp(1.1rem, 6vw, 1.4rem); }
+}
+
+@media (max-width: 360px) {
+  .heroSub { font-size: 1.05rem; }
 }

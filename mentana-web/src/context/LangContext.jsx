@@ -50,12 +50,12 @@ export const t = {
     quote: {
       una: { es: 'Una', en: 'A' },
       rest: {
-        es: 'Una voz que atravesó continentes, llevando el tango argentino a cada rincón del mundo.',
-        en: 'voice that crossed continents, bringing Argentine tango to every corner of the world.',
+        es: 'Una pasión que se hace canto, tejiendo la historia del tango con la fuerza del alma.',
+        en: 'passion turned into song, weaving the history of tango with the strength of the soul.',
       },
       emphasis: {
-        es: 'atravesó continentes',
-        en: 'crossed continents',
+        es: 'fuerza del alma',
+        en: 'strength of the soul',
       },
     },
   },
@@ -212,12 +212,12 @@ export const t = {
   biographyPage: {
     sectionLabel: { es: 'Biografía', en: 'Biography' },
     heroTitle: {
-      es: 'La Artista',
-      en: 'The Artist',
+      es: 'Una voz que<br />atravesó continentes',
+      en: 'A voice that<br />crossed continents',
     },
     heroSub: {
-      es: 'María José Mentana — una vida con la música.',
-      en: 'María José Mentana — a life with music.',
+      es: 'La trayectoria de una de las grandes voces del tango argentino contemporáneo.',
+      en: 'The career of one of the great voices of contemporary Argentine tango.',
     },
     bornLabel: { es: 'Fecha de nacimiento', en: 'Date of birth' },
     stats: {

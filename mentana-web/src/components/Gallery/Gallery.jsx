@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import styles from './Gallery.module.css'
 import { useLang, t } from '../../context/LangContext'
 import { photos } from '../../data/galleryPhotos'
+import { siteImages } from '../../data/images.js'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -15,9 +16,10 @@ export default function GalleryPage() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.gallery-header-el', {
-        opacity: 0, y: 30, duration: 0.8, stagger: 0.08, ease: 'power2.out', delay: 0.2
-      })
+      const heroTl = gsap.timeline({ delay: 0.2 })
+      heroTl
+        .fromTo('.gallery-hero-bg', { opacity: 0 }, { opacity: 1, duration: 1.2, ease: 'power2.out' })
+        .fromTo('.gallery-header-el', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out' }, '-=0.6')
       gsap.from('.gal-item', {
         opacity: 0, y: 30, duration: 0.7,
         stagger: { each: 0.04, from: 'start' },
@@ -42,14 +44,30 @@ export default function GalleryPage() {
   return (
     <div className={styles.page} ref={sectionRef}>
 
-      <div className={styles.header}>
-        <span className={`gallery-header-el section-label`}>{t.gallery.sectionLabel[lang]}</span>
-        <h1
-          className={`gallery-header-el ${styles.title}`}
-          dangerouslySetInnerHTML={{ __html: t.gallery.headingTitle[lang] }}
-        />
-        <p className={`gallery-header-el ${styles.subtitle}`}>{t.gallery.subtitle[lang]}</p>
-      </div>
+      {/* ── HERO ── */}
+      <section className={styles.hero}>
+        {/* Background Full-bleed */}
+        <div className={`gallery-hero-bg ${styles.portrait}`}>
+          <img
+            src={siteImages.galleryBg}
+            alt={lang === 'es' ? 'Galería' : 'Gallery'}
+            className={styles.portraitImg}
+          />
+          <div className={styles.portraitFade} aria-hidden="true" />
+        </div>
+
+        {/* Content stacked on top & aligned to the right */}
+        <div className={styles.heroInner}>
+          <div className={styles.heroContent}>
+            <span className="gallery-header-el section-label">{t.gallery.sectionLabel[lang]}</span>
+            <h1
+              className={`gallery-header-el ${styles.title}`}
+              dangerouslySetInnerHTML={{ __html: t.gallery.headingTitle[lang] }}
+            />
+            <p className={`gallery-header-el ${styles.subtitle}`}>{t.gallery.subtitle[lang]}</p>
+          </div>
+        </div>
+      </section>
 
       <div className={`gal-grid ${styles.grid}`}>
         {photos.map((photo, i) => (

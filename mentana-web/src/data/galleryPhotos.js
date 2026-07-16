@@ -23,11 +23,21 @@ function makePhoto(file) {
 
 /** Galería: todas las fotos de web-mentana, convertidas a .png */
 const webMentanaPngFiles = [
-  'MJM.png', 'MJM3.png',
-  'MIRTA-LEGRAND-COLEGAS.png', 'MORES.png',
-  'PAQUITO-D-RIVERA.png', 'Stampone-Federico-Rivas-Buono.png',
-  'VITTORIOGASMAN.png', 'maria_jose_mentana-70.png',
-  'talleres-fotos.png', 'talleresfotos.png'
+  'PAQUITO-D-RIVERA.png',
+  'VITTORIOGASMAN.png',
+  'maria_jose_mentana-70.png',
+  'img-12.png',
+  'img-ferrer.png',
+  'img-0173.png',
+  'stampone.png',
+  'Stampone-Federico-Rivas-Buono.png',
+  'tito-lusiardo-guillermo-fernandez.png',
+  'img-0313.png',
+  'img-0783.png',
+  'img-9833-2.png',
+  'MJM.png',
+  'MJM3.png',
+  'dsc-0842.png',
 ]
 
 export const photos = webMentanaPngFiles.map(makePhoto)

@@ -7,13 +7,6 @@ import { siteImages } from '../../data/images.js'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const statsData = [
-  { num: '+55', key: 'years'      },
-  { num: '3',   key: 'continents' },
-  { num: '+400', key: 'concerts'   },
-  { num: '10+', key: 'albums'     },
-]
-
 const distIds = ['dist-personalidad', 'dist-academica']
 
 const mastersAndCollabs = [
@@ -59,20 +52,10 @@ export default function BiographyPage() {
       const heroTl = gsap.timeline({ delay: 0.2 })
       heroTl
         .fromTo('.bpage-rule-top', { scaleX: 0 }, { scaleX: 1, duration: 0.9, ease: 'power2.inOut' })
-        .fromTo('.bpage-hero-label', { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '-=0.3')
-        .fromTo('.bpage-hero-title', { yPercent: 40, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 1, ease: 'power3.out' }, '-=0.3')
-        .fromTo('.bpage-hero-sub',   { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, '-=0.5')
-        .fromTo('.bpage-hero-img',   { opacity: 0, scale: 1.04 }, { opacity: 1, scale: 1, duration: 1.2, ease: 'power2.out' }, '-=0.6')
+        .fromTo('.bpage-hero-bg',    { opacity: 0 }, { opacity: 1, duration: 1.2, ease: 'power2.out' }, '-=0.4')
+        .fromTo('.bpage-hero-sub',   { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '-=0.6')
 
-      // Stats
-      gsap.from('.bpage-stat', {
-        opacity: 0,
-        y: 30,
-        duration: 0.7,
-        stagger: 0.1,
-        ease: 'power3.out',
-        scrollTrigger: { trigger: '.bpage-stats', start: 'top 85%', toggleActions: 'play none none none' }
-      })
+
 
       // Experience Counter Animation
       const counter = { val: 0 }
@@ -107,19 +90,7 @@ export default function BiographyPage() {
         },
       })
 
-      // Quote Block Animation
-      gsap.from('.bpage-quote-anim', {
-        opacity: 0,
-        y: 30,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.bpage-quote-section',
-          start: 'top 80%',
-          toggleActions: 'play none none none',
-        }
-      })
+
 
       // Honors & Collaborations
       gsap.from('.bpage-tags-anim', {
@@ -155,37 +126,31 @@ export default function BiographyPage() {
       {/* ── HERO ── */}
       <section className={styles.hero}>
         <div className={`bpage-rule-top ${styles.ruleTop}`} />
+        
+        {/* Foto full-bleed */}
+        <div className={`bpage-hero-bg ${styles.portrait}`}>
+          <img
+            src={siteImages.biographyBg}
+            alt="María José Mentana"
+            className={styles.portraitImg}
+          />
+          <div className={styles.portraitFade} aria-hidden="true" />
+        </div>
+
+        {/* Contenido centrado/alineado */}
         <div className={styles.heroInner}>
           <div className={styles.heroContent}>
-            <span className="bpage-hero-label section-label">{bp.sectionLabel[lang]}</span>
+            <span className="bpage-hero-sub section-label">{bp.sectionLabel[lang]}</span>
             <h1
-              className={`bpage-hero-title ${styles.heroTitle}`}
-            >
-              {bp.heroTitle[lang]}
-            </h1>
-            <p className={`bpage-hero-sub ${styles.heroSub}`}>{bp.heroSub[lang]}</p>
-          </div>
-
-          <div className={`bpage-hero-img ${styles.heroImgWrap}`}>
-            <img src={siteImages.biographyHero} alt="María José Mentana" className={styles.heroImg} />
-            <div className={styles.heroImgGradient} />
+              className={`bpage-hero-sub ${styles.title}`}
+              dangerouslySetInnerHTML={{ __html: bp.heroTitle[lang] }}
+            />
+            <p className={`bpage-hero-sub ${styles.subtitle}`}>{bp.heroSub[lang]}</p>
           </div>
         </div>
       </section>
 
-      {/* ── STATS ── */}
-      <div className={`bpage-stats ${styles.statsBar}`}>
-        <div className="container">
-          <div className={styles.statsGrid}>
-            {statsData.map(s => (
-              <div key={s.key} className={`bpage-stat ${styles.statItem}`}>
-                <span className={styles.statNum}>{s.num}</span>
-                <span className={styles.statLabel}>{bp.stats[s.key][lang]}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+
 
       <div className={`bpage-gold-line ${styles.goldLine}`} />
 
@@ -208,31 +173,17 @@ export default function BiographyPage() {
                   {yearsLines[0]}<br />{yearsLines[1]}
                 </span>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <div className={`bpage-gold-line ${styles.goldLine}`} />
-
-      {/* ── QUOTE SECTION ── */}
-      <section className={`bpage-quote-section ${styles.quoteSection}`}>
-        <div className="container">
-          <div className={styles.quoteBlock}>
-            <blockquote className={`bpage-quote-anim ${styles.quote}`}>
-              <QuoteText lang={lang} />
-            </blockquote>
-
-            <figure className={`bpage-quote-anim ${styles.quoteFigure}`}>
-              <div className={styles.quoteImageWrap}>
+              {/* Imagen abajo de los números */}
+              <div className={styles.counterImageWrap}>
                 <img
                   src={siteImages.aboutQuote}
                   alt="María José Mentana"
-                  className={styles.quoteImage}
+                  className={styles.counterImage}
                   loading="lazy"
                 />
               </div>
-            </figure>
+            </div>
           </div>
         </div>
       </section>

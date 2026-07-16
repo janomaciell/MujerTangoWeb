@@ -19,21 +19,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 30% center;
+  object-position: center;
 }
 
-/* Degradado oscuro zona derecha — más opaco */
+/* Opacidad leve y uniforme en toda la pantalla del video */
 .portraitFade {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      to left,
-      rgba(0, 0, 0, 0.85) 0%,
-      rgba(0, 0, 0, 0.65) 25%,
-      rgba(0, 0, 0, 0.3) 50%,
-      transparent 75%
-    );
+  background: rgba(0, 0, 0, 0.45);
   pointer-events: none;
 }
 
@@ -44,17 +37,17 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: clamp(4rem, 9vh, 6rem) var(--gutter) clamp(2rem, 4vh, 3rem);
+  justify-content: flex-end; /* Pushed to bottom on PC */
+  padding: clamp(4rem, 9vh, 6rem) var(--gutter) clamp(3rem, 6vh, 5rem);
 }
 
-/* Panel: texto en mitad-baja derecha */
+/* Panel: texto centrado y abajo en PC */
 .leftPanel {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  padding-right: clamp(2rem, 5vw, 8rem);
+  justify-content: flex-end;
+  align-items: center; /* Centered horizontally */
+  padding-right: 0;
   width: 100%;
 }
 
@@ -66,6 +59,16 @@
   align-items: center;
 }
 
+.nameRow {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  gap: clamp(1rem, 2.5vw, 2.5rem);
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
 /* ── Logo ── */
 .heroLogo {
   display: block;
@@ -73,7 +76,6 @@
   height: auto;
   margin: 0 auto 0.5rem;
   opacity: 0.95;
-  
 }
 
 .overflow {
@@ -87,11 +89,12 @@
 
 /* "Maria Jose" — tipografía script tipo firma */
 .wordMaria {
+  font-family: 'Pinyon Script', 'Alex Brush', 'Great Vibes', cursive;
   font-weight: 400;
   font-style: normal;
   color: rgba(255, 255, 255, 0.95);
-  font-size: clamp(4.5rem, 8.5vw, 9rem);
-  line-height: 0.95;
+  font-size: clamp(3rem, 5.5vw, 6.5rem); /* Reduced to prevent overflow on PC single line */
+  line-height: 1;
   position: relative;
   z-index: 10;
   text-transform: none;
@@ -100,9 +103,10 @@
 
 /* "MENTANA" — serif elegante */
 .wordMentana {
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
   font-style: normal;
-  font-size: clamp(4.5rem, 8.5vw, 9rem);
+  font-size: clamp(3rem, 5.5vw, 6.5rem); /* Reduced to prevent overflow on PC single line */
   color: rgba(255, 255, 255, 0.95);
   line-height: 1;
   margin-top: 0;
@@ -111,10 +115,10 @@
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Línea decorativa bajo MENTANA */
+/* Línea decorativa bajo MENTANA — oculta por defecto en PC, se muestra en móvil */
 .wordMentana::after {
   content: '';
-  display: block;
+  display: none; /* hidden on PC */
   width: 5.5rem;
   height: 1px;
   background: rgba(181, 173, 158, 0.55);
@@ -126,6 +130,12 @@
   .leftPanel {
     align-items: center;
     padding-right: 0;
+  }
+
+  .nameRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
   }
 
   .portraitImg {
@@ -141,6 +151,7 @@
   }
 
   .wordMentana::after {
+    display: block; /* Show decorative line on tablet/mobile */
     width: 4rem;
     margin-top: 0.8rem;
   }
@@ -166,6 +177,7 @@
   }
 
   .wordMentana::after {
+    display: block; /* Show decorative line on tablet/mobile */
     width: 3rem;
     margin-top: 0.6rem;
   }

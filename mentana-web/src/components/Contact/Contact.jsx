@@ -94,14 +94,18 @@ export default function Contact({ asPage = false }) {
   return (
     <section className={styles.section} id={asPage ? undefined : 'contacto'} ref={sectionRef}>
       <div className="container">
-        <div className="contact-header" style={{ textAlign: 'center', marginBottom: 'clamp(3rem,6vw,5rem)' }}>
-          <span className="section-label">{ct.sectionLabel[lang]}</span>
-          <h2>{ct.heading[lang]}</h2>
-          <div className="section-divider" style={{ background: 'var(--gold)', opacity: 0.4 }} />
-          <p>{ct.sub[lang]}</p>
-        </div>
+        {!asPage && (
+          <>
+            <div className="contact-header" style={{ textAlign: 'center', marginBottom: 'clamp(3rem,6vw,5rem)' }}>
+              <span className="section-label">{ct.sectionLabel[lang]}</span>
+              <h2>{ct.heading[lang]}</h2>
+              <div className="section-divider" style={{ background: 'var(--gold)', opacity: 0.4 }} />
+              <p>{ct.sub[lang]}</p>
+            </div>
 
-        <div className={`contact-line ${styles.divider}`} />
+            <div className={`contact-line ${styles.divider}`} />
+          </>
+        )}
 
         <div className={`contact-grid ${styles.grid}`}>
           <div className={`contact-col ${styles.infoCol}`}>

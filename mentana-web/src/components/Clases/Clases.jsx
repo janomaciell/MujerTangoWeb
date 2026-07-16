@@ -4,6 +4,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import styles from './Clases.module.css'
 import { useLang, t } from '../../context/LangContext'
+import { siteImages } from '../../data/images.js'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -22,6 +23,10 @@ const CLASS_PHOTOS = [
   '/web-mentana/10.png',
   '/web-mentana/11.png',
   '/web-mentana/img1.png',
+  '/web-mentana/clase-copia-de-3.png',
+  '/web-mentana/clase-copia-de-4.png',
+  '/web-mentana/clase-copia-de-7.png',
+  '/web-mentana/clase-copia-de-8d2ebb1d-ffed-43b5-95ec-a2df455dc145.png',
 ]
 
 const ROMAN = ['I', 'II', 'III', 'IV']
@@ -69,13 +74,19 @@ export default function Clases() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Hero intro
-      gsap.from(['.clases-kicker', '.clases-h1', '.clases-lead'], {
-        opacity: 0,
-        y: 28,
-        duration: 1,
-        stagger: 0.18,
-        ease: 'power3.out',
-      })
+      const heroTl = gsap.timeline({ delay: 0.2 })
+      heroTl
+        .fromTo('.clases-hero-bg', { opacity: 0 }, { opacity: 1, duration: 1.2, ease: 'power2.out' })
+        .fromTo(['.clases-kicker', '.clases-h1', '.clases-lead'], {
+          opacity: 0,
+          y: 20,
+        }, {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.12,
+          ease: 'power3.out',
+        }, '-=0.6')
 
       // Philosophy split
       gsap.from('.clases-phil-text', {
@@ -148,14 +159,26 @@ export default function Clases() {
       <div className={styles.bgPattern} aria-hidden="true" />
 
       {/* ── 1. INTRO HERO ── */}
-      <section className={styles.introSection}>
-        <div className={`container container--narrow ${styles.introInner}`}>
-          <span className={`${styles.kicker} clases-kicker`}>
-            {lang === 'es' ? 'Formación Vocal' : 'Vocal Training'}
-          </span>
-          <h1 className={`${styles.mainTitle} clases-h1`}>{c.title[lang]}</h1>
-          <p className={`${styles.mainLead} clases-lead`}>{c.subtitle[lang]}</p>
-          <div className={styles.titleRule} />
+      <section className={styles.hero}>
+        {/* Background Full-bleed */}
+        <div className={`clases-hero-bg ${styles.portrait}`}>
+          <img
+            src={siteImages.classesBg}
+            alt={lang === 'es' ? 'Clases de Canto' : 'Singing Classes'}
+            className={styles.portraitImg}
+          />
+          <div className={styles.portraitFade} aria-hidden="true" />
+        </div>
+
+        {/* Content stacked on top & aligned to the right */}
+        <div className={styles.heroInner}>
+          <div className={styles.heroContent}>
+            <span className={`clases-kicker section-label`}>
+              {lang === 'es' ? 'Formación Vocal' : 'Vocal Training'}
+            </span>
+            <h1 className={`clases-h1 ${styles.title}`}>{c.title[lang]}</h1>
+            <p className={`clases-lead ${styles.subtitle}`}>{c.subtitle[lang]}</p>
+          </div>
         </div>
       </section>
 

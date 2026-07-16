@@ -26,6 +26,8 @@ const MIME = {
   '.avif': 'image/avif',
   '.gif': 'image/gif',
   '.svg': 'image/svg+xml',
+  '.mov': 'video/quicktime',
+  '.mp4': 'video/mp4',
 }
 
 const dryRun = process.argv.includes('--dry-run')
@@ -73,7 +75,7 @@ function collectFiles() {
   return files.filter(f => {
     const ext = extname(f).toLowerCase()
     if (!MIME[ext]) return false
-    if (pngOnly && ext !== '.png') return false
+    if (pngOnly && ext !== '.png' && ext !== '.mov' && ext !== '.mp4' && ext !== '.jpeg' && ext !== '.jpg' && ext !== '.webp') return false
     return true
   })
 }

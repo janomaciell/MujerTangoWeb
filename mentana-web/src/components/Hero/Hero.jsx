@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import styles from './Hero.module.css'
@@ -8,6 +8,16 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Hero() {
   const sectionRef = useRef(null)
+  const [isVideoMobile, setIsVideoMobile] = useState(false)
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 768px)')
+    setIsVideoMobile(mediaQuery.matches)
+
+    const handler = (e) => setIsVideoMobile(e.matches)
+    mediaQuery.addEventListener('change', handler)
+    return () => mediaQuery.removeEventListener('change', handler)
+  }, [])
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -42,11 +52,15 @@ export default function Hero() {
   return (
     <section className={styles.section} id="hero" ref={sectionRef}>
 
-      {/* Foto full-bleed */}
+      {/* Video full-bleed */}
       <div className={`hero-portrait ${styles.portrait}`}>
-        <img
-          src={siteImages.hero}
-          alt="María José Mentana"
+        <video
+          key={isVideoMobile ? 'mobile' : 'desktop'}
+          src={isVideoMobile ? siteImages.videoHomeMobile : siteImages.videoHome}
+          autoPlay
+          loop
+          muted
+          playsInline
           className={styles.portraitImg}
         />
         <div className={styles.portraitFade} aria-hidden="true" />
@@ -62,18 +76,14 @@ export default function Hero() {
               <img src={siteImages.logo} alt="Logo" className={`hero-logo ${styles.heroLogo}`} />
             </div>
 
-            {/* "Maria Jose" — una línea, script, sin recorte */}
-            <div className={styles.overflow}>
-              <span className={`word-maria ${styles.word} ${styles.wordMaria}`}>
-                María José
-              </span>
-            </div>
-
-            {/* "MENTANA" */}
-            <div className={styles.overflow}>
-              <span className={`word-mentana ${styles.word} ${styles.wordMentana}`}>
-                Mentana
-              </span>
+            {/* Name container */}
+            <div className={styles.nameRow}>
+              {/* "MENTANA" */}
+              <div className={styles.overflow}>
+                <span className={`word-mentana ${styles.word} ${styles.wordMentana}`}>
+                  María José Mentana
+                </span>
+              </div>
             </div>
 
           </div>

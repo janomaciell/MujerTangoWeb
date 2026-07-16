@@ -116,7 +116,7 @@ h1 { font-size: clamp(4.5rem, 12vw, 11rem); }
 h2 { font-size: clamp(2.8rem, 6vw,  5.5rem); }
 h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); }
 
-p  { font-size: clamp(0.95rem, 1.2vw, 1.1rem); line-height: 1.75; }
+p  { font-size: clamp(0.95rem, 1.2vw, 1.1rem); line-height: 1.75; text-align: justify; }
 
 /* ── Container ── */
 .container {
