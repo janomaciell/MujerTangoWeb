@@ -55,7 +55,7 @@ export default function Clases() {
   useEffect(() => {
     autoplayRef.current = setInterval(() => {
       setActiveIdx(prev => (prev + 1) % CLASS_PHOTOS.length)
-    }, 4500)
+    }, 3375)
     return () => clearInterval(autoplayRef.current)
   }, [])
 
@@ -64,7 +64,7 @@ export default function Clases() {
     clearInterval(autoplayRef.current)
     autoplayRef.current = setInterval(() => {
       setActiveIdx(prev => (prev + 1) % CLASS_PHOTOS.length)
-    }, 4500)
+    }, 3375)
   }
 
   useEffect(() => {
@@ -332,7 +332,7 @@ export default function Clases() {
                 className={`${styles.offerCard} clases-offer-card`}
                 id={`clases-offer-${i + 1}`}
               >
-                <span className={styles.offerNumber}>{ROMAN[i]}</span>
+                <span className={styles.offerNumber}>{String(i + 1).padStart(2, '0')}</span>
                 <div className={styles.offerCardBody}>
                   <h3 className={styles.offerCardTitle}>{offer.title[lang]}</h3>
                   <p className={styles.offerCardDesc}>{offer.desc[lang]}</p>

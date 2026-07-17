@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import styles from './BiographyPage.module.css'
@@ -10,13 +10,27 @@ gsap.registerPlugin(ScrollTrigger)
 const distIds = ['dist-personalidad', 'dist-academica']
 
 const mastersAndCollabs = [
-  'Roberto "Polaco" Goyeneche', 'Osvaldo Pugliese', 'Edmundo Rivero',
-  'Tita Merello', 'Nelly Omar', 'Horacio Ferrer', 'Mariano Mores',
-  'Leopoldo Federico', 'Raúl Garello', 'Floreal Ruiz', 'Osvaldo Piro',
-  'Néstor Marconi', 'Sexteto Mayor', 'Atilio Stampone', 'Litto Nebbia',
-  'Simón Díaz', 'Osvaldo Berlingeri', 'Orquesta Sinfónica Venezuela',
-  'Sinfónica de Salta', 'Filarmónica de Mendoza',
-  'Orquesta Nacional "Juan de Dios Filiberto"'
+  { name: 'Roberto "Polaco" Goyeneche',  img: null },
+  { name: 'Osvaldo Pugliese',             img: null },
+  { name: 'Edmundo Rivero',               img: null },
+  { name: 'Tita Merello',                 img: null },
+  { name: 'Nelly Omar',                   img: null },
+  { name: 'Horacio Ferrer',               img: null },
+  { name: 'Mariano Mores',                img: null },
+  { name: 'Leopoldo Federico',            img: null },
+  { name: 'Raúl Garello',                 img: null },
+  { name: 'Floreal Ruiz',                 img: null },
+  { name: 'Osvaldo Piro',                 img: null },
+  { name: 'Néstor Marconi',               img: null },
+  { name: 'Sexteto Mayor',                img: null },
+  { name: 'Atilio Stampone',              img: null },
+  { name: 'Litto Nebbia',                 img: null },
+  { name: 'Simón Díaz',                   img: null },
+  { name: 'Osvaldo Berlingeri',           img: null },
+  { name: 'Orquesta Sinfónica Venezuela', img: null },
+  { name: 'Sinfónica de Salta',           img: null },
+  { name: 'Filarmónica de Mendoza',       img: null },
+  { name: 'Orquesta Nacional "Juan de Dios Filiberto"', img: null },
 ]
 
 function QuoteText({ lang }) {
@@ -37,6 +51,53 @@ function QuoteText({ lang }) {
       <em className={styles.quoteEmphasis}>{highlight}</em>
       {after}
     </p>
+  )
+}
+
+function CollabTag({ name, img }) {
+  const [expanded, setExpanded] = useState(false)
+
+  return (
+    <span className={`bpage-tags-anim ${styles.collabTagWrapper}`}>
+      <span
+        className={`${styles.collabTag} ${img ? styles.collabTagHasImg : ''}`}
+        onClick={() => img && setExpanded(prev => !prev)}
+        role={img ? 'button' : undefined}
+        tabIndex={img ? 0 : undefined}
+        onKeyDown={img ? (e) => e.key === 'Enter' && setExpanded(prev => !prev) : undefined}
+      >
+        {name}
+        {img && <span className={styles.collabTagDot} aria-hidden="true" />}
+        {/* Desktop hover tooltip */}
+        {img && (
+          <span className={styles.collabTooltip} aria-hidden="true">
+            <img src={img} alt={name} className={styles.collabTooltipImg} />
+          </span>
+        )}
+        {/* Placeholder shown when no image yet — desktop only hint */}
+        {!img && (
+          <span className={styles.collabTooltip} aria-hidden="true">
+            <span className={styles.collabTooltipPlaceholder}>
+              <span className={styles.collabTooltipPlaceholderIcon}>📷</span>
+              <span className={styles.collabTooltipPlaceholderText}>{name}</span>
+            </span>
+          </span>
+        )}
+      </span>
+      {/* Mobile expand panel */}
+      {expanded && (
+        <span className={styles.collabExpanded} role="region" aria-label={name}>
+          {img ? (
+            <img src={img} alt={name} className={styles.collabExpandedImg} />
+          ) : (
+            <span className={styles.collabExpandedPlaceholder}>
+              <span className={styles.collabExpandedPlaceholderIcon}>📷</span>
+              <span className={styles.collabExpandedPlaceholderText}>Imagen próximamente</span>
+            </span>
+          )}
+        </span>
+      )}
+    </span>
   )
 }
 
@@ -215,10 +276,8 @@ export default function BiographyPage() {
             <div className={styles.tagsCol}>
               <h2 className={`bpage-tags-anim ${styles.tagsColTitle}`}>{lang === 'es' ? 'Maestros y Colaboradores' : 'Mentors & Collaborators'}</h2>
               <div className={styles.collabList}>
-                {mastersAndCollabs.map(name => (
-                  <span key={name} className={`bpage-tags-anim ${styles.collabTag}`}>
-                    {name}
-                  </span>
+                {mastersAndCollabs.map(({ name, img }) => (
+                  <CollabTag key={name} name={name} img={img} />
                 ))}
               </div>
             </div>

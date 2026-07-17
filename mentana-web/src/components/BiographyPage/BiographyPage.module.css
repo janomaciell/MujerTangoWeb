@@ -227,7 +227,7 @@
 
 .counterNum {
   font-family: var(--font-display);
-  font-size: clamp(5rem, 10vw, 9rem);
+  font-size: clamp(3.5rem, 6vw, 6rem);
   font-weight: 300;
   color: #b5ad9e;
   line-height: 1;
@@ -252,6 +252,8 @@
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border: 1px solid rgba(181, 173, 158, 0.15);
+  max-width: 420px;
+  width: 100%;
 }
 
 .counterImageWrap::after {
@@ -365,7 +367,17 @@
   max-width: 500px;
 }
 
+.collabTagWrapper {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .collabTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   font-size: clamp(0.85rem, 1vw, 0.95rem);
   padding: 0.45rem 1rem;
   border: 1px solid var(--border);
@@ -374,11 +386,136 @@
   background: var(--surface);
   letter-spacing: 0.04em;
   transition: border-color 0.2s, color 0.2s;
+  position: relative;
+  cursor: default;
 }
 
-.collabTag:hover {
+.collabTagHasImg {
+  cursor: pointer;
+}
+
+.collabTag:hover,
+.collabTagHasImg:hover {
   border-color: var(--accent-light);
   color: var(--accent-light);
+}
+
+.collabTagDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent-light);
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+/* Desktop hover tooltip */
+.collabTooltip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 100;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  white-space: nowrap;
+}
+
+.collabTag:hover .collabTooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.collabTooltipImg {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+  display: block;
+}
+
+.collabTooltipPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 160px;
+  height: 120px;
+  background: var(--surface-2);
+  border: 1px dashed rgba(181, 173, 158, 0.25);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+}
+
+.collabTooltipPlaceholderIcon {
+  font-size: 1.5rem;
+  opacity: 0.4;
+}
+
+.collabTooltipPlaceholderText {
+  font-size: 0.7rem;
+  color: rgba(245, 247, 255, 0.4);
+  letter-spacing: 0.06em;
+  text-align: center;
+  line-height: 1.4;
+  white-space: normal;
+  max-width: 120px;
+}
+
+/* Mobile expand panel — shown below tag on click */
+.collabExpanded {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.collabExpandedImg {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+.collabExpandedPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 260px;
+  height: 100px;
+  background: var(--surface-2);
+  border: 1px dashed rgba(181, 173, 158, 0.2);
+  border-radius: 8px;
+}
+
+.collabExpandedPlaceholderIcon {
+  font-size: 1.5rem;
+  opacity: 0.35;
+}
+
+.collabExpandedPlaceholderText {
+  font-size: 0.72rem;
+  color: rgba(245, 247, 255, 0.35);
+  letter-spacing: 0.08em;
+}
+
+/* On desktop, hide mobile expand panel; on mobile, hide tooltip */
+@media (hover: hover) and (pointer: fine) {
+  .collabExpanded { display: none; }
+}
+
+@media (hover: none) {
+  .collabTooltip { display: none; }
 }
 
 /* ── RESPONSIVE ── */
@@ -409,7 +546,7 @@
   .ruleTop { top: calc(var(--header-h) + 0.5rem); }
 
   .portraitImg {
-    object-position: 40% center;
+    object-position: calc(50% + 250px) center;
   }
 
   .heroInner {
@@ -471,6 +608,19 @@
 
   .lead {
     font-size: clamp(1.05rem, 3.5vw, 1.4rem);
+  }
+
+  .para {
+    font-size: clamp(1.05rem, 3.5vw, 1.4rem);
+  }
+
+  .counterRow {
+    display: none;
+  }
+
+  .counterImageWrap {
+    margin-inline: auto;
+    max-width: 320px;
   }
 }
 

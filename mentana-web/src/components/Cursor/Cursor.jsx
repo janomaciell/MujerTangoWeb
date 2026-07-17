@@ -21,8 +21,8 @@ export default function Cursor() {
     const tick = () => {
       rx = lerp(rx, mx, 0.12)
       ry = lerp(ry, my, 0.12)
-      dot.style.transform  = `translate(${mx}px, ${my}px)`
-      ring.style.transform = `translate(${rx}px, ${ry}px)`
+      dot.style.transform  = `translate(calc(${mx}px - 50%), calc(${my}px - 50%))`
+      ring.style.transform = `translate(calc(${rx}px - 50%), calc(${ry}px - 50%))`
       raf = requestAnimationFrame(tick)
     }
     tick()
