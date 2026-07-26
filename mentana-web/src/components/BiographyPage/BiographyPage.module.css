@@ -411,17 +411,27 @@
   flex-shrink: 0;
 }
 
-/* Desktop hover tooltip */
+/* Desktop hover card — bigger */
 .collabTooltip {
   position: absolute;
-  bottom: calc(100% + 10px);
+  bottom: calc(100% + 14px);
   left: 50%;
-  transform: translateX(-50%) translateY(6px);
+  transform: translateX(-50%) translateY(8px);
   opacity: 0;
   pointer-events: none;
-  z-index: 100;
-  transition: opacity 0.22s ease, transform 0.22s ease;
-  white-space: nowrap;
+  z-index: 200;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(17, 17, 17, 0.92);
+  border: 1px solid rgba(181, 173, 158, 0.2);
+  border-radius: 12px;
+  padding: 0.75rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(181, 173, 158, 0.08);
+  min-width: 220px;
 }
 
 .collabTag:hover .collabTooltip {
@@ -430,92 +440,128 @@
 }
 
 .collabTooltipImg {
-  width: 180px;
-  height: 180px;
+  width: 240px;
+  height: 280px;
   object-fit: cover;
   border-radius: 8px;
-  border: 1px solid var(--border);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
   display: block;
 }
 
-.collabTooltipPlaceholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  width: 160px;
-  height: 120px;
-  background: var(--surface-2);
-  border: 1px dashed rgba(181, 173, 158, 0.25);
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
-}
-
-.collabTooltipPlaceholderIcon {
-  font-size: 1.5rem;
-  opacity: 0.4;
-}
-
-.collabTooltipPlaceholderText {
-  font-size: 0.7rem;
-  color: rgba(245, 247, 255, 0.4);
-  letter-spacing: 0.06em;
-  text-align: center;
-  line-height: 1.4;
-  white-space: normal;
-  max-width: 120px;
-}
-
-/* Mobile expand panel — shown below tag on click */
-.collabExpanded {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-top: 0.5rem;
-}
-
-.collabExpandedImg {
-  width: 100%;
-  max-width: 260px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
-}
-
-.collabExpandedPlaceholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  width: 100%;
-  max-width: 260px;
-  height: 100px;
-  background: var(--surface-2);
-  border: 1px dashed rgba(181, 173, 158, 0.2);
-  border-radius: 8px;
-}
-
-.collabExpandedPlaceholderIcon {
-  font-size: 1.5rem;
-  opacity: 0.35;
-}
-
-.collabExpandedPlaceholderText {
-  font-size: 0.72rem;
-  color: rgba(245, 247, 255, 0.35);
+.collabTooltipName {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 400;
   letter-spacing: 0.08em;
+  color: rgba(245, 247, 255, 0.85);
+  text-align: center;
+  line-height: 1.3;
+  max-width: 220px;
+  white-space: normal;
+  padding-inline: 0.25rem;
 }
 
-/* On desktop, hide mobile expand panel; on mobile, hide tooltip */
-@media (hover: hover) and (pointer: fine) {
-  .collabExpanded { display: none; }
+
+.mobileModalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: overlayIn 0.22s ease;
 }
 
+@keyframes overlayIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.mobileModal {
+  position: relative;
+  background: rgba(22, 22, 22, 0.96);
+  border: 1px solid rgba(181, 173, 158, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+  animation: modalIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.9) translateY(10px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.mobileModalClose {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(181, 173, 158, 0.25);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(245, 247, 255, 0.7);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+
+.mobileModalClose:hover,
+.mobileModalClose:focus {
+  background: rgba(181, 173, 158, 0.15);
+  color: var(--accent-light);
+  border-color: var(--accent-light);
+  outline: none;
+}
+
+.mobileModalImg {
+  width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(181, 173, 158, 0.15);
+  display: block;
+}
+
+.mobileModalPlaceholder {
+  width: 100%;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px dashed rgba(181, 173, 158, 0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.mobileModalName {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  font-weight: 300;
+  color: rgba(245, 247, 255, 0.9);
+  text-align: center;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* On desktop: hide mobile overlay trigger (modal triggered via click, but CSS-only hover card is primary) */
+/* On mobile (hover:none): hide desktop tooltip */
 @media (hover: none) {
   .collabTooltip { display: none; }
 }

@@ -16,7 +16,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const { join, relative, extname } = path
 const ROOT = join(__dirname, '..')
 const PUBLIC = join(ROOT, 'public')
-const UPLOAD_DIRS = ['images', 'portadas', 'web-mentana']
+const UPLOAD_DIRS = ['images', 'portadas', 'web-mentana', 'artistas-hover']
 
 const MIME = {
   '.png': 'image/png',

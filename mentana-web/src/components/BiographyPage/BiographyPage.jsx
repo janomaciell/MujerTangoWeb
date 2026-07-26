@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useCallback } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import styles from './BiographyPage.module.css'
@@ -9,25 +9,27 @@ gsap.registerPlugin(ScrollTrigger)
 
 const distIds = ['dist-personalidad', 'dist-academica']
 
+const BASE = 'https://pub-1a8e9e1898cd4579ab1dee0eb1fedb88.r2.dev/artistas-hover'
+
 const mastersAndCollabs = [
   { name: 'Roberto "Polaco" Goyeneche',  img: null },
-  { name: 'Osvaldo Pugliese',             img: null },
+  { name: 'Osvaldo Pugliese',             img: `${BASE}/OSVALGO PUGLIESE.png` },
   { name: 'Edmundo Rivero',               img: null },
   { name: 'Tita Merello',                 img: null },
   { name: 'Nelly Omar',                   img: null },
-  { name: 'Horacio Ferrer',               img: null },
-  { name: 'Mariano Mores',                img: null },
+  { name: 'Horacio Ferrer',               img: `${BASE}/HORACIO FERRER.png` },
+  { name: 'Mariano Mores',                img: `${BASE}/12 MARIANO MORES.png` },
   { name: 'Leopoldo Federico',            img: null },
-  { name: 'Raúl Garello',                 img: null },
+  { name: 'Raúl Garello',                 img: `${BASE}/RAUL GARELLO.png` },
   { name: 'Floreal Ruiz',                 img: null },
   { name: 'Osvaldo Piro',                 img: null },
-  { name: 'Néstor Marconi',               img: null },
+  { name: 'Néstor Marconi',               img: `${BASE}/JAPON92 NESTOR MARCONI.png` },
   { name: 'Sexteto Mayor',                img: null },
-  { name: 'Atilio Stampone',              img: null },
-  { name: 'Litto Nebbia',                 img: null },
+  { name: 'Atilio Stampone',              img: `${BASE}/ATILIO STAMPONE.png` },
+  { name: 'Litto Nebbia',                 img: `${BASE}/014 LITTO NEBIA.png` },
   { name: 'Simón Díaz',                   img: null },
-  { name: 'Osvaldo Berlingeri',           img: null },
-  { name: 'Orquesta Sinfónica Venezuela', img: null },
+  { name: 'Osvaldo Berlingeri',           img: `${BASE}/3548 OSVALDO BERLINGERI.png` },
+  { name: 'Orquesta Sinfónica Venezuela', img: `${BASE}/SINFONICA VENEZUELA.png` },
   { name: 'Sinfónica de Salta',           img: null },
   { name: 'Filarmónica de Mendoza',       img: null },
   { name: 'Orquesta Nacional "Juan de Dios Filiberto"', img: null },
@@ -55,49 +57,78 @@ function QuoteText({ lang }) {
 }
 
 function CollabTag({ name, img }) {
-  const [expanded, setExpanded] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
+
+  const openModal = useCallback(() => {
+    setMobileOpen(true)
+  }, [])
+
+  const closeModal = useCallback(() => {
+    setMobileOpen(false)
+  }, [])
+
+  const handleKeyDown = useCallback((e) => {
+    if (e.key === 'Enter' || e.key === ' ') openModal()
+    if (e.key === 'Escape') closeModal()
+  }, [openModal, closeModal])
 
   return (
-    <span className={`bpage-tags-anim ${styles.collabTagWrapper}`}>
-      <span
-        className={`${styles.collabTag} ${img ? styles.collabTagHasImg : ''}`}
-        onClick={() => img && setExpanded(prev => !prev)}
-        role={img ? 'button' : undefined}
-        tabIndex={img ? 0 : undefined}
-        onKeyDown={img ? (e) => e.key === 'Enter' && setExpanded(prev => !prev) : undefined}
-      >
-        {name}
-        {img && <span className={styles.collabTagDot} aria-hidden="true" />}
-        {/* Desktop hover tooltip */}
-        {img && (
-          <span className={styles.collabTooltip} aria-hidden="true">
-            <img src={img} alt={name} className={styles.collabTooltipImg} />
-          </span>
-        )}
-        {/* Placeholder shown when no image yet — desktop only hint */}
-        {!img && (
-          <span className={styles.collabTooltip} aria-hidden="true">
-            <span className={styles.collabTooltipPlaceholder}>
-              <span className={styles.collabTooltipPlaceholderIcon}>📷</span>
-              <span className={styles.collabTooltipPlaceholderText}>{name}</span>
-            </span>
-          </span>
-        )}
-      </span>
-      {/* Mobile expand panel */}
-      {expanded && (
-        <span className={styles.collabExpanded} role="region" aria-label={name}>
-          {img ? (
-            <img src={img} alt={name} className={styles.collabExpandedImg} />
-          ) : (
-            <span className={styles.collabExpandedPlaceholder}>
-              <span className={styles.collabExpandedPlaceholderIcon}>📷</span>
-              <span className={styles.collabExpandedPlaceholderText}>Imagen próximamente</span>
+    <>
+      <span className={`bpage-tags-anim ${styles.collabTagWrapper}`}>
+        <span
+          className={`${styles.collabTag} ${img ? styles.collabTagHasImg : ''}`}
+          onClick={img ? openModal : undefined}
+          role={img ? 'button' : undefined}
+          tabIndex={img ? 0 : undefined}
+          onKeyDown={img ? handleKeyDown : undefined}
+          aria-haspopup={img ? 'dialog' : undefined}
+        >
+          {name}
+          {img && <span className={styles.collabTagDot} aria-hidden="true" />}
+
+          {/* Desktop hover card — solo si tiene imagen */}
+          {img && (
+            <span className={styles.collabTooltip} aria-hidden="true">
+              <img src={img} alt={name} className={styles.collabTooltipImg} />
+              <span className={styles.collabTooltipName}>{name}</span>
             </span>
           )}
         </span>
+      </span>
+
+      {/* Mobile modal overlay */}
+      {mobileOpen && (
+        <div
+          className={styles.mobileModalOverlay}
+          onClick={closeModal}
+          role="dialog"
+          aria-modal="true"
+          aria-label={name}
+        >
+          <div
+            className={styles.mobileModal}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className={styles.mobileModalClose}
+              onClick={closeModal}
+              aria-label="Cerrar"
+            >
+              ✕
+            </button>
+            {img ? (
+              <img src={img} alt={name} className={styles.mobileModalImg} />
+            ) : (
+              <div className={styles.mobileModalPlaceholder}>
+                <span style={{ fontSize: '2.5rem', opacity: 0.3 }}>📷</span>
+                <span style={{ fontSize: '0.85rem', color: 'rgba(245,247,255,0.4)', letterSpacing: '0.06em' }}>Imagen próximamente</span>
+              </div>
+            )}
+            <p className={styles.mobileModalName}>{name}</p>
+          </div>
+        </div>
       )}
-    </span>
+    </>
   )
 }
 
