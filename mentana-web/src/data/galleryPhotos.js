@@ -27,17 +27,73 @@ const webMentanaPngFiles = [
   'VITTORIOGASMAN.png',
   'maria_jose_mentana-70.png',
   'img-12.png',
-  'img-ferrer.png',
   'img-0173.png',
-  'stampone.png',
-  'Stampone-Federico-Rivas-Buono.png',
   'tito-lusiardo-guillermo-fernandez.png',
   'img-0313.png',
   'img-0783.png',
   'img-9833-2.png',
   'MJM.png',
   'MJM3.png',
-  'dsc-0842.png',
 ]
 
-export const photos = webMentanaPngFiles.map(makePhoto)
+/** Fotos locales con path directo (en /public) */
+const localPhotos = [
+  {
+    id: 'gal-filarmonica-mendoza',
+    src: '/NuevasImagenes/DSC_0837.JPG.jpeg',
+    alt: {
+      es: 'Filarmónica de Mendoza — María José Mentana',
+      en: 'Philharmonic of Mendoza — María José Mentana',
+    },
+  },
+  {
+    id: 'gal-wa0183',
+    src: '/NuevasImagenes/IMG-20260803-WA0183.jpg.jpeg',
+    alt: { es: 'Fotografía — María José Mentana', en: 'Photo — María José Mentana' },
+  },
+  {
+    id: 'gal-wa0181',
+    src: '/NuevasImagenes/IMG-20260803-WA0181.jpg.jpeg',
+    alt: { es: 'Fotografía — María José Mentana', en: 'Photo — María José Mentana' },
+  },
+  {
+    id: 'gal-wa0186',
+    src: '/NuevasImagenes/IMG-20260803-WA0186.jpg.jpeg',
+    alt: { es: 'Fotografía — María José Mentana', en: 'Photo — María José Mentana' },
+  },
+  {
+    id: 'gal-wa0179',
+    src: '/NuevasImagenes/IMG-20260803-WA0179.jpeg',
+    alt: { es: 'Fotografía — María José Mentana', en: 'Photo — María José Mentana' },
+  },
+  {
+    id: 'gal-wa0185',
+    src: '/NuevasImagenes/IMG-20260803-WA0185.jpg.jpeg',
+    alt: { es: 'Fotografía — María José Mentana', en: 'Photo — María José Mentana' },
+  },
+  {
+    id: 'gal-wa0184',
+    src: '/NuevasImagenes/IMG-20260803-WA0184.jpg.jpeg',
+    alt: { es: 'Fotografía — María José Mentana', en: 'Photo — María José Mentana' },
+  },
+  {
+    id: 'gal-wa0180',
+    src: '/NuevasImagenes/IMG-20260803-WA0180.jpeg',
+    alt: { es: 'Fotografía — María José Mentana', en: 'Photo — María José Mentana' },
+  },
+  {
+    id: 'gal-wa0168',
+    src: '/NuevasImagenes/IMG-20260803-WA0168.jpg.jpeg',
+    alt: { es: 'Fotografía — María José Mentana', en: 'Photo — María José Mentana' },
+  },
+  {
+    id: 'gal-wa0169',
+    src: '/NuevasImagenes/IMG-20260803-WA0169.jpg.jpeg',
+    alt: { es: 'Fotografía — María José Mentana', en: 'Photo — María José Mentana' },
+  },
+]
+
+export const photos = [
+  ...webMentanaPngFiles.map(makePhoto),
+  ...localPhotos,
+]

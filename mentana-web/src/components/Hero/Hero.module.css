@@ -72,10 +72,11 @@
 /* ── Logo ── */
 .heroLogo {
   display: block;
-  width: clamp(100px, 20vw, 300px);
+  width: clamp(180px, 32vw, 480px);
   height: auto;
   margin: 0 auto 0.5rem;
   opacity: 0.95;
+  filter: drop-shadow(0 4px 24px rgba(0,0,0,0.2));
 }
 
 .overflow {

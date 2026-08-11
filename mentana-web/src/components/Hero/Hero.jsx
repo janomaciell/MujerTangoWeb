@@ -28,9 +28,9 @@ export default function Hero() {
         { opacity: 1, duration: 1.2, ease: 'power2.out' }
       )
       tl.fromTo(
-        ['.hero-logo', '.word-maria', '.word-mentana'],
-        { yPercent: 110, opacity: 0 },
-        { yPercent: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out' },
+        '.hero-logo',
+        { yPercent: 30, opacity: 0 },
+        { yPercent: 0, opacity: 1, duration: 1.1, ease: 'power3.out' },
         '-=0.75'
       )
 
@@ -70,22 +70,10 @@ export default function Hero() {
       <div className={`hero-inner ${styles.inner}`}>
         <div className={styles.leftPanel}>
           <div className={styles.titleBlock}>
-
-            {/* Logo */}
+            {/* Logo mjm — logo clásico con fondo transparente */}
             <div className={styles.overflow}>
-              <img src={siteImages.logo} alt="Logo" className={`hero-logo ${styles.heroLogo}`} />
+              <img src={siteImages.logoHero} alt="María José Mentana" className={`hero-logo ${styles.heroLogo}`} />
             </div>
-
-            {/* Name container */}
-            <div className={styles.nameRow}>
-              {/* "MENTANA" */}
-              <div className={styles.overflow}>
-                <span className={`word-mentana ${styles.word} ${styles.wordMentana}`}>
-                  María José Mentana
-                </span>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>

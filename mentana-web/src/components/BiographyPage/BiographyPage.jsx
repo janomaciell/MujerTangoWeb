@@ -11,28 +11,31 @@ const distIds = ['dist-personalidad', 'dist-academica']
 
 const BASE = 'https://pub-1a8e9e1898cd4579ab1dee0eb1fedb88.r2.dev/artistas-hover'
 
+const LOCAL = '/NuevasImagenes'
+
 const mastersAndCollabs = [
   { name: 'Roberto "Polaco" Goyeneche',  img: null },
   { name: 'Osvaldo Pugliese',             img: `${BASE}/OSVALGO PUGLIESE.png` },
-  { name: 'Edmundo Rivero',               img: null },
-  { name: 'Tita Merello',                 img: null },
-  { name: 'Nelly Omar',                   img: null },
+  { name: 'Tita Merello',                 img: `${LOCAL}/7 TITA MERELLO- BEBA BIDART.jpg.jpeg` },
+  { name: 'Nelly Omar',                   img: `${LOCAL}/IMG-20260803-WA0170.jpeg` },
+  { name: 'Mercedes Sosa',                img: null },
+  { name: 'Raúl Lavié',                   img: null },
   { name: 'Horacio Ferrer',               img: `${BASE}/HORACIO FERRER.png` },
   { name: 'Mariano Mores',                img: `${BASE}/12 MARIANO MORES.png` },
   { name: 'Leopoldo Federico',            img: null },
   { name: 'Raúl Garello',                 img: `${BASE}/RAUL GARELLO.png` },
-  { name: 'Floreal Ruiz',                 img: null },
-  { name: 'Osvaldo Piro',                 img: null },
+  { name: 'Floreal Ruiz',                 img: `${LOCAL}/C Floreal Ruiz.jpeg` },
   { name: 'Néstor Marconi',               img: `${BASE}/JAPON92 NESTOR MARCONI.png` },
-  { name: 'Sexteto Mayor',                img: null },
-  { name: 'Atilio Stampone',              img: `${BASE}/ATILIO STAMPONE.png` },
+  { name: 'Sexteto Mayor',                img: `${LOCAL}/IMG-20260803-WA0172.jpeg` },
+  { name: 'Atilio Stampone',              img: `${LOCAL}/Stampone, Federico Rivas Buono.jpg.jpeg` },
   { name: 'Litto Nebbia',                 img: `${BASE}/014 LITTO NEBIA.png` },
   { name: 'Simón Díaz',                   img: null },
+  { name: 'Mercedes Simone',              img: `${LOCAL}/5 MERCEDES SIMONE.jpg.jpeg` },
+  { name: 'Ernesto Baffa',                img: `${LOCAL}/BAFFA ERNESTO.jpg.jpeg` },
   { name: 'Osvaldo Berlingeri',           img: `${BASE}/3548 OSVALDO BERLINGERI.png` },
   { name: 'Orquesta Sinfónica Venezuela', img: `${BASE}/SINFONICA VENEZUELA.png` },
-  { name: 'Sinfónica de Salta',           img: null },
-  { name: 'Filarmónica de Mendoza',       img: null },
-  { name: 'Orquesta Nacional "Juan de Dios Filiberto"', img: null },
+  { name: 'Filarmónica de Mendoza',       img: `${LOCAL}/DSC_0837.JPG.jpeg` },
+  { name: 'Orquesta Nacional "Juan de Dios Filiberto"', img: `${LOCAL}/Screenshot_20260811_110511_Adobe Acrobat.jpeg` },
 ]
 
 function QuoteText({ lang }) {
@@ -300,6 +303,14 @@ export default function BiographyPage() {
                     </div>
                   </div>
                 ))}
+              </div>
+              <div className={`bpage-tags-anim ${styles.distImgWrap}`}>
+                <img
+                  src={`${LOCAL}/IMG-20260803-WA0187.jpeg`}
+                  alt={lang === 'es' ? 'Distinción — María José Mentana' : 'Distinction — María José Mentana'}
+                  className={styles.distImg}
+                  loading="lazy"
+                />
               </div>
             </div>
 
