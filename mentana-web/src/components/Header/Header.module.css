@@ -36,11 +36,15 @@
 .logo { display: flex; align-items: center; flex-shrink: 0; }
 
 .logoImg {
-  height: 130px;
+  height: 70px;
   width: auto;
   object-fit: contain;
   display: block;
-  mix-blend-mode: multiply;
+  transition: height 0.3s ease, transform 0.3s ease;
+}
+
+.logoImg:hover {
+  transform: scale(1.04);
 }
 
 .langToggle {
@@ -292,7 +296,7 @@
   .socials { display: none; }
   .burger { display: flex; }
   .rightGroup { gap: 0.75rem; }
-  .logoImg { height: 64px; width: auto; }
+  .logoImg { height: 56px; width: auto; }
   .inner { padding-block: 0.45rem; }
 
   .langBtn {
@@ -317,7 +321,7 @@
     font-size: clamp(1.75rem, 9vw, 2.35rem);
   }
 
-  .logoImg { height: 52px; width: auto; }
+  .logoImg { height: 48px; width: auto; }
 
   .langBtn {
     padding: 0.25rem 0.55rem;
@@ -335,6 +339,6 @@
     font-size: 0.58rem;
   }
 
-  .logoImg { height: 44px; width: auto; }
+  .logoImg { height: 40px; width: auto; }
 }
 
