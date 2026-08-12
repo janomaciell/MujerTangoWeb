@@ -48,7 +48,7 @@ export default function Header() {
     { label: lang === 'es' ? 'Biografía'   : 'Biography',   id: 'biografia', to: '/biografia'   },
     { label: lang === 'es' ? 'Galería'     : 'Gallery',     id: 'galeria',   to: '/galeria'     },
     { label: lang === 'es' ? 'Discografía' : 'Discography', id: 'disco',     to: '/discografia' },
-    { label: lang === 'es' ? 'Clases'      : 'Classes',     id: 'clases',    to: '/clases'      },
+    { label: lang === 'es' ? 'Contrataciones' : 'Bookings', id: 'clases', to: '/clases' },
     { label: lang === 'es' ? 'Contacto'    : 'Contact',     id: 'contacto',  to: '/contacto'    },
   ]
 

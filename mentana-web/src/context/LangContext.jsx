@@ -335,65 +335,65 @@ export const t = {
     },
   },
 
-  // ── Clases ──
+  // ── Contrataciones ──
   clases: {
     title: {
-      es: 'Clases de Canto',
-      en: 'Singing Classes',
+      es: 'Contrataciones',
+      en: 'Bookings & Shows',
     },
     subtitle: {
-      es: 'Cantar no es solo afinar, es interpretar, es decir, es encontrarse.',
-      en: 'Singing is not just about staying in tune: it is about interpreting, expressing, and finding yourself.',
+      es: 'Llevá la voz del tango de María José Mentana a tu escenario, festival o evento.',
+      en: 'Bring the tango voice of María José Mentana to your stage, festival, or event.',
     },
     intro1: {
-      es: 'Hay algo en la voz que no se escribe en ningún manual. Se aprende escuchando, sintiendo, viviendo. Eso es lo que propongo en mis clases: la intención, los yeites, el propósito detrás de cada nota, de cada frase.',
-      en: 'There is something in the voice that is not written in any manual. It is learned by listening, feeling, living. That is what I propose in my classes: the intention, the style, the purpose behind each note, each phrase.',
+      es: 'Con más de 55 años de trayectoria internacional, María José Mentana ofrece espectáculos de tango de primer nivel, combinando emoción, técnica impecable y la fuerza expresiva de una de las grandes voces del género.',
+      en: 'With over 55 years of international career, María José Mentana delivers top-tier tango shows, combining emotion, flawless technique, and the expressive force of one of the genre\'s greatest voices.',
     },
     intro2: {
-      es: 'Quiero que puedas recibir lo que los grandes referentes me enseñaron, y compartir con vos todo lo que aprendí de su mano.',
-      en: 'I want you to be able to receive what the great masters taught me, and share with you everything I learned by their side.',
+      es: 'Disponible para conciertos, festivales, eventos privados, presentaciones corporativas y seminarios magistrales en Argentina y el mundo.',
+      en: 'Available for concerts, festivals, private events, corporate performances, and master seminars in Argentina and worldwide.',
     },
     offerTitle: {
-      es: '¿Qué te propongo para que puedas sumarte?',
-      en: 'What do I propose for you to join?',
+      es: 'Propuestas de Contratación',
+      en: 'Booking Options',
     },
     offers: [
       {
-        title: { es: 'Clases individuales - presenciales', en: 'In-person individual classes' },
-        desc: { es: 'Trabajo personalizado, a tu ritmo y con tu voz.', en: 'Personalized work, at your own pace and with your voice.' }
+        title: { es: 'Conciertos y Festivales', en: 'Concerts & Festivals' },
+        desc: { es: 'Shows en vivo con repertorio de tango clásico y contemporáneo.', en: 'Live shows featuring classic and contemporary tango repertoire.' }
       },
       {
-        title: { es: 'Clases online', en: 'Online classes' },
-        desc: { es: 'La misma calidad, desde donde estés.', en: 'The same quality, from wherever you are.' }
+        title: { es: 'Eventos Privados y Corporativos', en: 'Private & Corporate Events' },
+        desc: { es: 'Presentaciones exclusivas adaptadas a la medida de tu evento.', en: 'Exclusive performances tailored to your event.' }
       },
       {
-        title: { es: 'Master Class', en: 'Master Class' },
-        desc: { es: 'Una experiencia intensiva para dar el salto que necesitas.', en: 'An intensive experience to take the leap you need.' }
+        title: { es: 'Master Class & Formación Vocal', en: 'Master Classes & Vocal Seminars' },
+        desc: { es: 'Encuentros intensivos de perfeccionamiento técnico e interpretativo.', en: 'Intensive technical and interpretative training sessions.' }
       },
       {
-        title: { es: 'Talleres y Seminarios', en: 'Workshops & Seminars' },
-        desc: { es: 'Aprendizaje colectivo, creativo y transformador.', en: 'Collective, creative, and transformative learning.' }
+        title: { es: 'Giras Internacionales', en: 'International Tours' },
+        desc: { es: 'Presentaciones teatrales y espectáculos internacionales.', en: 'Theater performances and international shows.' }
       }
     ],
     audience1: {
-      es: 'Para principiantes, intermedios y cantantes con experiencia.',
-      en: 'For beginners, intermediate, and experienced singers.',
+      es: 'Para productores, festivales, teatros y organizadores de eventos.',
+      en: 'For producers, festivals, theaters, and event organizers.',
     },
     audience2: {
-      es: 'Para quienes quieren potenciar su canto, y también para quienes quieren cantar por primera vez.',
-      en: 'For those who want to boost their singing, and also for those who want to sing for the first time.',
+      es: 'Para quienes buscan un espectáculo de tango inolvidable y de jerarquía internacional.',
+      en: 'For those seeking an unforgettable tango show of international caliber.',
     },
     closing1: {
-      es: 'Cantar es expresarte en plenitud.',
-      en: 'Singing is expressing yourself in full.',
+      es: 'El tango es emoción en estado puro.',
+      en: 'Tango is pure emotion.',
     },
     closing2: {
-      es: 'Y eso es lo que haremos juntos.',
-      en: 'And that is what we will do together.',
+      es: 'Hacé de tu próximo evento una experiencia inolvidable.',
+      en: 'Make your next event an unforgettable experience.',
     },
     reserveLabel: {
-      es: 'Reservá tu lugar —',
-      en: 'Book your spot —',
+      es: 'Consultá por contrataciones —',
+      en: 'Inquire for bookings —',
     },
     contactLink: { es: 'Contacto', en: 'Contact' },
   },
@@ -410,7 +410,7 @@ export const t = {
       { es: 'Discografía', en: 'Discography', to: '/discografia' },
       { es: 'Biografía',   en: 'Biography',   to: '/biografia'   },
       { es: 'Galería',     en: 'Gallery',     to: '/galeria'     },
-      { es: 'Clases',      en: 'Classes',     to: '/clases'      },
+      { es: 'Contrataciones', en: 'Bookings', to: '/clases'      },
       { es: 'Contacto',    en: 'Contact',     to: '/contacto'    },
     ],
     copy:    { es: 'Todos los derechos reservados.', en: 'All rights reserved.' },

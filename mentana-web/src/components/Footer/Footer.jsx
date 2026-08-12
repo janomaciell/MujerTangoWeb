@@ -107,7 +107,7 @@ export default function Footer() {
                   </svg>
                 </a>
               </div>
-              <p className={styles.location}>San Isidro, Buenos Aires, Argentina</p>
+              <p className={styles.location}>Nordelta, Buenos Aires, Argentina</p>
             </div>
           </div>
         </div>

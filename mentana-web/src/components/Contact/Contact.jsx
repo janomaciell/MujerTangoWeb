@@ -117,7 +117,7 @@ export default function Contact({ asPage = false }) {
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>{ct.location[lang]}</span>
-              <p className={styles.infoValue}>San Isidro, Buenos Aires<br />Argentina</p>
+              <p className={styles.infoValue}>Nordelta, Buenos Aires<br />Argentina</p>
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>{ct.social[lang]}</span>
