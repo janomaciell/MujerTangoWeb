@@ -407,9 +407,9 @@ export const t = {
     sections: { es: 'Secciones', en: 'Sections' },
     contact:  { es: 'Contacto',  en: 'Contact'  },
     links: [
-      { es: 'Discografía', en: 'Discography', to: '/discografia' },
       { es: 'Biografía',   en: 'Biography',   to: '/biografia'   },
       { es: 'Galería',     en: 'Gallery',     to: '/galeria'     },
+      { es: 'Discografía', en: 'Discography', to: '/discografia' },
       { es: 'Contrataciones', en: 'Bookings', to: '/clases'      },
       { es: 'Contacto',    en: 'Contact',     to: '/contacto'    },
     ],
