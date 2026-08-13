@@ -30,8 +30,8 @@ export const t = {
     heading:    { es: 'La Artista',    en: 'The Artist'    },
     paragraphs: [
       {
-        es: 'María José Mentana es una de las grandes voces del tango argentino contemporáneo. Con más de cinco décadas de trayectoria, inició su carrera a los nueve años en Grandes Valores del Tango y construyó un camino artístico que la llevó a compartir escenarios y proyectos con figuras emblemáticas como Tita Merello, Nelly Omar, Roberto Goyeneche, Mariano Mores, Leopoldo Federico, Raúl Garello, Horacio Ferrer, Jairo, Rubén Juárez y Mercedes Sosa, por nombrar algunos.',
-        en: 'María José Mentana is one of the great voices of contemporary Argentine tango. With a career spanning over five decades, she began at the age of nine on Grandes Valores del Tango and forged an artistic path that led her to share stages and projects with legendary figures such as Tita Merello, Nelly Omar, Roberto Goyeneche, Mariano Mores, Leopoldo Federico, Raúl Garello, Horacio Ferrer, Jairo, Rubén Juárez, and Mercedes Sosa, to name a few.',
+        es: 'María José Mentana es una de las grandes voces del tango argentino contemporáneo. Con más de cinco décadas de trayectoria, inició su carrera a los nueve años en Grandes Valores del Tango y construyó un camino artístico que la llevó a compartir escenarios y proyectos con figuras emblemáticas como Tita Merello, Nelly Omar, Mariano Mores, Leopoldo Federico, Raúl Garello, Horacio Ferrer, Jairo, Rubén Juárez y Mercedes Sosa, por nombrar algunos.',
+        en: 'María José Mentana is one of the great voices of contemporary Argentine tango. With a career spanning over five decades, she began at the age of nine on Grandes Valores del Tango and forged an artistic path that led her to share stages and projects with legendary figures such as Tita Merello, Nelly Omar, Mariano Mores, Leopoldo Federico, Raúl Garello, Horacio Ferrer, Jairo, Rubén Juárez, and Mercedes Sosa, to name a few.',
       },
       {
         es: 'Su arte ha recorrido los principales escenarios de Europa, Asia y Latinoamérica, consolidando una interpretación reconocida por su profundidad expresiva, elegancia y autenticidad. La crítica la ha definido como una artista de “voz de intensos matices” y una de las intérpretes más personales del tango de las últimas décadas.',
@@ -120,8 +120,8 @@ export const t = {
         era:   { es: 'La revelación',   en: 'The revelation'   },
         title: { es: 'La Niña Prodigio', en: 'The Child Prodigy' },
         text: {
-          es: 'A los nueve años debuta en "Grandes Valores del Tango" de Canal 9, conducido por Juan Carlos Thorry. La crítica la bautiza: "La Niña Prodigio". Comparte escenario con Goyeneche, Pugliese, Tita Merello.',
-          en: 'At age nine she debuts on "Grandes Valores del Tango" on Canal 9, hosted by Juan Carlos Thorry. Critics dub her "The Child Prodigy". She shares the stage with Goyeneche, Pugliese, Tita Merello.',
+          es: 'A los nueve años debuta en "Grandes Valores del Tango" de Canal 9, conducido por Juan Carlos Thorry. La crítica la bautiza: "La Niña Prodigio". Comparte escenario con Pugliese, Tita Merello.',
+          en: 'At age nine she debuts on "Grandes Valores del Tango" on Canal 9, hosted by Juan Carlos Thorry. Critics dub her "The Child Prodigy". She shares the stage with Pugliese, Tita Merello.',
         },
         detail: { es: 'Canal 9, Buenos Aires', en: 'Canal 9, Buenos Aires' },
       },

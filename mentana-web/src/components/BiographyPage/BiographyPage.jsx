@@ -14,7 +14,6 @@ const BASE = 'https://pub-1a8e9e1898cd4579ab1dee0eb1fedb88.r2.dev/artistas-hover
 const LOCAL = '/NuevasImagenes'
 
 const mastersAndCollabs = [
-  { name: 'Roberto "Polaco" Goyeneche',  img: null },
   { name: 'Osvaldo Pugliese',             img: `${BASE}/OSVALGO PUGLIESE.png` },
   { name: 'Tita Merello',                 img: `${LOCAL}/7 TITA MERELLO- BEBA BIDART.jpg.jpeg` },
   { name: 'Nelly Omar',                   img: `${LOCAL}/IMG-20260803-WA0170.jpeg` },
@@ -29,7 +28,6 @@ const mastersAndCollabs = [
   { name: 'Sexteto Mayor',                img: `${LOCAL}/IMG-20260803-WA0172.jpeg` },
   { name: 'Atilio Stampone',              img: `${LOCAL}/Stampone, Federico Rivas Buono.jpg.jpeg` },
   { name: 'Litto Nebbia',                 img: `${BASE}/014 LITTO NEBIA.png` },
-  { name: 'Simón Díaz',                   img: null },
   { name: 'Mercedes Simone',              img: `${LOCAL}/5 MERCEDES SIMONE.jpg.jpeg` },
   { name: 'Ernesto Baffa',                img: `${LOCAL}/BAFFA ERNESTO.jpg.jpeg` },
   { name: 'Osvaldo Berlingeri',           img: `${BASE}/3548 OSVALDO BERLINGERI.png` },

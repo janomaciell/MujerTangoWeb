@@ -56,8 +56,6 @@ export default function Footer() {
             </nav>
 
             <div className={`footer-el ${styles.contact}`}>
-              <span className={styles.navHeading}>{ft.contact[lang]}</span>
-              <a href="mailto:info@mariajosementana.com" className={styles.email}>info@mariajosementana.com</a>
               <div className={styles.socials}>
                 <a
                   href="https://www.instagram.com/mariajosementana/"
