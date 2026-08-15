@@ -272,9 +272,10 @@
 }
 
 .lightboxCount {
-  font-size: 0.72rem;
-  color: rgba(245, 247, 255, 0.25);
-  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  color: rgba(245, 247, 255, 0.65);
+  letter-spacing: 0.14em;
+  font-family: var(--font-body);
 }
 
 .lightboxNav {

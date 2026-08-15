@@ -30,13 +30,13 @@ export function coverPath(file) {
 export const SITE_FAVICON = '/Logo.png'
 
 export const siteImages = {
-  hero:          assetUrl('background-liso-hero.jpeg'),
+  hero:          assetUrl('Fondo GALERIA.png'),
   aboutQuote:    assetUrl('biografia2.jpeg'),
   biographyHero: webMentanaPath('MARIA-Biografia.png'),
   logo:          '/Logo.png',
   logoHero:      '/logo-maria.png',
   biographyBg:   assetUrl('Fondo BIO.png'),
-  galleryBg:     assetUrl('Fondo GALERIA.png'),
+  galleryBg:     '/maria-home.jpeg',
   discographyBg: assetUrl('FondoDiscografia.png'),
   classesBg:     assetUrl('FondoClases.jpeg'),
   contactBg:     assetUrl('fondo-contacto.jpeg'),

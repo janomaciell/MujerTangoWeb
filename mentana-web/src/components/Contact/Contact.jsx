@@ -94,11 +94,7 @@ export default function Contact({ asPage = false }) {
 
   return (
     <section className={styles.section} id={asPage ? undefined : 'contacto'} ref={sectionRef}>
-      <div className={styles.sectionBg} aria-hidden="true">
-        <img src={siteImages.contactBg} alt="" className={styles.sectionBgImg} />
-        <div className={styles.sectionBgOverlay} />
-      </div>
-      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+      <div className="container">
         {!asPage && (
           <>
             <div className="contact-header" style={{ textAlign: 'center', marginBottom: 'clamp(3rem,6vw,5rem)' }}>
@@ -145,12 +141,11 @@ export default function Contact({ asPage = false }) {
                 <a href="https://www.youtube.com/user/mariajosementana" target="_blank" rel="noopener noreferrer" id="contact-youtube" className={styles.socialLink}>
                   YouTube <span className={styles.socialArrow}>↗</span>
                 </a>
-                <a href="https://mariajosementana.blogspot.com/" target="_blank" rel="noopener noreferrer" id="contact-blog" className={styles.socialLink}>
-                  {ct.blog[lang]} <span className={styles.socialArrow}>↗</span>
+                <a href="https://open.spotify.com/artist/0RQtI5ALj0KN8knNE6aBA0" target="_blank" rel="noopener noreferrer" id="contact-spotify" className={styles.socialLink}>
+                  Spotify <span className={styles.socialArrow}>↗</span>
                 </a>
               </div>
             </div>
-            <blockquote className={styles.sideQuote}>{ct.quote[lang]}</blockquote>
           </div>
 
           <div className={`contact-col ${styles.formCol}`}>

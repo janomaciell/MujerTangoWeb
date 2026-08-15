@@ -77,10 +77,9 @@ export default function Hero() {
       <div className={`hero-inner ${styles.inner}`}>
         <div className={styles.leftPanel}>
           <div className={styles.titleBlock}>
-            {/* Logo mjm — logo clásico con fondo transparente */}
-            <div className={styles.overflow}>
-              <img src={siteImages.logoHero} alt="María José Mentana" className={`hero-logo ${styles.heroLogo}`} />
-            </div>
+            <h1 className={`hero-logo ${styles.nameRow}`}>
+              <span className={styles.wordMaria}>María José Mentana</span>
+            </h1>
           </div>
         </div>
       </div>

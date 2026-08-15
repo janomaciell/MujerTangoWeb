@@ -216,8 +216,8 @@ export const t = {
       en: 'A voice that<br />crossed continents',
     },
     heroSub: {
-      es: 'La trayectoria de una de las grandes voces del tango argentino contemporáneo.',
-      en: 'The career of one of the great voices of contemporary Argentine tango.',
+      es: 'La trayectoria de una de las grandes voces del Tango.',
+      en: 'The career of one of the great voices of Argentine Tango.',
     },
     bornLabel: { es: 'Fecha de nacimiento', en: 'Date of birth' },
     stats: {
@@ -304,10 +304,10 @@ export const t = {
   // ── Contact ──
   contact: {
     sectionLabel: { es: 'Contacto',                 en: 'Contact'                   },
-    heading:      { es: 'Ponte en contacto',          en: 'Get in Touch'              },
+    heading:      { es: 'Escribime',                en: 'Write to me'               },
     sub: {
-      es: 'Escribinos para contrataciones de shows, giras, prensa o representación.',
-      en: 'Write to us for show bookings, tours, press, or management inquiries.',
+      es: 'Para contrataciones de shows, giras, prensa o clases.',
+      en: 'For show bookings, tours, press inquiries, or classes.',
     },
     emailLabel: { es: 'Email directo',               en: 'Direct email'                },
     whatsappLabel: { es: 'WhatsApp',                 en: 'WhatsApp'                    },

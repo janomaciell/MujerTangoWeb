@@ -13,7 +13,6 @@ const CLASS_PHOTOS = [
   '/web-mentana/3.png',
   '/web-mentana/4.png',
   '/web-mentana/7.png',
-  '/web-mentana/clase-copia-de-8d2ebb1d-ffed-43b5-95ec-a2df455dc145.png',
 ]
 
 const ROMAN = ['I', 'II', 'III', 'IV']

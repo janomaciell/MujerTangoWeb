@@ -132,7 +132,6 @@ export default function GalleryPage() {
               onError={e => { e.target.style.opacity = 0 }}
             />
             <div className={styles.lightboxCaption}>
-              <p className={styles.lightboxAlt}>{photos[lightbox].alt[lang]}</p>
               <span className={styles.lightboxCount}>{lightbox + 1} / {photos.length}</span>
             </div>
           </div>

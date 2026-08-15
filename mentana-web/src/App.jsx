@@ -61,6 +61,7 @@ export default function App() {
           <Route path="/biografia"   element={<main><BiographyPage /></main>} />
           <Route path="/contacto"    element={<main><ContactPage /></main>} />
           <Route path="/clases"      element={<main><Clases /></main>} />
+          <Route path="*"            element={<Home />} />
         </Routes>
         <Footer />
       </BrowserRouter>

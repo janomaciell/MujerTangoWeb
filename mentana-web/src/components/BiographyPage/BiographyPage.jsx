@@ -3,7 +3,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import styles from './BiographyPage.module.css'
 import { useLang, t } from '../../context/LangContext'
-import { siteImages } from '../../data/images.js'
+import { siteImages, assetUrl } from '../../data/images.js'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -15,17 +15,17 @@ const LOCAL = '/NuevasImagenes'
 
 const mastersAndCollabs = [
   { name: 'Osvaldo Pugliese',             img: `${BASE}/OSVALGO PUGLIESE.png` },
-  { name: 'Juanjo Domínguez',             img: '/artistas-hover/Juanjo-dominguez.jpeg' },
+  { name: 'Juanjo Domínguez',             img: assetUrl('artistas-hover/Juanjo-dominguez.jpeg') },
   { name: 'Astor Piazzolla',              img: `${LOCAL}/IMG-20260803-WA0181.jpg.jpeg` },
   { name: 'Tita Merello',                 img: `${LOCAL}/7 TITA MERELLO- BEBA BIDART.jpg.jpeg` },
   { name: 'Nelly Omar',                   img: `${LOCAL}/IMG-20260803-WA0170.jpeg` },
-  { name: 'Rubén Juárez',                 img: '/artistas-hover/ruben-juarez.jpeg' },
-  { name: 'Estrella Morente',             img: '/artistas-hover/estrella-morente.jpeg' },
-  { name: 'Mercedes Sosa',                img: '/artistas-hover/mercedes-sosa.jpeg' },
-  { name: 'Raúl Lavié',                   img: '/artistas-hover/LAVIE.JPG.jpeg' },
+  { name: 'Rubén Juárez',                 img: assetUrl('artistas-hover/ruben-juarez.jpeg') },
+  { name: 'Estrella Morente',             img: assetUrl('artistas-hover/estrella-morente.jpeg') },
+  { name: 'Mercedes Sosa',                img: assetUrl('artistas-hover/mercedes-sosa.jpeg') },
+  { name: 'Raúl Lavié',                   img: assetUrl('artistas-hover/LAVIE.JPG.jpeg') },
   { name: 'Horacio Ferrer',               img: `${BASE}/HORACIO FERRER.png` },
   { name: 'Mariano Mores',                img: `${BASE}/12 MARIANO MORES.png` },
-  { name: 'Leopoldo Federico',            img: '/artistas-hover/leopoldofederico.jpeg' },
+  { name: 'Leopoldo Federico',            img: assetUrl('artistas-hover/leopoldofederico.jpeg') },
   { name: 'Raúl Garello',                 img: `${BASE}/RAUL GARELLO.png` },
   { name: 'Floreal Ruiz',                 img: `${LOCAL}/C Floreal Ruiz.jpeg` },
   { name: 'Néstor Marconi',               img: `${BASE}/JAPON92 NESTOR MARCONI.png` },
@@ -148,8 +148,7 @@ export default function BiographyPage() {
       // Hero Animation
       const heroTl = gsap.timeline({ delay: 0.2 })
       heroTl
-        .fromTo('.bpage-rule-top', { scaleX: 0 }, { scaleX: 1, duration: 0.9, ease: 'power2.inOut' })
-        .fromTo('.bpage-hero-bg',    { opacity: 0 }, { opacity: 1, duration: 1.2, ease: 'power2.out' }, '-=0.4')
+        .fromTo('.bpage-hero-bg',    { opacity: 0 }, { opacity: 1, duration: 1.2, ease: 'power2.out' })
         .fromTo('.bpage-hero-sub',   { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '-=0.6')
 
 
@@ -222,8 +221,6 @@ export default function BiographyPage() {
 
       {/* ── HERO ── */}
       <section className={styles.hero}>
-        <div className={`bpage-rule-top ${styles.ruleTop}`} />
-        
         {/* Foto full-bleed */}
         <div className={`bpage-hero-bg ${styles.portrait}`}>
           <img

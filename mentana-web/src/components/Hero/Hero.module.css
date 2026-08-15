@@ -88,9 +88,9 @@
   display: block;
 }
 
-/* "Maria Jose" — tipografía script tipo firma */
+/* "Maria Jose" */
 .wordMaria {
-  font-family: 'Pinyon Script', 'Alex Brush', 'Great Vibes', cursive;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
   font-style: normal;
   color: rgba(255, 255, 255, 0.95);
