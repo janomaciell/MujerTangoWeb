@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
-import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import styles from './Clases.module.css'
@@ -11,21 +10,9 @@ gsap.registerPlugin(ScrollTrigger)
 const WHATSAPP_NUMBER = '5491132102983'
 
 const CLASS_PHOTOS = [
-  '/web-mentana/1.png',
-  '/web-mentana/2.png',
   '/web-mentana/3.png',
   '/web-mentana/4.png',
-  '/web-mentana/5.png',
-  '/web-mentana/6.png',
   '/web-mentana/7.png',
-  '/web-mentana/8.png',
-  '/web-mentana/9.png',
-  '/web-mentana/10.png',
-  '/web-mentana/11.png',
-  '/web-mentana/img1.png',
-  '/web-mentana/clase-copia-de-3.png',
-  '/web-mentana/clase-copia-de-4.png',
-  '/web-mentana/clase-copia-de-7.png',
   '/web-mentana/clase-copia-de-8d2ebb1d-ffed-43b5-95ec-a2df455dc145.png',
 ]
 
@@ -174,7 +161,7 @@ export default function Clases() {
         <div className={styles.heroInner}>
           <div className={styles.heroContent}>
             <span className={`clases-kicker section-label`}>
-              {lang === 'es' ? 'Formación Vocal & Canto' : 'Vocal Training & Singing'}
+              {lang === 'es' ? 'Formación Vocal' : 'Vocal Training'}
             </span>
             <h1 className={`clases-h1 ${styles.title}`}>{c.title[lang]}</h1>
             <p className={`clases-lead ${styles.subtitle}`}>{c.subtitle[lang]}</p>
@@ -360,38 +347,13 @@ export default function Clases() {
         </div>
       </section>
 
-      {/* ── 6. CLOSING QUOTE + CTA ── */}
+      {/* ── 6. CLOSING QUOTE ── */}
       <section className={`${styles.ctaSection} clases-cta`}>
         <div className="container container--narrow">
           <blockquote className={styles.closingQuote}>
             <p className={styles.closingLine1}>{c.closing1[lang]}</p>
             <p className={styles.closingLine2}>{c.closing2[lang]}</p>
           </blockquote>
-
-          <div className={styles.ctaBlock}>
-            <p className={styles.ctaLabel}>{c.reserveLabel[lang]}</p>
-            <div className={styles.ctaLinks}>
-              <Link to="/contacto" className={styles.ctaPrimary} id="clases-link-contacto">
-                {c.contactLink[lang]}
-              </Link>
-              <a
-                href="mailto:info@mariajosementana.com"
-                className={styles.ctaSecondary}
-                id="clases-link-email"
-              >
-                Email
-              </a>
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.ctaSecondary}
-                id="clases-link-whatsapp"
-              >
-                WhatsApp
-              </a>
-            </div>
-          </div>
         </div>
       </section>
 

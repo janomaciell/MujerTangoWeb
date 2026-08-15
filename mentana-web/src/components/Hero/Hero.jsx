@@ -52,17 +52,24 @@ export default function Hero() {
   return (
     <section className={styles.section} id="hero" ref={sectionRef}>
 
-      {/* Video full-bleed */}
+      {/* Background: Video on Mobile, Image on Desktop */}
       <div className={`hero-portrait ${styles.portrait}`}>
-        <video
-          key={isVideoMobile ? 'mobile' : 'desktop'}
-          src={isVideoMobile ? siteImages.videoHomeMobile : siteImages.videoHome}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className={styles.portraitImg}
-        />
+        {isVideoMobile ? (
+          <video
+            src={siteImages.videoHomeMobile}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className={styles.portraitImg}
+          />
+        ) : (
+          <img
+            src={siteImages.hero}
+            alt="María José Mentana"
+            className={styles.portraitImg}
+          />
+        )}
         <div className={styles.portraitFade} aria-hidden="true" />
       </div>
 

@@ -15,14 +15,17 @@ const LOCAL = '/NuevasImagenes'
 
 const mastersAndCollabs = [
   { name: 'Osvaldo Pugliese',             img: `${BASE}/OSVALGO PUGLIESE.png` },
+  { name: 'Juanjo Domínguez',             img: '/artistas-hover/Juanjo-dominguez.jpeg' },
+  { name: 'Astor Piazzolla',              img: `${LOCAL}/IMG-20260803-WA0181.jpg.jpeg` },
   { name: 'Tita Merello',                 img: `${LOCAL}/7 TITA MERELLO- BEBA BIDART.jpg.jpeg` },
   { name: 'Nelly Omar',                   img: `${LOCAL}/IMG-20260803-WA0170.jpeg` },
+  { name: 'Rubén Juárez',                 img: '/artistas-hover/ruben-juarez.jpeg' },
   { name: 'Estrella Morente',             img: '/artistas-hover/estrella-morente.jpeg' },
   { name: 'Mercedes Sosa',                img: '/artistas-hover/mercedes-sosa.jpeg' },
   { name: 'Raúl Lavié',                   img: '/artistas-hover/LAVIE.JPG.jpeg' },
   { name: 'Horacio Ferrer',               img: `${BASE}/HORACIO FERRER.png` },
   { name: 'Mariano Mores',                img: `${BASE}/12 MARIANO MORES.png` },
-  { name: 'Leopoldo Federico',            img: null },
+  { name: 'Leopoldo Federico',            img: '/artistas-hover/leopoldofederico.jpeg' },
   { name: 'Raúl Garello',                 img: `${BASE}/RAUL GARELLO.png` },
   { name: 'Floreal Ruiz',                 img: `${LOCAL}/C Floreal Ruiz.jpeg` },
   { name: 'Néstor Marconi',               img: `${BASE}/JAPON92 NESTOR MARCONI.png` },

@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import emailjs from '@emailjs/browser'
 import styles from './Contact.module.css'
 import { useLang, t } from '../../context/LangContext'
+import { siteImages } from '../../data/images.js'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -93,7 +94,11 @@ export default function Contact({ asPage = false }) {
 
   return (
     <section className={styles.section} id={asPage ? undefined : 'contacto'} ref={sectionRef}>
-      <div className="container">
+      <div className={styles.sectionBg} aria-hidden="true">
+        <img src={siteImages.contactBg} alt="" className={styles.sectionBgImg} />
+        <div className={styles.sectionBgOverlay} />
+      </div>
+      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         {!asPage && (
           <>
             <div className="contact-header" style={{ textAlign: 'center', marginBottom: 'clamp(3rem,6vw,5rem)' }}>
@@ -113,6 +118,18 @@ export default function Contact({ asPage = false }) {
               <span className={styles.infoLabel}>{ct.emailLabel[lang]}</span>
               <a href="mailto:info@mariajosementana.com" className={styles.emailLink} id="link-email">
                 info@mariajosementana.com
+              </a>
+            </div>
+            <div className={styles.infoBlock}>
+              <span className={styles.infoLabel}>{ct.whatsappLabel[lang]}</span>
+              <a
+                href="https://wa.me/5491132102983"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.emailLink}
+                id="link-whatsapp"
+              >
+                +54 9 11 3210-2983
               </a>
             </div>
             <div className={styles.infoBlock}>

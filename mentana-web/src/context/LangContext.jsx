@@ -30,8 +30,8 @@ export const t = {
     heading:    { es: 'La Artista',    en: 'The Artist'    },
     paragraphs: [
       {
-        es: 'María José Mentana es una de las grandes voces del tango argentino contemporáneo. Con más de cinco décadas de trayectoria, inició su carrera a los nueve años en Grandes Valores del Tango y construyó un camino artístico que la llevó a compartir escenarios y proyectos con figuras emblemáticas como Tita Merello, Nelly Omar, Mariano Mores, Leopoldo Federico, Raúl Garello, Horacio Ferrer, Jairo, Rubén Juárez, Estrella Morente y Mercedes Sosa, por nombrar algunos.',
-        en: 'María José Mentana is one of the great voices of contemporary Argentine tango. With a career spanning over five decades, she began at the age of nine on Grandes Valores del Tango and forged an artistic path that led her to share stages and projects with legendary figures such as Tita Merello, Nelly Omar, Mariano Mores, Leopoldo Federico, Raúl Garello, Horacio Ferrer, Jairo, Rubén Juárez, Estrella Morente, and Mercedes Sosa, to name a few.',
+        es: 'María José Mentana es una de las grandes voces del tango argentino contemporáneo. Con más de cinco décadas de trayectoria, inició su carrera a los nueve años en Grandes Valores del Tango y construyó un camino artístico que la llevó a compartir escenarios y proyectos con figuras emblemáticas como Tita Merello, Nelly Omar, Juanjo Domínguez, Astor Piazzolla, Mariano Mores, Leopoldo Federico, Raúl Garello, Horacio Ferrer, Rubén Juárez, Estrella Morente y Mercedes Sosa, por nombrar algunos.',
+        en: 'María José Mentana is one of the great voices of contemporary Argentine tango. With a career spanning over five decades, she began at the age of nine on Grandes Valores del Tango and forged an artistic path that led her to share stages and projects with legendary figures such as Tita Merello, Nelly Omar, Juanjo Domínguez, Astor Piazzolla, Mariano Mores, Leopoldo Federico, Raúl Garello, Horacio Ferrer, Rubén Juárez, Estrella Morente, and Mercedes Sosa, to name a few.',
       },
       {
         es: 'Su arte ha recorrido los principales escenarios de Europa, Asia y Latinoamérica, consolidando una interpretación reconocida por su profundidad expresiva, elegancia y autenticidad. La crítica la ha definido como una artista de “voz de intensos matices” y una de las intérpretes más personales del tango de las últimas décadas.',
@@ -304,12 +304,13 @@ export const t = {
   // ── Contact ──
   contact: {
     sectionLabel: { es: 'Contacto',                 en: 'Contact'                   },
-    heading:      { es: 'Descubrí tu voz',            en: 'Find your voice'           },
+    heading:      { es: 'Ponte en contacto',          en: 'Get in Touch'              },
     sub: {
-      es: 'Encontrá tu lugar en el mundo a través de la música y el canto.',
-      en: 'Find your place in the world through music and singing.',
+      es: 'Escribinos para contrataciones de shows, giras, prensa o representación.',
+      en: 'Write to us for show bookings, tours, press, or management inquiries.',
     },
     emailLabel: { es: 'Email directo',               en: 'Direct email'                },
+    whatsappLabel: { es: 'WhatsApp',                 en: 'WhatsApp'                    },
     location:   { es: 'Ubicación',                    en: 'Location'                    },
     social:     { es: 'Redes',                        en: 'Socials'                     },
     quote: {
@@ -360,7 +361,7 @@ export const t = {
     offers: [
       {
         title: { es: 'Clases Individuales (Presenciales)', en: 'Individual Classes (In-Person)' },
-        desc: { es: 'Trabajo personalizado, a tu ritmo, afinando tu técnica vocal e interpretación.', en: 'Personalized training, at your own pace, fine-tuning your vocal technique and interpretation.' }
+        desc: { es: 'Un trabajo personalizado, a tu ritmo, para desarrollar tu técnica vocal y potenciar tu interpretación.', en: 'Personalized training, at your own pace, to develop your vocal technique and enhance your performance.' }
       },
       {
         title: { es: 'Clases Online', en: 'Online Classes' },
@@ -368,7 +369,7 @@ export const t = {
       },
       {
         title: { es: 'Master Class', en: 'Master Class' },
-        desc: { es: 'Encuentros intensivos de perfeccionamiento para cantantes que buscan dar un salto cualitativo.', en: 'Intensive sessions for singers seeking a qualitative breakthrough in performance.' }
+        desc: { es: 'Encuentros intensivos de perfeccionamiento para cantantes que buscan perfeccionar su arte.', en: 'Intensive sessions for singers looking to refine their craft.' }
       },
       {
         title: { es: 'Talleres y Seminarios', en: 'Workshops & Seminars' },
