@@ -244,10 +244,6 @@ export default function BiographyPage() {
         </div>
       </section>
 
-
-
-      <div className={`bpage-gold-line ${styles.goldLine}`} />
-
       {/* ── BIOGRAPHY TEXT (ABOUT PARAGRAPHS) ── */}
       <section className={styles.aboutSection}>
         <div className="container">
