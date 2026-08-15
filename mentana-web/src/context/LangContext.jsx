@@ -335,65 +335,65 @@ export const t = {
     },
   },
 
-  // ── Contrataciones ──
+  // ── Clases ──
   clases: {
     title: {
-      es: 'Contrataciones',
-      en: 'Bookings & Shows',
+      es: 'Clases de Canto',
+      en: 'Singing Classes',
     },
     subtitle: {
-      es: 'Llevá la voz del tango de María José Mentana a tu escenario, festival o evento.',
-      en: 'Bring the tango voice of María José Mentana to your stage, festival, or event.',
+      es: 'Encontrá tu voz y expresate en plenitud de la mano de una de las grandes referentes del tango argentino.',
+      en: 'Find your voice and express yourself fully guided by one of the masters of Argentine tango.',
     },
     intro1: {
-      es: 'Con más de 55 años de trayectoria internacional, María José Mentana ofrece espectáculos de tango de primer nivel, combinando emoción, técnica impecable y la fuerza expresiva de una de las grandes voces del género.',
-      en: 'With over 55 years of international career, María José Mentana delivers top-tier tango shows, combining emotion, flawless technique, and the expressive force of one of the genre\'s greatest voices.',
+      es: 'Con más de 55 años de trayectoria en los escenarios del mundo, María José Mentana comparte su técnica, sensibilidad y experiencia con quienes desean desarrollar y perfeccionar su voz.',
+      en: 'With over 55 years of experience on the world’s stages, María José Mentana shares her technique, sensitivity, and experience with those wishing to develop and refine their voice.',
     },
     intro2: {
-      es: 'Disponible para conciertos, festivales, eventos privados, presentaciones corporativas y seminarios magistrales en Argentina y el mundo.',
-      en: 'Available for concerts, festivals, private events, corporate performances, and master seminars in Argentina and worldwide.',
+      es: 'Clases individuales (presenciales y online), técnica vocal, repertorio, interpretación, postura escénica y seminarios intensivos para todos los niveles.',
+      en: 'Individual classes (in-person and online), vocal technique, repertoire, interpretation, stage presence, and intensive seminars for all levels.',
     },
     offerTitle: {
-      es: 'Propuestas de Contratación',
-      en: 'Booking Options',
+      es: 'Modalidades de Clase',
+      en: 'Class Formats',
     },
     offers: [
       {
-        title: { es: 'Conciertos y Festivales', en: 'Concerts & Festivals' },
-        desc: { es: 'Shows en vivo con repertorio de tango clásico y contemporáneo.', en: 'Live shows featuring classic and contemporary tango repertoire.' }
+        title: { es: 'Clases Individuales (Presenciales)', en: 'Individual Classes (In-Person)' },
+        desc: { es: 'Trabajo personalizado, a tu ritmo, afinando tu técnica vocal e interpretación.', en: 'Personalized training, at your own pace, fine-tuning your vocal technique and interpretation.' }
       },
       {
-        title: { es: 'Eventos Privados y Corporativos', en: 'Private & Corporate Events' },
-        desc: { es: 'Presentaciones exclusivas adaptadas a la medida de tu evento.', en: 'Exclusive performances tailored to your event.' }
+        title: { es: 'Clases Online', en: 'Online Classes' },
+        desc: { es: 'La misma dedicación y calidad técnica desde cualquier parte del mundo.', en: 'The same dedication and technical quality from anywhere in the world.' }
       },
       {
-        title: { es: 'Master Class & Formación Vocal', en: 'Master Classes & Vocal Seminars' },
-        desc: { es: 'Encuentros intensivos de perfeccionamiento técnico e interpretativo.', en: 'Intensive technical and interpretative training sessions.' }
+        title: { es: 'Master Class', en: 'Master Class' },
+        desc: { es: 'Encuentros intensivos de perfeccionamiento para cantantes que buscan dar un salto cualitativo.', en: 'Intensive sessions for singers seeking a qualitative breakthrough in performance.' }
       },
       {
-        title: { es: 'Giras Internacionales', en: 'International Tours' },
-        desc: { es: 'Presentaciones teatrales y espectáculos internacionales.', en: 'Theater performances and international shows.' }
+        title: { es: 'Talleres y Seminarios', en: 'Workshops & Seminars' },
+        desc: { es: 'Espacios de aprendizaje colectivo, interpretación de tango y expresión artística.', en: 'Collective spaces for learning, tango interpretation, and artistic expression.' }
       }
     ],
     audience1: {
-      es: 'Para productores, festivales, teatros y organizadores de eventos.',
-      en: 'For producers, festivals, theaters, and event organizers.',
+      es: 'Para principiantes, intermedios y cantantes con experiencia.',
+      en: 'For beginners, intermediate, and experienced singers.',
     },
     audience2: {
-      es: 'Para quienes buscan un espectáculo de tango inolvidable y de jerarquía internacional.',
-      en: 'For those seeking an unforgettable tango show of international caliber.',
+      es: 'Para quienes buscan potenciar su voz, y también para quienes desean cantar por primera vez.',
+      en: 'For those looking to boost their voice, as well as those wishing to sing for the very first time.',
     },
     closing1: {
-      es: 'El tango es emoción en estado puro.',
-      en: 'Tango is pure emotion.',
+      es: 'Cantar es expresarte en plenitud.',
+      en: 'Singing is expressing yourself to the fullest.',
     },
     closing2: {
-      es: 'Hacé de tu próximo evento una experiencia inolvidable.',
-      en: 'Make your next event an unforgettable experience.',
+      es: 'Y eso es lo que haremos juntos.',
+      en: 'And that is what we will do together.',
     },
     reserveLabel: {
-      es: 'Consultá por contrataciones —',
-      en: 'Inquire for bookings —',
+      es: 'Reservá tu lugar —',
+      en: 'Book your spot —',
     },
     contactLink: { es: 'Contacto', en: 'Contact' },
   },
@@ -410,7 +410,7 @@ export const t = {
       { es: 'Biografía',   en: 'Biography',   to: '/biografia'   },
       { es: 'Galería',     en: 'Gallery',     to: '/galeria'     },
       { es: 'Discografía', en: 'Discography', to: '/discografia' },
-      { es: 'Contrataciones', en: 'Bookings', to: '/clases'      },
+      { es: 'Clases',      en: 'Classes',     to: '/clases'      },
       { es: 'Contacto',    en: 'Contact',     to: '/contacto'    },
     ],
     copy:    { es: 'Todos los derechos reservados.', en: 'All rights reserved.' },

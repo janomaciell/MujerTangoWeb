@@ -149,8 +149,8 @@ export default function Clases() {
 
   const whatsappMsg = encodeURIComponent(
     lang === 'es'
-      ? '¡Hola! Me gustaría consultar por contrataciones para María José Mentana.'
-      : 'Hello! I would like to inquire about bookings for María José Mentana.'
+      ? '¡Hola! Me gustaría consultar por las clases de canto con María José Mentana.'
+      : 'Hello! I would like to inquire about singing classes with María José Mentana.'
   )
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMsg}`
 
@@ -164,7 +164,7 @@ export default function Clases() {
         <div className={`clases-hero-bg ${styles.portrait}`}>
           <img
             src={siteImages.classesBg}
-            alt={lang === 'es' ? 'Contrataciones' : 'Bookings & Shows'}
+            alt={lang === 'es' ? 'Clases de Canto' : 'Singing Classes'}
             className={styles.portraitImg}
           />
           <div className={styles.portraitFade} aria-hidden="true" />
@@ -174,7 +174,7 @@ export default function Clases() {
         <div className={styles.heroInner}>
           <div className={styles.heroContent}>
             <span className={`clases-kicker section-label`}>
-              {lang === 'es' ? 'Shows & Presentaciones' : 'Shows & Performances'}
+              {lang === 'es' ? 'Formación Vocal & Canto' : 'Vocal Training & Singing'}
             </span>
             <h1 className={`clases-h1 ${styles.title}`}>{c.title[lang]}</h1>
             <p className={`clases-lead ${styles.subtitle}`}>{c.subtitle[lang]}</p>
@@ -188,7 +188,7 @@ export default function Clases() {
           <div className={styles.philosophySplit}>
             <div className={`${styles.philText} clases-phil-text`}>
               <h2 className={styles.sectionHeading}>
-                {lang === 'es' ? 'Tango de Jerarquía Internacional' : 'World-Class Tango Performance'}
+                {lang === 'es' ? 'Técnica e Interpretación' : 'Technique & Interpretation'}
               </h2>
               <div className={styles.accentBar} />
               <p className={styles.philParagraph}>{c.intro1[lang]}</p>
@@ -197,11 +197,11 @@ export default function Clases() {
             <div className={`${styles.philImageWrap} clases-phil-img`}>
               <img
                 src="/web-mentana/img1.png"
-                alt={lang === 'es' ? 'María José Mentana en vivo' : 'María José Mentana live'}
+                alt={lang === 'es' ? 'Clases de canto' : 'Singing lessons'}
                 className={styles.philImage}
               />
               <div className={styles.philImageCaption}>
-                {lang === 'es' ? 'Más de 55 años de experiencia escénica' : 'Over 55 years of stage experience'}
+                {lang === 'es' ? 'Más de 55 años de experiencia docente y escénica' : 'Over 55 years of teaching and stage experience'}
               </div>
             </div>
           </div>
@@ -212,15 +212,15 @@ export default function Clases() {
       <section className={`${styles.gallerySection} clases-gallery`}>
         <div className={styles.carouselHeader}>
           <span className={styles.sectionLabel}>
-            {lang === 'es' ? 'Trayectoria' : 'Highlights'}
+            {lang === 'es' ? 'Experiencia' : 'Experience'}
           </span>
           <h2 className={styles.sectionHeading}>
-            {lang === 'es' ? 'Presentaciones y Escenario' : 'Stage & Live Performances'}
+            {lang === 'es' ? 'Clases y Seminarios' : 'Classes & Seminars'}
           </h2>
           <p className={styles.sectionSub}>
             {lang === 'es'
-              ? 'Imágenes de presentaciones en vivo, espectáculos y momentos sobre el escenario.'
-              : 'Moments from live performances, shows, and stage appearances.'}
+              ? 'Imágenes de clases, seminarios y momentos junto a alumnos y cantantes.'
+              : 'Images from classes, seminars, and moments with students and singers.'}
           </p>
         </div>
 
