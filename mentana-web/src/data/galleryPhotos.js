@@ -104,15 +104,28 @@ const photoImagenDiario = {
   alt: { es: 'Nota de prensa — María José Mentana', en: 'Press note — María José Mentana' },
 }
 
+// Nuevas imágenes para posiciones 1 y 6
+const photoGaleria1 = {
+  id: 'gal-galeria-1',
+  src: '/NuevasImagenes/galeria 1.jpeg',
+  alt: { es: 'Fotografía — María José Mentana', en: 'Photo — María José Mentana' },
+}
+
+const photoGaleria6 = {
+  id: 'gal-galeria-6',
+  src: '/NuevasImagenes/galeria 6.jpeg',
+  alt: { es: 'Fotografía — María José Mentana', en: 'Photo — María José Mentana' },
+}
+
 const webPhotos = webMentanaPngFiles.map(makePhoto)
 
 export const photos = [
-  webPhotos[0],
+  photoGaleria1,       // posición 1 → galeria 1.jpeg
   photoWa20250514,
   webPhotos[1],
   webPhotos[2],
   photoImagenDiario,
-  webPhotos[3],
+  photoGaleria6,       // posición 6 → galeria 6.jpeg
   ...webPhotos.slice(4),
   ...localPhotos,
 ]
