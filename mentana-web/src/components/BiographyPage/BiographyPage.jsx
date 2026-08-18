@@ -65,6 +65,8 @@ function QuoteText({ lang }) {
 
 function CollabTag({ name, img }) {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const tagRef = useRef(null)
+  const tooltipRef = useRef(null)
 
   const openModal = useCallback(() => {
     setMobileOpen(true)
@@ -79,23 +81,54 @@ function CollabTag({ name, img }) {
     if (e.key === 'Escape') closeModal()
   }, [openModal, closeModal])
 
+  // Ajustar posición horizontal del tooltip para que no se salga de pantalla
+  const adjustTooltipPosition = useCallback(() => {
+    const tag = tagRef.current
+    const tip = tooltipRef.current
+    if (!tag || !tip) return
+
+    // Reset para medir correctamente
+    tip.style.left = '50%'
+    tip.style.transform = 'translateX(-50%) translateY(0)'
+
+    const tagRect = tag.getBoundingClientRect()
+    const tipRect = tip.getBoundingClientRect()
+    const vw = window.innerWidth
+    const MARGIN = 12 // px de margen con el borde de pantalla
+
+    const tipLeft = tagRect.left + tagRect.width / 2 - tipRect.width / 2
+    const tipRight = tipLeft + tipRect.width
+
+    let offsetX = 0
+    if (tipLeft < MARGIN) {
+      offsetX = MARGIN - tipLeft
+    } else if (tipRight > vw - MARGIN) {
+      offsetX = (vw - MARGIN) - tipRight
+    }
+
+    tip.style.left = '50%'
+    tip.style.transform = `translateX(calc(-50% + ${offsetX}px)) translateY(0)`
+  }, [])
+
   return (
     <>
       <span className={`bpage-tags-anim ${styles.collabTagWrapper}`}>
         <span
+          ref={tagRef}
           className={`${styles.collabTag} ${img ? styles.collabTagHasImg : ''}`}
           onClick={img ? openModal : undefined}
           role={img ? 'button' : undefined}
           tabIndex={img ? 0 : undefined}
           onKeyDown={img ? handleKeyDown : undefined}
           aria-haspopup={img ? 'dialog' : undefined}
+          onMouseEnter={img ? adjustTooltipPosition : undefined}
         >
           {name}
           {img && <span className={styles.collabTagDot} aria-hidden="true" />}
 
           {/* Desktop hover card — solo si tiene imagen */}
           {img && (
-            <span className={styles.collabTooltip} aria-hidden="true">
+            <span ref={tooltipRef} className={styles.collabTooltip} aria-hidden="true">
               <img src={img} alt={name} className={styles.collabTooltipImg} />
               <span className={styles.collabTooltipName}>{name}</span>
             </span>
