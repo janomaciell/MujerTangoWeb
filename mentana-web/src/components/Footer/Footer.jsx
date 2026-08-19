@@ -94,7 +94,7 @@ export default function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="https://open.spotify.com/artist/0RQtI5ALj0KN8knNE6aBA0"
+                  href="https://open.spotify.com/artist/2YbZKgdAtwTIpabYIfUJ5X"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.socialLink}

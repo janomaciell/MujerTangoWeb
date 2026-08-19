@@ -25,7 +25,7 @@ const mastersAndCollabs = [
   { name: 'Estrella Morente',             img: `${HOVER}/Estrella morente.jpeg` },
   { name: 'Mercedes Sosa',                img: `${HOVER}/mercedes-sosa.jpeg` },
   { name: 'Raúl Lavié',                   img: `${HOVER}/LAVIE.JPG.jpeg` },
-  { name: 'Horacio Ferrer',               img: `${BASE}/HORACIO FERRER.png` },
+  { name: 'Horacio Ferrer',               img: `${BASE}/HORACIO FERRER.jpeg` },
   { name: 'Mariano Mores',                img: `${BASE}/12 MARIANO MORES.png` },
   { name: 'Leopoldo Federico',            img: `${HOVER}/leopoldofederico.jpeg` },
   { name: 'Raúl Garello',                 img: `${HOVER}/Raul garello.jpeg` },

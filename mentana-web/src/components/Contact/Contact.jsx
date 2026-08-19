@@ -141,7 +141,7 @@ export default function Contact({ asPage = false }) {
                 <a href="https://www.youtube.com/user/mariajosementana" target="_blank" rel="noopener noreferrer" id="contact-youtube" className={styles.socialLink}>
                   YouTube <span className={styles.socialArrow}>↗</span>
                 </a>
-                <a href="https://open.spotify.com/artist/0RQtI5ALj0KN8knNE6aBA0" target="_blank" rel="noopener noreferrer" id="contact-spotify" className={styles.socialLink}>
+                <a href="https://open.spotify.com/artist/2YbZKgdAtwTIpabYIfUJ5X" target="_blank" rel="noopener noreferrer" id="contact-spotify" className={styles.socialLink}>
                   Spotify <span className={styles.socialArrow}>↗</span>
                 </a>
               </div>
