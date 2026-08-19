@@ -313,7 +313,7 @@
 
 @media (max-width: 768px) {
   .portraitImg {
-    object-position: calc(25% + 55px) center;
+    object-position: center center;
   }
 
   .heroInner {
