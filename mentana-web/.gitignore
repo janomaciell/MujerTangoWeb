@@ -5,3 +5,6 @@ dist
 .env
 .env.local
 scripts/r2-manifest.json
+
+# Originales sin comprimir (respaldo local, no se suben)
+assets-originales

@@ -14,7 +14,12 @@
     "r2:upload:dry": "node scripts/upload-r2.mjs --dry-run",
     "r2:update": "node scripts/upload-r2.mjs",
     "r2:sync-web": "npm run images:convert-web && npm run r2:upload",
-    "r2:sync-artistas": "npm run images:convert-artistas && npm run r2:upload --all-formats"
+    "r2:sync-artistas": "npm run images:convert-artistas && npm run r2:upload --all-formats",
+    "optimize": "node scripts/optimize-assets.mjs",
+    "verify": "node scripts/verify-assets.mjs",
+    "deploy": "node scripts/deploy-ftp.mjs",
+    "deploy:list": "node scripts/deploy-ftp.mjs --list",
+    "deploy:dry": "node scripts/deploy-ftp.mjs --dry"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -28,6 +33,7 @@
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
+    "basic-ftp": "^6.2.0",
     "dotenv": "^17.4.2",
     "sharp": "^0.34.5",
     "vite": "^5.4.8"

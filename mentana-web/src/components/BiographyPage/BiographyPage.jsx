@@ -9,37 +9,37 @@ gsap.registerPlugin(ScrollTrigger)
 
 const distIds = ['dist-personalidad', 'dist-academica']
 
-const BASE = 'https://pub-1a8e9e1898cd4579ab1dee0eb1fedb88.r2.dev/artistas-hover'
+const BASE = '/artistas-hover'
 
 const LOCAL = '/NuevasImagenes'
 
 const HOVER = '/artistas-hover'
 
 const mastersAndCollabs = [
-  { name: 'Osvaldo Pugliese',             img: `${BASE}/OSVALGO PUGLIESE.png` },
-  { name: 'Juanjo Domínguez',             img: `${HOVER}/Juanjo-dominguez.jpeg` },
-  { name: 'Astor Piazzolla',              img: `${HOVER}/Astor piazolla.jpeg` },
-  { name: 'Tita Merello',                 img: `${LOCAL}/7 TITA MERELLO- BEBA BIDART.jpg.jpeg` },
-  { name: 'Nelly Omar',                   img: `${LOCAL}/IMG-20260803-WA0170.jpeg` },
-  { name: 'Rubén Juárez',                 img: `${HOVER}/ruben-juarez.jpeg` },
-  { name: 'Estrella Morente',             img: `${HOVER}/Estrella morente.jpeg` },
-  { name: 'Mercedes Sosa',                img: `${HOVER}/mercedes-sosa.jpeg` },
-  { name: 'Raúl Lavié',                   img: `${HOVER}/LAVIE.JPG.jpeg` },
-  { name: 'Horacio Ferrer',               img: `${BASE}/HORACIO FERRER.jpeg` },
-  { name: 'Mariano Mores',                img: `${BASE}/12 MARIANO MORES.png` },
-  { name: 'Leopoldo Federico',            img: `${HOVER}/leopoldofederico.jpeg` },
-  { name: 'Raúl Garello',                 img: `${HOVER}/Raul garello.jpeg` },
-  { name: 'Floreal Ruiz',                 img: `${LOCAL}/C Floreal Ruiz.jpeg` },
-  { name: 'Néstor Marconi',               img: `${HOVER}/Nestor Marconi.jpeg` },
-  { name: 'Sexteto Mayor',                img: `${LOCAL}/IMG-20260803-WA0172.jpeg` },
-  { name: 'Atilio Stampone',              img: `${HOVER}/Arilio stampone.jpeg` },
-  { name: 'Litto Nebbia',                 img: `${BASE}/014 LITTO NEBIA.png` },
-  { name: 'Mercedes Simone',              img: `${LOCAL}/5 MERCEDES SIMONE.jpg.jpeg` },
-  { name: 'Ernesto Baffa',               img: `${HOVER}/Ernesto baffa.jpeg` },
-  { name: 'Osvaldo Berlingeri',           img: `${BASE}/3548 OSVALDO BERLINGERI.png` },
-  { name: 'Orquesta Sinfónica Venezuela', img: `${BASE}/SINFONICA VENEZUELA.png` },
-  { name: 'Filarmónica de Mendoza',       img: `${LOCAL}/DSC_0837.JPG.jpeg` },
-  { name: 'Orquesta Nacional "Juan de Dios Filiberto"', img: `${LOCAL}/Screenshot_20260811_110511_Adobe Acrobat.jpeg` },
+  { name: 'Osvaldo Pugliese',             img: `${BASE}/OSVALGO PUGLIESE.webp` },
+  { name: 'Juanjo Domínguez',             img: `${HOVER}/Juanjo-dominguez.webp` },
+  { name: 'Astor Piazzolla',              img: `${HOVER}/Astor piazolla.webp` },
+  { name: 'Tita Merello',                 img: `${LOCAL}/7 TITA MERELLO- BEBA BIDART.jpg.webp` },
+  { name: 'Nelly Omar',                   img: `${LOCAL}/IMG-20260803-WA0170.webp` },
+  { name: 'Rubén Juárez',                 img: `${HOVER}/ruben-juarez.webp` },
+  { name: 'Estrella Morente',             img: `${HOVER}/Estrella morente.webp` },
+  { name: 'Mercedes Sosa',                img: `${HOVER}/mercedes-sosa.webp` },
+  { name: 'Raúl Lavié',                   img: `${HOVER}/LAVIE.JPG.webp` },
+  { name: 'Horacio Ferrer',               img: `${BASE}/HORACIO FERRER.webp` },
+  { name: 'Mariano Mores',                img: `${BASE}/12 MARIANO MORES.webp` },
+  { name: 'Leopoldo Federico',            img: `${HOVER}/leopoldofederico.webp` },
+  { name: 'Raúl Garello',                 img: `${HOVER}/Raul garello.webp` },
+  { name: 'Floreal Ruiz',                 img: `${LOCAL}/C Floreal Ruiz.webp` },
+  { name: 'Néstor Marconi',               img: `${HOVER}/Nestor Marconi.webp` },
+  { name: 'Sexteto Mayor',                img: `${LOCAL}/IMG-20260803-WA0172.webp` },
+  { name: 'Atilio Stampone',              img: `${HOVER}/Arilio stampone.webp` },
+  { name: 'Litto Nebbia',                 img: `${BASE}/014 LITTO NEBIA.webp` },
+  { name: 'Mercedes Simone',              img: `${LOCAL}/5 MERCEDES SIMONE.jpg.webp` },
+  { name: 'Ernesto Baffa',               img: `${HOVER}/Ernesto baffa.webp` },
+  { name: 'Osvaldo Berlingeri',           img: `${BASE}/3548 OSVALDO BERLINGERI.webp` },
+  { name: 'Orquesta Sinfónica Venezuela', img: `${BASE}/SINFONICA VENEZUELA.webp` },
+  { name: 'Filarmónica de Mendoza',       img: `${LOCAL}/DSC_0837.JPG.webp` },
+  { name: 'Orquesta Nacional "Juan de Dios Filiberto"', img: `${LOCAL}/Screenshot_20260811_110511_Adobe Acrobat.webp` },
 ]
 
 function QuoteText({ lang }) {
@@ -336,7 +336,7 @@ export default function BiographyPage() {
               </div>
               <div className={`bpage-tags-anim ${styles.distImgWrap}`}>
                 <img
-                  src={`${LOCAL}/IMG-20260803-WA0187.jpeg`}
+                  src={`${LOCAL}/IMG-20260803-WA0187.webp`}
                   alt={lang === 'es' ? 'Distinción — María José Mentana' : 'Distinction — María José Mentana'}
                   className={styles.distImg}
                   loading="lazy"

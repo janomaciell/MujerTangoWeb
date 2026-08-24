@@ -30,18 +30,18 @@ export function coverPath(file) {
 export const SITE_FAVICON = '/Logo.png'
 
 export const siteImages = {
-  hero:          assetUrl('Fondo GALERIA.png'),
-  aboutQuote:    assetUrl('biografia2.jpeg'),
-  biographyHero: webMentanaPath('MARIA-Biografia.png'),
+  hero:          assetUrl('Fondo GALERIA.webp'),
+  aboutQuote:    assetUrl('biografia2.webp'),
+  biographyHero: webMentanaPath('MARIA-Biografia.webp'),
   logo:          '/Logo.png',
   logoHero:      '/logo-maria.png',
-  biographyBg:   assetUrl('Fondo BIO.png'),
-  galleryBg:     '/maria-home.jpeg',
-  discographyBg: assetUrl('FondoDiscografia.png'),
-  classesBg:     assetUrl('FondoClases.jpeg'),
-  contactBg:     assetUrl('fondo-contacto.jpeg'),
-  videoHome:     assetUrl('videohome.MOV'),
-  videoHomeMobile: assetUrl('FondoHeroMobile.MOV'),
+  biographyBg:   assetUrl('Fondo BIO.webp'),
+  galleryBg:     '/maria-home.webp',
+  discographyBg: assetUrl('FondoDiscografia.webp'),
+  classesBg:     assetUrl('FondoClases.webp'),
+  contactBg:     assetUrl('fondo-contacto.webp'),
+  videoHome:     assetUrl('videohome.mp4'),
+  videoHomeMobile: assetUrl('FondoHeroMobile.mp4'),
 }
 
 export const usesRemoteAssets = Boolean(ASSETS_BASE)

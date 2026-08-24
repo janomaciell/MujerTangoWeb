@@ -1,0 +1,71 @@
+# ==========================================================
+#  mariajosementana.com — configuracion Apache
+#  Sitio SPA (React + Vite). Todas las rutas resuelven a index.html
+# ==========================================================
+
+Options -Indexes
+
+# OJO: en este mismo public_html vive tambien el sitio mjespacio.com.ar, en una
+# subcarpeta, con su propio dominio. Por eso todas las reglas de rewrite estan
+# acotadas por HTTP_HOST: solo actuan sobre mariajosementana.com y no tocan
+# nada de lo otro que este alojado aca.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # ---------- 1) Forzar HTTPS ----------
+  RewriteCond %{HTTP_HOST} ^(www\.)?mariajosementana\.com$ [NC]
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # ---------- 2) SPA fallback ----------
+  # Si el archivo o la carpeta existen de verdad, Apache los sirve tal cual.
+  # Cualquier otra ruta (/biografia, /discografia, etc.) -> index.html
+  RewriteCond %{HTTP_HOST} ^(www\.)?mariajosementana\.com$ [NC]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# ---------- 3) Tipos MIME ----------
+<IfModule mod_mime.c>
+  AddType video/quicktime            .mov .MOV
+  AddType video/mp4                  .mp4
+  AddType image/webp                 .webp
+  AddType image/svg+xml              .svg
+  AddType font/woff                  .woff
+  AddType font/woff2                 .woff2
+  AddType application/javascript     .js .mjs
+  AddCharset UTF-8                   .html .css .js .json .svg
+</IfModule>
+
+# ---------- 4) Compresion (gzip) ----------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE application/json application/xml image/svg+xml
+</IfModule>
+
+# ---------- 5) Cache del navegador ----------
+<IfModule mod_headers.c>
+  # index.html: nunca cachear, asi el usuario siempre ve la ultima version
+  <FilesMatch "(?i)\.html$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+  </FilesMatch>
+
+  # JS y CSS: Vite les pone un hash en el nombre -> cache eterno seguro
+  <FilesMatch "(?i)\.(js|css)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # Imagenes / videos / fuentes: nombre fijo -> cache de 7 dias
+  <FilesMatch "(?i)\.(png|jpe?g|gif|webp|svg|ico|mp4|mov|woff2?)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+</IfModule>
+
+# Nota: no se define ErrorDocument. La regla de rewrite de arriba ya resuelve
+# todas las rutas del sitio, y un ErrorDocument global afectaria tambien a los
+# otros sitios alojados en este mismo public_html.

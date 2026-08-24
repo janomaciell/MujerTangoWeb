@@ -10,9 +10,9 @@ gsap.registerPlugin(ScrollTrigger)
 const WHATSAPP_NUMBER = '5491132102983'
 
 const CLASS_PHOTOS = [
-  '/web-mentana/3.png',
-  '/web-mentana/4.png',
-  '/web-mentana/7.png',
+  '/web-mentana/3.webp',
+  '/web-mentana/4.webp',
+  '/web-mentana/7.webp',
 ]
 
 const ROMAN = ['I', 'II', 'III', 'IV']
@@ -182,7 +182,7 @@ export default function Clases() {
             </div>
             <div className={`${styles.philImageWrap} clases-phil-img`}>
               <img
-                src="/web-mentana/img1.png"
+                src="/web-mentana/img1.webp"
                 alt={lang === 'es' ? 'Clases de canto' : 'Singing lessons'}
                 className={styles.philImage}
               />

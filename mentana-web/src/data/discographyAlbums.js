@@ -5,7 +5,7 @@ export const discographyAlbums = [
     id: 'mujer-tango',
     year: '2025',
     title: 'Mujer Tango',
-    cover: coverPath('MUJERTANGO.png'),
+    cover: coverPath('MUJERTANGO.webp'),
     note: {
       es: 'Último disco — con composiciones inéditas. El tango de siempre, renovado.',
       en: 'Latest album — with unreleased compositions. Classic tango, renewed.',
@@ -29,7 +29,7 @@ export const discographyAlbums = [
     id: 'cientroilos',
     year: '2014',
     title: 'CienTroilos',
-    cover: coverPath('CIENTROILOS1.png'),
+    cover: coverPath('CIENTROILOS1.webp'),
     note: {
       es: 'Homenaje a Troilo — con Stampone, Federico, Garello, Baffa, Berlingieri y Nebbia.',
       en: 'Tribute to Troilo — with Stampone, Federico, Garello, Baffa, Berlingieri and Nebbia.',
@@ -57,7 +57,7 @@ export const discographyAlbums = [
     id: '40-anos',
     year: '2010',
     title: '40 Años con el Tango',
-    cover: coverPath('40ANOSCONELTANGO.png'),
+    cover: coverPath('40ANOSCONELTANGO.webp'),
     note: {
       es: 'Grabación en vivo — cuatro décadas de carrera en el escenario.',
       en: 'Live recording — four decades of career on stage.',
@@ -81,7 +81,7 @@ export const discographyAlbums = [
   {
     id: 'por-amor',
     title: 'Por Amor a Buenos Aires',
-    cover: coverPath('PORAMORABUENOSAIRES.png'),
+    cover: coverPath('PORAMORABUENOSAIRES.webp'),
     note: {
       es: 'Tangos clásicos con la sensibilidad de María José Mentana.',
       en: 'Classic tangos with María José Mentana\'s sensibility.',
@@ -106,7 +106,7 @@ export const discographyAlbums = [
   {
     id: 'vuelvo-al-sur',
     title: 'Vuelvo al Sur',
-    cover: coverPath('VUELVOALSUR.png'),
+    cover: coverPath('VUELVOALSUR.webp'),
     note: {
       es: 'Repertorio emblemático del sur y del tango porteño.',
       en: 'Emblematic repertoire from the south and Buenos Aires tango.',
@@ -129,7 +129,7 @@ export const discographyAlbums = [
   {
     id: 'una-piba',
     title: 'Una Piba y un Tango',
-    cover: coverPath('UNAPIBAYUNTANGO.png'),
+    cover: coverPath('UNAPIBAYUNTANGO.webp'),
     note: {
       es: 'Canciones de amor, desencuentro y la voz de una generación.',
       en: 'Songs of love, missed encounters and a generation\'s voice.',
@@ -153,7 +153,7 @@ export const discographyAlbums = [
   {
     id: 'singles',
     title: 'Singles',
-    cover: coverPath('SINGLES.png'),
+    cover: coverPath('SINGLES.webp'),
     note: {
       es: 'Lanzamientos destacados.',
       en: 'Featured releases.',
