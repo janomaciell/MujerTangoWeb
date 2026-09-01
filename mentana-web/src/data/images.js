@@ -35,13 +35,14 @@ export const siteImages = {
   biographyHero: webMentanaPath('MARIA-Biografia.webp'),
   logo:          '/Logo.png',
   logoHero:      '/logo-maria.png',
-  biographyBg:   assetUrl('Fondo BIO.webp'),
+  biographyBg:   assetUrl('fondo-contacto.webp'),
   galleryBg:     '/maria-home.webp',
   discographyBg: assetUrl('FondoDiscografia.webp'),
   classesBg:     assetUrl('FondoClases.webp'),
-  contactBg:     assetUrl('fondo-contacto.webp'),
+  contactBg:     assetUrl('maria-contacto-pc.jpeg'),
+  contactBgMobile: assetUrl('maria-contactomobile.jpeg'),
   videoHome:     assetUrl('videohome.mp4'),
-  videoHomeMobile: assetUrl('FondoHeroMobile.mp4'),
+  videoHomeMobile: assetUrl('maria-video-mobile.mp4'),
 }
 
 export const usesRemoteAssets = Boolean(ASSETS_BASE)

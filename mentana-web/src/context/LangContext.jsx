@@ -343,8 +343,8 @@ export const t = {
       en: 'Singing Classes',
     },
     subtitle: {
-      es: 'Encontrá tu voz y expresate en plenitud de la mano de una de las grandes referentes del tango argentino.',
-      en: 'Find your voice and express yourself fully guided by one of the masters of Argentine tango.',
+      es: '@mjestudioo — Encontrá tu voz y expresate en plenitud de la mano de una de las grandes referentes del tango argentino.',
+      en: '@mjestudioo — Find your voice and express yourself fully guided by one of the masters of Argentine tango.',
     },
     intro1: {
       es: 'Con más de 55 años de trayectoria en los escenarios del mundo, María José Mentana comparte su técnica, sensibilidad y experiencia con quienes desean desarrollar y perfeccionar su voz.',

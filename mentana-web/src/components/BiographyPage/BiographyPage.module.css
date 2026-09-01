@@ -618,7 +618,7 @@
   .ruleTop { top: calc(var(--header-h) + 0.5rem); }
 
   .portraitImg {
-    object-position: calc(50% + 250px) center;
+    object-position: 5% center;
   }
 
   .heroInner {

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import Contact from '../Contact/Contact'
 import styles from './ContactPage.module.css'
@@ -9,9 +9,18 @@ export default function ContactPage() {
   const containerRef = useRef(null)
   const { lang } = useLang()
   const ct = t.contact
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     window.scrollTo(0, 0)
+  }, [])
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 768px)')
+    setIsMobile(mediaQuery.matches)
+    const handler = (e) => setIsMobile(e.matches)
+    mediaQuery.addEventListener('change', handler)
+    return () => mediaQuery.removeEventListener('change', handler)
   }, [])
 
   useEffect(() => {
@@ -32,7 +41,7 @@ export default function ContactPage() {
         {/* Background Full-bleed */}
         <div className={`contact-hero-bg ${styles.portrait}`}>
           <img
-            src={siteImages.contactBg}
+            src={isMobile ? siteImages.contactBgMobile : siteImages.contactBg}
             alt={lang === 'es' ? 'Contacto' : 'Contact'}
             className={styles.portraitImg}
           />
